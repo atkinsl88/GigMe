@@ -12,7 +12,7 @@ const commentSchema = new mongoose.Schema({
 // })
 
 const eventSchema = new mongoose.Schema({
-  artists: { type: String }, 
+  artistName: { type: String }, 
   venue: { type: String, required: true },
   venueAddress: { type: String, required: true },
   genre: { type: String }, //could also be an array for cross-genre acts?
