@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const events = require('../controllers/events')
 const auth = require('../controllers/auth')
-// const secureRoute = require('../lib/secureRoute') //! Don't need this yet
+const secureRoute = require('../lib/secureRoute') //! Don't need this yet
 
 
 router.route('/events')
@@ -18,6 +18,5 @@ router.route('/register')
 
 router.route('/login')
   .post(auth.login)
-
 
 module.exports = router
