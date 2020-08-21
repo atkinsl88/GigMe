@@ -1,23 +1,22 @@
 const router = require('express').Router()
 const events = require('../controllers/events')
 const auth = require('../controllers/auth')
-// const secureRoute = require('../lib/secureRoute') //! Don't need this yet
+const secureRoute = require('../lib/secureRoute') //! Don't need this yet
 
 
 router.route('/events')
   .get(events.index)
-  .post(events.create)
+  .post(secureRoute, events.create)
 
 router.route('/events/:id')
   .get(events.show)
-  .put(events.edit)
-  .delete(events.delete)
+  .put(secureRoute, events.edit)
+  .delete(secureRoute, events.delete)
 
 router.route('/register')
   .post(auth.register)
 
 router.route('/login')
   .post(auth.login)
-
 
 module.exports = router
