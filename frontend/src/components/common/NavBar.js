@@ -6,10 +6,7 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">Home</Link>
-        <Link to="/cheeses" className="navbar-item">Cheese Index</Link>
-        <Link to="/register" className="navbar-item">Register</Link>
-        <Link to="/login" className="navbar-item">Log In</Link>
-        <Link to="/cheeses/new" className="navbar-item">Make a new Cheese</Link>
+        <Link to="/" className="navbar-item">Cheese Index</Link>
       </div>
     </div>
   </nav>
