@@ -20,13 +20,13 @@ async function login (req, res, next) {
     if (!user || !user.validatePassword(req.body.password)) {
       throw new Error() } else {
       res.status(202).json({ //! Pre-token logging in.
-        message: `Welcome to GigMe ${user.username}`,
+        message: `Welcome to GigMe ${user.username}`
       })
     }
   }
   
   catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 
