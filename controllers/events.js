@@ -9,7 +9,7 @@ async function eventsShow (req, res) {
   try {
     const events = await Event.findById(req.params.id)
     if (!events) throw new Error()
-    res.status(200).json(event)
+    res.status(200).json(events)
   } catch (err) {
     res.json(err)
   }
