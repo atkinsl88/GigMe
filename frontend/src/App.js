@@ -1,22 +1,19 @@
 import React from 'react'
-// import axios from 'axios'
+import { BrowserRouter } from 'react-router-dom'
 
-class App extends React.Component {
+import Navbar from './components/common/NavBar'
 
-  // async componentDidMount() {
-
-  //   try {
-  //     const res = await axios.get('localhost:4000/queens')
-  //     console.log(res.data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-  
-  render() {
-    return <h1>Hello World</h1>
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      {/* <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route path="/cheeses/:id" component={CheeseShow} />
+        <Route path="/cheeses" component={CheeseIndex} />
+      </Switch> */}
+    </BrowserRouter>
+  )
 }
-
 
 export default App
