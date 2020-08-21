@@ -1,17 +1,16 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch , Route  } from 'react-router-dom'
 
 import Navbar from './components/common/NavBar'
+import Home from './components/common/Home'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      {/* <Switch>
+      <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/cheeses/:id" component={CheeseShow} />
-        <Route path="/cheeses" component={CheeseIndex} />
-      </Switch> */}
+      </Switch>
     </BrowserRouter>
   )
 }
