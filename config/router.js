@@ -6,12 +6,12 @@ const auth = require('../controllers/auth')
 
 router.route('/events')
   .get(events.index)
-  .post(events.create)
+  .post(secureRoute, events.create)
 
 router.route('/events/:id')
   .get(events.show)
-  .put(events.edit)
-  .delete(events.delete)
+  .put(secureRoute, events.edit)
+  .delete(secureRoute, events.delete)
 
 router.route('/register')
   .post(auth.register)
