@@ -20,3 +20,4 @@ router.route('/login')
   .post(auth.login)
 
 
+module.exports = router
