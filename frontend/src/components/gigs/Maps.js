@@ -3,10 +3,12 @@ import axios from 'axios'
 import MapGL, { Marker , Popup } from 'react-map-gl'
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import '../../../src/styles/main.scss'
 
 class Maps extends React.Component {
   state = {
     venues: [],
+    // selectedVenue: null,
     //! setting viewport is part of allowing the pan and zoom as well as default focus
     viewport: {
       latitude: 51.5,
@@ -40,13 +42,20 @@ return (
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
         {this.state.venues.map(venue => (
+          <>
           <Marker
             key={venue._id}
+            value={venue.venue}
             latitude={venue.latitude}
             longitude={venue.longitude}
-          >
-            <span role="img" aria-label="marker" height="50">🔴</span>
+            >
+            <span role="img" aria-label="marker" height="50" onClick = {(e) => {
+              console.log(e.target.venue)
+            }}>🔴</span>
+            <div className="mapLabels" key={venue._id}>{venue.venue}</div>
           </Marker>
+          {/* <h4>{venue.venue}</h4> */}
+          </>
         ))}
         
       </MapGL>
