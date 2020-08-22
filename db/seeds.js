@@ -24,6 +24,7 @@ mongoose.connect(
       })
       const events = await Event.create(eventsWithUsers) // * We re create all that data
       console.log(`${events.length} Events created 🥁`)
+     
       await mongoose.connection.close() // * close the connection to the database
       console.log('Goodbye 👋')
     } catch (err) {

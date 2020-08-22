@@ -24,7 +24,7 @@ const eventSchema = new mongoose.Schema({
   posterImage: { type: String, required: true }, //url for image
   eventPrice: { type: String , required: false },
   aboutEvent: { type: String, required: false },
-  // user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
   comments: [commentSchema] //comments embedded
 } , {
   timestamps: true
