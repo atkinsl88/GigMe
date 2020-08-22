@@ -3,6 +3,9 @@ import image from '../../assets/001.png'
 
 class GigCard extends React.Component {
   render() {
+    
+    console.log(this.props.singleGigProps) // Data from API
+
     return (
       <section>
 

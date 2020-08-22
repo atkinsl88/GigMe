@@ -13,6 +13,12 @@ router.route('/events/:id')
   .put(secureRoute, events.edit)
   .delete(secureRoute, events.delete)
 
+router.route('/events/:id/comments')
+  .post(secureRoute, events.commentCreate)
+
+router.route('/events/:id/comments/:commentId')
+  .delete(secureRoute, events.commentDelete)
+
 router.route('/register')
   .post(auth.register)
 

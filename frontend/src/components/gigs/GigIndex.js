@@ -4,10 +4,6 @@ import GigCard from './GigCard'
 
 class GigIndex extends React.Component {
 
-  // state = {
-  //   gigs: []
-  // }
-
   // async componentDidMount() {
   //   try {
   //     const res = await getAllGigs()
@@ -18,6 +14,9 @@ class GigIndex extends React.Component {
   // }
 
   render() {
+
+console.log(this.props.gigprops) //data from the API here
+
     return (
       <section>
 
@@ -29,7 +28,7 @@ class GigIndex extends React.Component {
 
         {/* <div className="container">
           <div className="columns is-multiline">
-            {this.state.gigs.map(gig => (
+            {this.props.gigprops.map(gig => (
               <GigCard key={gig._id} {...gig}/>
             ))}
           </div>
