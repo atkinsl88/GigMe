@@ -8,14 +8,14 @@ const Navbar = () => (
       <Link to="/">Gigme</Link>
     </div>
     <div className="nav-lft">
-      <Link to="/">Gigs</Link>
-      <Link to="/">Community</Link>
+      <Link to="/gigs">Gigs</Link>
+      <Link to="/community">Community</Link>
       <Link to="/">Blog</Link>
     </div>
     <div className="nav-rgt">
       <Link to="/">Profile</Link>
-      <Link to="/">Login</Link>
-      <Link to="/">Sign Up</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/register">Sign Up</Link>
     </div>
   </nav>
 )

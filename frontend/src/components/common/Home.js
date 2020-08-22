@@ -102,7 +102,7 @@ const Home = () => (
     </div>
 
 
-    <div className="footer">
+    <div className="footer-main">
       <div className="footer-text">
         <h1>Gigme</h1>
       </div>

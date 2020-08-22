@@ -115,7 +115,7 @@ nav a {
   width: 50vw;
 }
 
-/* Hero */
+/* Heros */
 
 .hero-home {
   height: 390px;
@@ -128,6 +128,37 @@ nav a {
 .hero-home-txt {
   margin-left: 40px;
   width: 300px;
+}
+
+.hero-gigs {
+  height: 390px;
+  width: 100vw;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+}
+
+.hero-gigs-txt {
+  margin-left: 40px;
+  width: 300px;
+}
+
+.hero-gigs-indv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #FBFAF4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-gigs-indv-txt {
+  margin-left: 50px;
+  width: 600px;
+}
+
+.hero-gigs-indv-img {
+  margin-right: 50px;
 }
 
 /* Featured Events */
@@ -249,13 +280,38 @@ nav a {
   margin-bottom: 40px;
 }
 
+/* Form */
+
+.form-area {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FBFAF4;
+  height: 80vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  margin-left: 50px;
+}
+
+.form-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 
 /* Footer */
 
-.footer {
+.footer-main {
   background-color: #FF9E9E;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@import '~bulma/bulma.sass';
