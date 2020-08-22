@@ -8,8 +8,26 @@ import GigIndex from './components/gigs/GigIndex'
 import GigShow from './components/gigs/GigShow'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+// import React from 'react'
+import axios from 'axios'
 
-const App = () => {
+class App extends React.Component{
+  state = {
+    gigs: []
+  }
+
+  async componentDidMount() {
+    try {
+      const res = await axios.get('http://localhost:3000/api/events')
+      // console.log(res.data)
+      this.setState({ gigs: res.data })
+      console.log(this.state.gigs)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+render(){
   return (
     <BrowserRouter>
       <Navbar />
@@ -23,6 +41,7 @@ const App = () => {
       </Switch>
     </BrowserRouter>
   )
+}
 }
 
 export default App
