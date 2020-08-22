@@ -10,6 +10,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 // import React from 'react'
 import axios from 'axios'
+import Maps from './components/gigs/Maps'
 
 class App extends React.Component{
   state = {
@@ -37,6 +38,7 @@ render(){
       <Switch>
         //! Please make sure if sending props that are all named uniquely here
         <Route exact path="/" render={(props) => <Home homeProps={this.state.gigs}/>}/>
+        <Route exact path="/gigs/map" component={Maps}/>
         <Route exact path="/gigs/:id" render={(props) => <GigShow singleGigProps={this.state.gigs}/>}/>
         <Route exact path="/gigs" render={(props) => <GigIndex gigprops={this.state.gigs}/>}/>
         <Route exact path="/community" component={Community}/>
