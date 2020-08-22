@@ -2,7 +2,8 @@ module.exports = [
   {
     username: 'Liam',
     email: 'liam@email',
-    genres: 'rock',
+    genres: 'grime',
+    password: 'pass',
     passwordConfirmation: 'pass',
     mySite: 'http://cnn.com/',
     profilePicture: 'https://i.imgur.com/d9wqAR5.jpg',
@@ -12,6 +13,7 @@ module.exports = [
     username: 'Ash',
     email: 'ash@email',
     genres: 'electronic',
+    password: 'pass',
     passwordConfirmation: 'pass',
     mySite: 'http://cnn.com/',
     profilePicture: 'https://i.imgur.com/sfreHS3.jpg' ,

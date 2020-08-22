@@ -18,15 +18,15 @@ async function login (req, res, next) {
     const user = await User.findOne({ email: req.body.email }) 
     if (!user || !user.validatePassword(req.body.password)) {
       throw new Error() } 
-      const token = jwt.sign( 
-        { sub: user._id }, 
-        secret, 
-        { expiresIn: '7 days' } 
-      )
-      res.status(202).json({ //! Pre-token logging in.
-        message: `Welcome to GigMe ${user.username}`,
-        token
-      })
+    const token = jwt.sign( 
+      { sub: user._id }, 
+      secret, 
+      { expiresIn: '7 days' } 
+    )
+    res.status(202).json({ //! Pre-token logging in.
+      message: `Welcome to GigMe ${user.username}`,
+      token
+    })
   }
   
   catch (err) {

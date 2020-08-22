@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
-const genreSchema = new mongoose.Schema({
-  text: { type: String, required: true } // control this input with a dropdown menu? Would help keep searches accurate?
-})
+// const genreSchema = new mongoose.Schema({
+//   text: { type: String } // control this input with a dropdown menu? Would help keep searches accurate?
+// })
 
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 50 },
   email: { type: String, required: true, unique: true },
-  genres: [genreSchema], //not sure if this is best way to deal with this? 
+  // genres: [genreSchema], //not sure if this is best way to deal with this? 
   aboutMe: { type: String , required: false },
   mySite: { type: String , required: false }, //for people to link a website or social media account?
   profilePicture: { type: String } , // would be helpful to find a way to upload and host images? 
