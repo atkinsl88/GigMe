@@ -6,6 +6,7 @@ import Home from './components/common/Home'
 import Community from './components/common/Community'
 import GigIndex from './components/gigs/GigIndex'
 import GigShow from './components/gigs/GigShow'
+import GigCalendar from './components/gigs/GigCalendar'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 // import React from 'react'
@@ -43,6 +44,7 @@ render(){
         <Route exact path="/gigs" render={(props) => <GigIndex gigprops={this.state.gigs}/>}/>
         <Route exact path="/community" component={Community}/>
         <Route path="/register" component={Register} />
+        <Route path="/gigcalendar" component={GigCalendar} />
         <Route path="/login" component={Login} />
       </Switch>
     </BrowserRouter>

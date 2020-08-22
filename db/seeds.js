@@ -16,13 +16,27 @@ mongoose.connect(
     try {
       await db.dropDatabase() // * empty the database of all previous data
       console.log('Database Dropped 👍')
+<<<<<<< HEAD
+
+      const users = await User.create(userData) // * recreate the users
+
+      console.log(`${'🙂'.repeat(users.length)} created`)
+
+=======
       const users = await User.create(userData) // * recreate the users
       console.log(`${'🙂'.repeat(users.length)} created`)
+>>>>>>> 8dc3949bbb588bf01fd173081d9eb7e6c31f5833
       const eventsWithUsers = eventData.map(event => { // * map over all the queens and add one of our newly created users and the queens "user" (the person who created it)
         event.user = users[0]._id
         return event
       })
+<<<<<<< HEAD
+
       const events = await Event.create(eventsWithUsers) // * We re create all that data
+
+=======
+      const events = await Event.create(eventsWithUsers) // * We re create all that data
+>>>>>>> 8dc3949bbb588bf01fd173081d9eb7e6c31f5833
       console.log(`${events.length} Events created 🥁`)
      
       await mongoose.connection.close() // * close the connection to the database

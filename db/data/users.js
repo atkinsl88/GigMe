@@ -2,7 +2,11 @@ module.exports = [
   {
     username: 'Liam',
     email: 'liam@email',
+<<<<<<< HEAD
+    genres: 'grime',
+=======
     genres: 'rock',
+>>>>>>> 8dc3949bbb588bf01fd173081d9eb7e6c31f5833
     password: 'pass',
     passwordConfirmation: 'pass',
     mySite: 'http://cnn.com/',
