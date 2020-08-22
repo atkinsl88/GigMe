@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const commentSchema = new mongoose.Schema({
-  text: { type: String, required: true, maxlength: 500 },
+  text: { type: String, required: true, maxlength: 100 },
   user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 }, {
   timestamps: true
@@ -24,7 +24,7 @@ const eventSchema = new mongoose.Schema({
   posterImage: { type: String, required: true }, //url for image
   eventPrice: { type: String , required: false },
   aboutEvent: { type: String, required: false },
-  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
+  // user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
   comments: [commentSchema] //comments embedded
 } , {
   timestamps: true
