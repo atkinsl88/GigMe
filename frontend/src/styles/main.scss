@@ -89,7 +89,7 @@ nav a {
 .nav-logo {
   display: flex;
   justify-content: flex-start;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .nav-logo a {
@@ -104,18 +104,18 @@ nav a {
 .nav-lft {
   display: flex;
   justify-content: flex-start;
-  margin-left: 30px;
+  margin-left: 40px;
   width: 50vw;
 }
 
 .nav-rgt {
   display: flex;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 40px;
   width: 50vw;
 }
 
-/* Hero */
+/* Heros */
 
 .hero-home {
   height: 390px;
@@ -126,8 +126,39 @@ nav a {
 }
 
 .hero-home-txt {
-  margin-left: 30px;
+  margin-left: 40px;
   width: 300px;
+}
+
+.hero-gigs {
+  height: 390px;
+  width: 100vw;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+}
+
+.hero-gigs-txt {
+  margin-left: 40px;
+  width: 300px;
+}
+
+.hero-gigs-indv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #FBFAF4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-gigs-indv-txt {
+  margin-left: 50px;
+  width: 600px;
+}
+
+.hero-gigs-indv-img {
+  margin-right: 50px;
 }
 
 /* Featured Events */
@@ -141,15 +172,15 @@ nav a {
   height: 70px;
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .three-col {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .three-col-event {
@@ -171,13 +202,13 @@ nav a {
 .links-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .links-boxes-lft {
   height: 220px;
-  width: 560px;
+  width: 44vw;
   background-color: #6455C1;
   display: flex;
   justify-content: center;
@@ -191,7 +222,7 @@ nav a {
 
 .links-boxes-rgt{
   height: 220px;
-  width: 560px;
+  width: 44vw;
   background-color: #FFDECA;
   display: flex;
   justify-content: center;
@@ -207,11 +238,12 @@ nav a {
 .genres {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .genres > div {
-  margin-right: 20px;
+  margin-right: 15px;
   margin-bottom: 20px;
   height: 55px;
   width: 140px;
@@ -231,7 +263,7 @@ nav a {
 .map-icons {
   display: flex;
   justify-content: flex-end;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .map-icons img {
@@ -243,18 +275,43 @@ nav a {
   height: 520px;
   background-color: grey;
   margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 40px;
+}
+
+/* Form */
+
+.form-area {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FBFAF4;
+  height: 80vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500px;
+  margin-left: 50px;
+}
+
+.form-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 
 /* Footer */
 
-.footer {
+.footer-main {
   background-color: #FF9E9E;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+@import '~bulma/bulma.sass';

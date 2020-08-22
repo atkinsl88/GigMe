@@ -9,9 +9,15 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 50 },
   email: { type: String, required: true, unique: true },
   // genres: [genreSchema], //not sure if this is best way to deal with this? 
+<<<<<<< HEAD
   aboutMe: { type: String , required: false },
   mySite: { type: String , required: false }, //for people to link a website or social media account?
   profilePicture: { type: String } , // would be helpful to find a way to upload and host images? 
+=======
+  // aboutMe: { type: String , required: false },
+  // mySite: { type: String , required: false }, //for people to link a website or social media account?
+  // profilePicture: { type: String } , // would be helpful to find a way to upload and host images? 
+>>>>>>> de936076e3ea21dd7af2037d483580ba426cc0c4
   password: { type: String, required: true }
   //not sure how to deal with commented on events and liked events, etc? 
 })
