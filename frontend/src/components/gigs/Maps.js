@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import MapGL, { Marker , Popup } from 'react-map-gl'
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
+// import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../../../src/styles/main.scss'
 
@@ -52,9 +52,8 @@ return (
             <span role="img" aria-label="marker" height="50" onClick = {(e) => {
               console.log(e.target.venue)
             }}>🔴</span>
-            <div className="mapLabels" key={venue._id}>{venue.venue}</div>
+            <div key={venue.artistName} className="mapLabels" >{venue.venue}</div>
           </Marker>
-          {/* <h4>{venue.venue}</h4> */}
           </>
         ))}
         
