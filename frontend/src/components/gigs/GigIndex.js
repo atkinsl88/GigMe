@@ -1,6 +1,6 @@
 import React from 'react'
 // import { getAllGigs } from '../../../../lib/api'
-import GigCard from './GigCard'
+// import GigCard from './GigCard'
 
 class GigIndex extends React.Component {
 
