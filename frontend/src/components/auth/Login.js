@@ -59,13 +59,6 @@ class Login extends React.Component {
           </div>
         </div>
 
-        <div className="footer-main">
-          <div className="footer-text">
-            <h1>Gigme</h1>
-          </div>
-        </div>
-
-
       </section>
     )
   }

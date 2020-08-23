@@ -1,16 +1,16 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-const GigCard = ({ name, image, artistName,venue, date, eventPrice }) => (
+const GigCard = ({ name, posterImage, artistName,venue, date, eventPrice, _id }) => (
 
-  // <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
-  //   <Link to={`/gigs/${_id}`}>
+  <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
+    <Link to={`/gigs/${_id}`}>
 
       <div className="card">
 
         <div className="card-image">
           <figure className="image image is-1by1">
-            <img src={image} alt={name} loading="lazy" width="300" height="220" />
+            <img src={posterImage} alt={name} loading="lazy" width="300" height="220" />
           </figure>
         </div>
 
@@ -26,9 +26,9 @@ const GigCard = ({ name, image, artistName,venue, date, eventPrice }) => (
 
       </div>
 
-    // </Link>
+    </Link>
 
-  // </div>
+  </div>
 
 )
 
