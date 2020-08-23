@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import { BrowserRouter, Switch , Route  } from 'react-router-dom'
 
 import Navbar from './components/common/NavBar'
@@ -14,19 +14,19 @@ import Login from './components/auth/Login'
 import Maps from './components/gigs/Maps'
 
 class App extends React.Component{
-  state = {
-    gigs: []
-  }
+  // state = {
+  //   gigs: []
+  // }
 
-  async componentDidMount() {
-    try {
-      const res = await axios.get('http://localhost:3000/api/events')
-      // console.log(res.data)
-      // this.setState({ gigs: res.data })
-    } catch (err) {
-      console.log(err)
-    }
-  }
+  // async componentDidMount() {
+  //   try {
+  //     const res = await axios.get('http://localhost:3000/api/events')
+  //     console.log(res.data)
+  //     this.setState({ gigs: res.data })
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
 
 render(){
 
@@ -36,10 +36,10 @@ render(){
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/" render={(props) => <Home homeProps={this.state.gigs}/>}/>
+        <Route exact path="/" component={Home}/>
         <Route exact path="/gigs/map" component={Maps}/>
-        <Route exact path="/gigs/:id" render={(props) => <GigShow singleGigProps={this.state.gigs}/>}/>
-        <Route exact path="/gigs" render={(props) => <GigIndex gigprops={this.state.gigs}/>}/>
+        <Route exact path="/gigs/:id" component={GigShow}/>
+        <Route exact path="/gigs" component={GigIndex}/>
         <Route exact path="/community" component={Community}/>
         <Route path="/register" component={Register} />
         <Route path="/gigcalendar" component={GigCalendar} />

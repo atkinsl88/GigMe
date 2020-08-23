@@ -6,7 +6,7 @@ class GigCard extends React.Component {
   
   render() {
     
-    {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
+    // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
 
     return (
       <section>

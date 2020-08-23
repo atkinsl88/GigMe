@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import MapGL, { Marker , Popup } from 'react-map-gl'
+import MapGL, { Marker } from 'react-map-gl'
 // import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../../../src/styles/main.scss'
