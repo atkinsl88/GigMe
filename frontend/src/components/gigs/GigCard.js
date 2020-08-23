@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
-const GigCard = ({ name, image, artistName,venue, date, eventPrice, _id }) => (
+const GigCard = ({ name, image, artistName,venue, date, eventPrice }) => (
 
-  <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
-    <Link to={`/gigs/${_id}`}>
+  // <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
+  //   <Link to={`/gigs/${_id}`}>
 
       <div className="card">
 
@@ -26,9 +26,9 @@ const GigCard = ({ name, image, artistName,venue, date, eventPrice, _id }) => (
 
       </div>
 
-    </Link>
+    // </Link>
 
-  </div>
+  // </div>
 
 )
 

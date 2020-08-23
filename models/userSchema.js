@@ -2,11 +2,7 @@ const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 // const genreSchema = new mongoose.Schema({
-<<<<<<< HEAD
-//   text: { type: String } // control this input with a dropdown menu? Would help keep searches accurate?
-=======
 //   text: { type: String, required: true } // control this input with a dropdown menu? Would help keep searches accurate?
->>>>>>> 8dc3949bbb588bf01fd173081d9eb7e6c31f5833
 // })
 
 const userSchema = new mongoose.Schema({

@@ -1,21 +1,27 @@
 import React from 'react'
-// import { getAllGigs } from '../../../../lib/api'
+// import { getAllEvents } from '../../lib/api'
+import axios from 'axios'
 import GigCard from './GigCard'
 
 class GigIndex extends React.Component {
+  state = {
+    events: []
+  }
 
-  // async componentDidMount() {
-  //   try {
-  //     const res = await getAllGigs()
-  //     this.setState({ gigs: res.data })
-  //   } catch (err) {
-  //     this.props.history.push('/notfound')
-  //   }
-  // }
+  async componentDidMount() {
+    try {
+      const res = await axios.get('http://localhost:3000/api/events')
+      this.setState({ events: res.data })
+      console.log(res.data)
+    } catch (err) {
+      // this.props.history.push('/notfound')
+      console.log(err)
+    }
+  }
 
   render() {
 
-console.log(this.props.gigprops) //data from the API here
+// console.log(this.props.gigprops) //data from the API here
 
     return (
       <section>
@@ -26,13 +32,13 @@ console.log(this.props.gigprops) //data from the API here
           </div>
         </div>
 
-        {/* <div className="container">
+        <div className="container">
           <div className="columns is-multiline">
-            {this.props.gigprops.map(gig => (
-              <GigCard key={gig._id} {...gig}/>
+            {this.state.events.map(event => (
+              <GigCard key={event._id} {...event}/>
             ))}
           </div>
-        </div> */}
+        </div>
 
       </section>
     )
