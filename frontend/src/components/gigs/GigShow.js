@@ -28,14 +28,14 @@ class GigShow extends React.Component {
         <div className="hero-gigs-indv">
           <div className="hero-gigs-indv-txt">
             <h2>Event Info</h2>
-            <h3>{this.state.event.artistName}</h3>
+            <span className="gigShowArtistName">{this.state.event.artistName}</span>
             <h4>{this.state.event.venue}</h4>
             <h4>{this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
           </div>
           <div className="hero-gigs-indv-img">
-            <img src={this.state.event.posterImage} alt="logo" />  
+            <img src={this.state.event.posterImage} alt="logo" />
           </div>
         </div>
 

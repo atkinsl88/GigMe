@@ -117,9 +117,10 @@ class Home extends React.Component{
       <div className="map-icons">
         <img src={icon} alt="logo" />
         <img src={icon2} alt="logo" />
-      </div>
+      </div><div className="mapArea">
       <Map className="map">
       </Map>
+      </div>
     </div>
 
 

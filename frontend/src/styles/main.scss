@@ -160,13 +160,33 @@ nav a {
 
 .hero-gigs-indv-img {
   margin-right: 50px;
+
+  // margin:0px;
 }
 
+.hero-gigs-indv-img img{
+  margin: 0 50px;
+  max-width: 550px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  padding:0px;
+  display: block;
+  border-radius: 25px;
+  // margin:0px;
+}
+
+.gigShowArtistName {
+  color: #081C6A;
+  font-size: 20px;
+  font-weight: bold;
+
+}
 /* Featured Events */
 
 .featured-home {
   background-color: #FFFFFF;
-  padding-bottom: 40px
+  padding-bottom: 40px;
 }
 
 .home-title {
@@ -269,6 +289,13 @@ nav a {
 
 .map-icons img {
   margin: 5px;
+}
+
+.mapArea {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding:30px;
 }
 
 
