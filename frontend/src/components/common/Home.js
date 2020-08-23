@@ -5,6 +5,7 @@ import image2 from '../../assets/003.png'
 import image3 from '../../assets/004.png'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
+import Map from '../gigs/Maps'
 
 class Home extends React.Component{
   state = {
@@ -117,17 +118,17 @@ class Home extends React.Component{
         <img src={icon} alt="logo" />
         <img src={icon2} alt="logo" />
       </div>
-      <div className="map">
-      </div>
+      <Map className="map">
+      </Map>
     </div>
 
 
-    <div className="footer-main">
+    {/* <div className="footer-main">
       <div className="footer-text">
         <h1>Gigme</h1>
         <h4>made with ♥︎ by Ash, Aishath, Liam and Noa</h4>
       </div>
-    </div>
+    </div> */}
 
   </section>
   

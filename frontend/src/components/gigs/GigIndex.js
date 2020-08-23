@@ -12,7 +12,7 @@ class GigIndex extends React.Component {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
       this.setState({ events: res.data })
-      console.log(res.data)
+      // console.log(res.data)
     } catch (err) {
       // this.props.history.push('/notfound')
       console.log(err)

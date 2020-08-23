@@ -10,7 +10,7 @@ import GigShow from './components/gigs/GigShow'
 import GigCalendar from './components/gigs/GigCalendar'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
-// import React from 'react'
+import Footer from './components/common/Footer'
 import Maps from './components/gigs/Maps'
 
 class App extends React.Component{
@@ -45,6 +45,7 @@ render(){
         <Route path="/gigcalendar" component={GigCalendar} />
         <Route path="/login" component={Login} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }

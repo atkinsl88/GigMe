@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
+@import '~bulma/bulma.sass';
 
 /* Misc */
 
@@ -272,7 +273,6 @@ nav a {
 
 
 .map {
-  height: 520px;
   background-color: grey;
   margin-top: 20px;
   margin-left: 40px;
@@ -321,4 +321,3 @@ nav a {
   font-size: 16px;
 }
 
-@import '~bulma/bulma.sass';
