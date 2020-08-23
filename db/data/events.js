@@ -52,7 +52,7 @@ module.exports = [
     hasBar: true, 
     latitude: 51.501267 , 
     longitude: -0.17754,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '90'
   },
   { 
@@ -66,7 +66,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '75'
   },
   { 
@@ -80,7 +80,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: 25
   },
   { 
@@ -94,7 +94,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '35'
   },
   { 
@@ -108,7 +108,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '35'
   },
   { 
@@ -122,7 +122,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '45'
   },
   { 
@@ -136,7 +136,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '60'
   },
   { 
@@ -150,7 +150,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.530767 , 
     longitude: -0.120263,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '25'
   },
   { 
@@ -164,7 +164,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '22'
   },
   { 
@@ -178,7 +178,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '65'
   },
   { 
@@ -192,7 +192,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '60'
   },
   { 
@@ -206,7 +206,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.552031 ,  
     longitude: -0.141892 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '45'
   },
   { 
@@ -220,7 +220,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.552031 ,  
     longitude: -0.141892 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '45'
   },
   { 
@@ -234,7 +234,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '100'
   },
   { 
@@ -248,7 +248,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '155'
   },
   { 
@@ -262,7 +262,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '175'
   },
   {
@@ -276,7 +276,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.519959 , 
     longitude: -0.094129,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '35'
   },
   {
@@ -290,7 +290,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.487092 , 
     longitude: -0.197709 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '155'
   },
   {
@@ -304,7 +304,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5347485 ,  
     longitude: -0.1381645,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '75'
   },
   {
@@ -318,7 +318,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.530767 , 
     longitude: -0.120263,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '66'
   },
   {
@@ -332,7 +332,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.506494 ,  
     longitude: -0.231685 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '65'
   },
   {
@@ -346,7 +346,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.46332 , 
     longitude: -0.111692 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '25'
   },
   {
@@ -360,7 +360,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '90'
   },
   {
@@ -374,7 +374,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.516215 , 
     longitude: -0.135333 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '45'
   },
   {
@@ -388,7 +388,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.531705 , 
     longitude: -0.11188 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '250'
   },
   {
@@ -402,7 +402,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.51961 , 
     longitude: -0.102391 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '200'
   },
   {
@@ -416,7 +416,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.51961 , 
     longitude: -0.102391 ,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '35'
   },
   {
@@ -430,7 +430,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '22'
   },
   {
@@ -444,7 +444,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.519959 , 
     longitude: -0.094129,
-    aboutEvent: 'place event information here',
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
     eventPrice: '35'
   },
   {
@@ -458,7 +458,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.537413 , 
     longitude: -0.1457,
-    aboutEvent: 'place event information here' ,
+    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.' ,
     eventPrice:	'65'
   }
 ]
