@@ -1,18 +1,13 @@
 import React from 'react'
 import axios from 'axios'
-import image from '../../assets/001.png'
-import image2 from '../../assets/003.png'
-import image3 from '../../assets/004.png'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
-
 class Home extends React.Component{
   state = {
     gigs: [],
     randomChoices: []
   }
-
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
@@ -25,7 +20,6 @@ class Home extends React.Component{
       console.log(err)
     }
   }
-
   getRandom = () => {
     let currentChoices = []
     for (let i = 0; i < 3; i++) {
@@ -51,13 +45,11 @@ class Home extends React.Component{
     return(
 
   <section>
-
     <div className="hero-home">
       <div className="hero-home-txt">
         <h1>Find concerts in your area</h1>
       </div>
     </div>
-
     <div className="featured-home">
       <div className="home-title">
         <h2>Featured Events</h2>
@@ -76,7 +68,6 @@ class Home extends React.Component{
         })}
       </div>
     </div>
-
     <div className="links-home">
       <div className="home-title">
         <h2>Links</h2>
@@ -90,8 +81,6 @@ class Home extends React.Component{
         </div>
       </div>
     </div>
-
-
     <div className="map-home">
       <div className="home-title">
         <h2>Search Events</h2>
@@ -118,11 +107,8 @@ class Home extends React.Component{
       </Map>
       </div>
     </div>
-
   </section>
-  
   )
   }
 }
-
 export default Home
