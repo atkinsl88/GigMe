@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
+@import '~bulma/bulma.sass';
 
 /* Misc */
 
@@ -303,6 +304,10 @@ nav a {
   justify-content: flex-start;
 }
 
+.box {
+  border-radius: 0px
+}
+
 
 /* Footer */
 
@@ -320,5 +325,3 @@ nav a {
   font-weight: bold;
   font-size: 16px;
 }
-
-@import '~bulma/bulma.sass';
