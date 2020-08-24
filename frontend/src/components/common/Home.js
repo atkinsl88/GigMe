@@ -6,34 +6,49 @@ import image3 from '../../assets/004.png'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
-
 class Home extends React.Component{
   state = {
-    gigs: []
+    gigs: [],
+    randomChoices: []
   }
-
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
       // console.log(res.data)
       this.setState({ gigs: res.data })
+      // console.log(this.getRandom)
+      this.getRandom()
+      console.log(this.state.randomChoices)
     } catch (err) {
       console.log(err)
     }
   }
-
-  render(){
-
-    console.log(this.state.gigs)
+  getRandom = () => {
+    let currentChoices = []
+    for (let i = 0; i < 3; i++) {
+      const random = this.state.gigs[Math.floor(Math.random() * this.state.gigs.length)]
+      console.log(random)
+      currentChoices.push(random)
+      // this.setState({ randomChoices: random })
+      // if (random === this.state.gigs) {
+      //   return this.getRandom()
+      // } else {
+      //   currentChoices.push(random)
+      //   console.log(this.state.randomChoices)
+      // }
+    } 
+    console.log(currentChoices)
+    this.setState({ randomChoices: [...currentChoices] })
+  }
+  render() {
+    // if (!this.state.randomChoices) return
     return(
   <section>
-
     <div className="hero-home">
       <div className="hero-home-txt">
         <h1>Find concerts in your area</h1>
       </div>
     </div>
-
     <div className="featured-home">
       <div className="home-title">
         <h2>Featured Events</h2>
@@ -41,7 +56,10 @@ class Home extends React.Component{
       <div className="three-col">
         <div className="three-col-event">
           <img src={image} alt="logo" />
-          <h3>Spinal Tap</h3>
+          <h3>{this.state.randomChoices.map(name => {
+              return <p key={name.id}>{name.artistName}</p>
+          })}</h3>
+          {/* <h3>{this.state.randomChoices[0].artistName}</h3> */}
           <h4>Vocalist and Guitarist from local band Third Dart returns to the hot box for a solo show.</h4>
           <div className="three-col-event-info">
             <div>
@@ -80,7 +98,6 @@ class Home extends React.Component{
         </div>
       </div>
     </div>
-
     <div className="links-home">
       <div className="home-title">
         <h2>Links</h2>
@@ -94,8 +111,6 @@ class Home extends React.Component{
         </div>
       </div>
     </div>
-
-
     <div className="map-home">
       <div className="home-title">
         <h2>Search Events</h2>
@@ -122,19 +137,8 @@ class Home extends React.Component{
       </Map>
       </div>
     </div>
-
-
-    {/* <div className="footer-main">
-      <div className="footer-text">
-        <h1>Gigme</h1>
-        <h4>made with ♥︎ by Ash, Aishath, Liam and Noa</h4>
-      </div>
-    </div> */}
-
   </section>
-  
   )
   }
 }
-
 export default Home
