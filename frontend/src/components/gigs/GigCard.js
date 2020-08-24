@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-<<<<<<< HEAD
-const GigCard = ({ name, image, artistName, venue, date, eventPrice, _id }) => (
-=======
-const GigCard = ({ name, posterImage, artistName,venue, date, eventPrice, _id }) => (
->>>>>>> c09e9ce24bc7b9ad0c5fd689a9c165a7a7750862
+const GigCard = ({ name, posterImage, artistName, venue, date, eventPrice, _id }) => (
 
   <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
     <Link to={`/gigs/${_id}`}>
