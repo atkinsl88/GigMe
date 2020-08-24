@@ -71,6 +71,19 @@ async function eventsCommentDelete (req, res) {
   }
 }
 
+async function eventsLike (req, res) {
+  try {
+    const event = await Event.findById(req.params.id)
+    const likeBody = req.body 
+    likeBody.user = req.currentUser._id
+    event.likes.push(likeBody)
+    await event.save()
+    res.status(201).json(event)
+  } catch (err) {
+    res.status(400).json(err)
+  }
+}
+
 module.exports = {
   index: eventsIndex,
   show: eventsShow,
@@ -78,5 +91,6 @@ module.exports = {
   edit: eventsEdit,
   delete: eventsDelete,
   commentCreate: eventsCommentCreate,
-  commentDelete: eventsCommentDelete
+  commentDelete: eventsCommentDelete,
+  eventsLike 
 }

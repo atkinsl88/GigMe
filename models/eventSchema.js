@@ -7,6 +7,11 @@ const commentSchema = new mongoose.Schema({
   timestamps: true
 })
 
+const likeSchema = new mongoose.Schema({
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true, unique: true },
+  text: { type: String }
+})
+
 // const artistSchema = new mongoose.Schema({
 //   artistName: { type: String, required: true , maxlength: 60 }
 // })
@@ -22,10 +27,11 @@ const eventSchema = new mongoose.Schema({
   latitude: { type: Number, required: true },// for map markers
   longitude: { type: Number, required: true }, //for map markers
   posterImage: { type: String, required: true }, //url for image
-  eventPrice: { type: String , required: false },
-  aboutEvent: { type: String, required: false },
+  eventPrice: { type: String },
+  aboutEvent: { type: String },
   user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
-  comments: [commentSchema] //comments embedded
+  comments: [commentSchema], //comments embedded
+  likes: [likeSchema]
 } , {
   timestamps: true
 })
