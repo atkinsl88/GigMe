@@ -1,6 +1,7 @@
 import React from 'react'
 import image from '../../assets/002.png'
 import { loginUser } from '../../lib/api'
+import { setToken } from "../../lib/auth"
 
 class Login extends React.Component {
   state = {
@@ -22,6 +23,8 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       console.log(res.data.token)
+      setToken(res.data.token)
+      this.props.history.push('/')
     } catch (err) {
       console.log(err.response.data)
     }
