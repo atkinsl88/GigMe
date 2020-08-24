@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
-import MapGL, { Marker , Popup } from 'react-map-gl'
-import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
+import MapGL, { Marker } from 'react-map-gl'
+// import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../../../src/styles/main.scss'
 
@@ -36,8 +36,8 @@ return (
   <MapGL
   {...this.state.viewport}
         mapboxApiAccessToken="pk.eyJ1IjoiYWlzaGF0aG5hc2lyIiwiYSI6ImNrZHllYW51ODRodGIydHJvbm1yc2lkZHgifQ.8C_6datWjuBQUQbfsBAsOg"
-        height={'100vh'}
-        width={'100vw'}
+        height={'520px'}
+        width={'940px'}
         onViewportChange={viewport => this.setState({viewport})}
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
@@ -52,9 +52,8 @@ return (
             <span role="img" aria-label="marker" height="50" onClick = {(e) => {
               console.log(e.target.venue)
             }}>🔴</span>
-            <div className="mapLabels" key={venue._id}>{venue.venue}</div>
+            <div key={venue.artistName} className="mapLabels" >{venue.venue}</div>
           </Marker>
-          {/* <h4>{venue.venue}</h4> */}
           </>
         ))}
         

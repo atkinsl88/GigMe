@@ -1,12 +1,31 @@
 import React from 'react'
+import axios from 'axios'
 import image from '../../assets/001.png'
 import image2 from '../../assets/003.png'
 import image3 from '../../assets/004.png'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
+import Map from '../gigs/Maps'
 
-const Home = () => (
+class Home extends React.Component{
+  state = {
+    gigs: []
+  }
 
+  async componentDidMount() {
+    try {
+      const res = await axios.get('http://localhost:3000/api/events')
+      // console.log(res.data)
+      this.setState({ gigs: res.data })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  render(){
+
+    console.log(this.state.gigs)
+    return(
   <section>
 
     <div className="hero-home">
@@ -98,20 +117,24 @@ const Home = () => (
       <div className="map-icons">
         <img src={icon} alt="logo" />
         <img src={icon2} alt="logo" />
-      </div>
-      <div className="map">
+      </div><div className="mapArea">
+      <Map className="map">
+      </Map>
       </div>
     </div>
 
 
-    <div className="footer-main">
+    {/* <div className="footer-main">
       <div className="footer-text">
         <h1>Gigme</h1>
+        <h4>made with ♥︎ by Ash, Aishath, Liam and Noa</h4>
       </div>
-    </div>
+    </div> */}
 
   </section>
   
-)
+  )
+  }
+}
 
 export default Home
