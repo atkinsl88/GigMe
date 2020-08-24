@@ -4,7 +4,8 @@ import axios from 'axios'
 
 class GigShow extends React.Component {
   state = {
-    event: []
+    event: [],
+    likes: []
   }
 
   async componentDidMount() {
@@ -13,11 +14,33 @@ class GigShow extends React.Component {
       const res = await axios.get(`http://localhost:3000/api/events/${eventId}`)
       this.setState({ event: res.data })
       console.log(res.data)
+      console.log(this.state.event.likes.length)
+      this.setState({ likes: res.likes.length })
+      console.log(this.state.event.likes)
+      this.handleClick()
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  async componentDidUpdate() {
+    try {
+      
     } catch (err) {
       console.log(err)
     }
   }
   
+  handleClick = (e) => {
+    // const likesArray = []
+    if (e.target.value === 'like') {
+      this.state.likes.push('like')
+      // likesArray.push('likes')
+      // this.setState({ likes: [...likesArray] })
+      console.log(this.state.likes)
+    }
+  }
+
   render() {
     
     // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
@@ -33,6 +56,10 @@ class GigShow extends React.Component {
             <h4>{this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
+
+            <button onClick={this.handleClick} value="like">Like</button>
+            <p>{this.state.likes.length}</p>
+
           </div>
           <div className="hero-gigs-indv-img">
             <img src={this.state.event.posterImage} alt="logo" />
