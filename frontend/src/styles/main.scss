@@ -198,19 +198,12 @@ nav a {
 
 .three-col {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 40px;
-  margin-right: 40px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.three-col-event {
-  width: 350px;
-}
-
-.three-col-event-info {
-  display: flex;
-  justify-content: flex-start;
+.three-col-content {
+  margin: 20px;
 }
 
 /* Links */
@@ -330,6 +323,10 @@ nav a {
   justify-content: flex-start;
 }
 
+.box {
+  border-radius: 0px
+}
+
 
 /* Footer */
 
@@ -347,4 +344,3 @@ nav a {
   font-weight: bold;
   font-size: 16px;
 }
-
