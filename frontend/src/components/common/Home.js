@@ -62,52 +62,18 @@ class Home extends React.Component{
       <div className="home-title">
         <h2>Featured Events</h2>
       </div>
+
       <div className="three-col">
-        <div className="three-col-event">
-          <img src={image} alt="logo" />
-
-          <h3>{this.state.randomChoices.map(name => {
-              return <p key={name.id}>{name.artistName}</p>
-          })}</h3>
-
-          {/* <h3>{this.state.randomChoices[0].artistName}</h3> */}
-
-          <h4>Vocalist and Guitarist from local band Third Dart returns to the hot box for a solo show.</h4>
-          <div className="three-col-event-info">
-            <div>
-              <h5>26/09/2020, 7:00pm</h5>
+        {this.state.randomChoices.map(name => {
+          return (
+            <div className="three-col-content" key={name.id}>
+              <img src={name.posterImage} alt="logo" />
+              <h3>{name.artistName}</h3>
+              <h4>{name.aboutEvent}</h4>
+              <h5>{name.date}</h5>
             </div>
-            <div>
-              <h6>London</h6>
-            </div>
-          </div>
-        </div>
-        <div className="three-col-event">
-          <img src={image2} alt="logo" />
-          <h3>Lady Gaga</h3>
-          <h4>Rough Trade Shops are extremely excited to present this Zoom hosted virtual event.</h4>
-          <div className="three-col-event-info">
-            <div>
-              <h5>30/09/2020, 7:00pm</h5>
-            </div>
-            <div>
-              <h6>London</h6>
-            </div>
-          </div>
-        </div>
-        <div className="three-col-event">
-          <img src={image3} alt="logo" />
-          <h3>Spinal Tap</h3>
-          <h4>Vocalist and Guitarist from local band Third Dart returns to the hot box for a solo show.</h4>
-          <div className="three-col-event-info">
-            <div>
-              <h5>26/09/2020, 7:00pm</h5>
-            </div>
-            <div>
-              <h6>London</h6>
-            </div>
-          </div>
-        </div>
+          )
+        })}
       </div>
     </div>
 
