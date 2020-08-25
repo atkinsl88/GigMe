@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { getToken } from './auth.js'
-
-
 const baseUrl = 'http://localhost:3000/api'
+
 export const withHeaders = () => { 
   return {
     headers: { Authorization: `Bearer ${getToken()}` }  
@@ -10,7 +9,6 @@ export const withHeaders = () => {
 }
 
 // // cheese requests 
-
 // export const getAllEvents = () => {
 //   return axios.get(`${baseUrl}/events`)
 // }

@@ -7,6 +7,7 @@ import { createLike } from '../../lib/api.js'
 
 const baseUrl = 'http://localhost:3000/api'
 class GigShow extends React.Component {
+
   state = {
     event: [],
     text: '',
@@ -19,6 +20,7 @@ class GigShow extends React.Component {
     }
   }
   async componentDidMount() {
+
     try {
       const eventId = this.props.match.params.id
       const res = await axios.get(`http://localhost:3000/api/events/${eventId}`)
