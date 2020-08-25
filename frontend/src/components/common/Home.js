@@ -73,12 +73,12 @@ class Home extends React.Component{
         <h2>Links</h2>
       </div>
       <div className="links-boxes">
-        <div className="links-boxes-lft">
-          <h2>All Gigs</h2>
-        </div>
-        <div className="links-boxes-rgt">
-          <h2>Community</h2>
-        </div>
+          <a href="/gigs" className="links-boxes-lft">
+            <h2>All Gigs</h2>
+          </a>
+          <a href="/community" className="links-boxes-rgt">
+            <h2>Community</h2>
+          </a>
       </div>
     </div>
     <div className="map-home">

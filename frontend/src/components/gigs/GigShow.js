@@ -5,7 +5,12 @@ import axios from 'axios'
 class GigShow extends React.Component {
   state = {
     event: [],
-    likes: []
+    likes: [],
+    comments: [],
+    Liked: 0,
+    formData:{
+      comment:'',
+    }
   }
 
   async componentDidMount() {
@@ -33,13 +38,27 @@ class GigShow extends React.Component {
   
   handleClick = (e) => {
     // const likesArray = []
+    let Liked = null
     if (e.target.value === 'like') {
       this.state.likes.push('like')
       // likesArray.push('likes')
       // this.setState({ likes: [...likesArray] })
       console.log(this.state.likes)
-    }
+      Liked = this.state.likes.length + 1
+      this.setState({ Liked : Liked})
+    } 
   }
+
+  handleChange = event => {
+    // const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
+    const formData = { ...this.state.formData, [event.target.name]: event.target.value }
+    // console.log(formData)
+    this.setState({ formData })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+    console.log(this.state.formData.comment)}
 
   render() {
     
@@ -69,6 +88,18 @@ class GigShow extends React.Component {
         <div className="home-title">
           <h2>Comments</h2>
         </div>
+        <form>
+
+        <textarea
+                  className="textarea"
+                  name="comment"
+                  value={this.state.formData.comment}
+                  onChange={this.handleChange}
+                />
+        <div>
+      <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+      </div>
+        </form>
 
       </section>
     )
