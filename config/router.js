@@ -32,4 +32,10 @@ router.route('/register')
 router.route('/login')
   .post(auth.login)
 
+router.route('/profiles')
+  .get(auth.profileIndex)
+
+router.route('/profiles/:id')
+  .get(auth.showProfile)
+
 module.exports = router

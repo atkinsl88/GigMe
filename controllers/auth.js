@@ -27,15 +27,33 @@ async function login (req, res, next) {
       message: `Welcome to GigMe ${user.username}`,
       token
     })
+  } catch (err) {
+    next(err)
   }
-  
-  catch (err) {
+}
+
+async function profileIndex (req, res, next) {
+  const profiles = await User.find().populate('user')
+  res.status(200).json(profiles)
+}
+
+async function showProfile (req, res, next) {
+  try {
+    const profiles = await User.findById(req.params.id).populate('user')
+    if (!profiles) throw new Error()
+    res.status(200).json(profiles)
+  } catch (err) {
+    res.json(err)
     console.log(err)
   }
 }
+  
+
 
 
 module.exports = {
   register,
-  login
+  login,
+  showProfile,
+  profileIndex
 }
