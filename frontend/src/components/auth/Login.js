@@ -33,7 +33,7 @@ class Login extends React.Component {
   render() {
     // const { formData } = this.state
     return (
-      <section>
+      <section className="login">
 
         <div className="hero-gigs-indv">
           <div className="hero-gigs-indv-txt">

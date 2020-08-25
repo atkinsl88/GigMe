@@ -316,13 +316,20 @@ nav a {
   margin-bottom: 40px;
 }
 
+/* Login */
+
+.login {
+  height: 85vh;
+  background-color: #FBFAF4;
+}
+
 /* Form */
 
 .form-area {
   display: flex;
   flex-wrap: wrap;
   background-color: #FBFAF4;
-  height: 80vh;
+  // height: 80vh;
 }
 
 .form {
@@ -333,14 +340,27 @@ nav a {
   margin-left: 50px;
 }
 
+.register-form {
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+
 .form-image {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: 10px;
+  margin-top: 20px;
 }
 
 .box {
   border-radius: 0px
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 
@@ -351,7 +371,7 @@ nav a {
   height: 80px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: flex-end;
 }
 
 // The below is for the map component - added by Aishath
