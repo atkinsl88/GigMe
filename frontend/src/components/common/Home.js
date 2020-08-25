@@ -3,6 +3,7 @@ import axios from 'axios'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
+import GigCalendar from '../gigs/GigCalendar'
 class Home extends React.Component{
   state = {
     gigs: [],
@@ -73,12 +74,12 @@ class Home extends React.Component{
         <h2>Links</h2>
       </div>
       <div className="links-boxes">
-        <div className="links-boxes-lft">
-          <h2>All Gigs</h2>
-        </div>
-        <div className="links-boxes-rgt">
-          <h2>Community</h2>
-        </div>
+          <a href="/gigs" className="links-boxes-lft">
+            <h2>All Gigs</h2>
+          </a>
+          <a href="/community" className="links-boxes-rgt">
+            <h2>Community</h2>
+          </a>
       </div>
     </div>
     <div className="map-home">
@@ -102,10 +103,18 @@ class Home extends React.Component{
       <div className="map-icons">
         <img src={icon} alt="logo" />
         <img src={icon2} alt="logo" />
-      </div><div className="mapArea">
-      <Map className="map">
-      </Map>
       </div>
+      
+      <div className="mapArea">
+        <Map className="map">
+        </Map>
+      </div>
+
+      <div className="calArea">
+        <GigCalendar className="cal">
+        </GigCalendar>
+      </div>
+
     </div>
   </section>
   )

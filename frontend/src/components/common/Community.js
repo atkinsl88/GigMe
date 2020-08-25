@@ -5,8 +5,8 @@ class Community extends React.Component {
     return (
       <section>
 
-        <div className="hero-gigs">
-          <div className="hero-gigs-txt">
+        <div className="hero-community">
+          <div className="hero-community-txt">
             <h1>Community</h1>
           </div>
         </div>

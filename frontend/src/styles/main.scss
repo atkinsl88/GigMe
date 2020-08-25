@@ -124,6 +124,7 @@ nav a {
   background-color: grey;
   display: flex;
   align-items: center;
+  background-image: url(https://i.imgur.com/Jj8wIjG.png);
 }
 
 .hero-home-txt {
@@ -137,6 +138,7 @@ nav a {
   background-color: grey;
   display: flex;
   align-items: center;
+  background-image: url(https://i.imgur.com/fD2RdRx.png);
 }
 
 .hero-gigs-txt {
@@ -160,9 +162,23 @@ nav a {
 
 .hero-gigs-indv-img {
   margin-right: 50px;
+}
+
+.hero-community {
+  height: 390px;
+  width: 100vw;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  background-image: url(https://i.imgur.com/drQe5dH.png);
+}
+
+.hero-community-txt {
+  margin-left: 40px;
+  width: 300px;
+}
 
   // margin:0px;
-}
 
 .hero-gigs-indv-img img{
   margin: 0 50px;
