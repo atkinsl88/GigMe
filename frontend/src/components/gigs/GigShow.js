@@ -1,6 +1,7 @@
 import React from 'react'
 // import image from '../../assets/001.png'
 import axios from 'axios'
+import { createComment } from '../../lib/api.js'
 
 const baseUrl = 'http://localhost:3000/api'
 
@@ -11,7 +12,7 @@ class GigShow extends React.Component {
     comments: [],
     Liked: 0,
     formData:{
-      comments:'',
+      text:'',
     }
   }
 
@@ -52,22 +53,22 @@ class GigShow extends React.Component {
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    // console.log(formData)
+    console.log(this.state.formData.text)
     this.setState({ formData })
     }
   
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault()
-    const formData = { ...this.state.formData, [event.target.name]: event.target.value }
+    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
-    console.log(this.state.formData.comments)
     console.log(`${baseUrl}/events/${eventId}`)
     try {
     // const eventId = this.props.match.params.id
-    return axios.post(`${baseUrl}/events/${eventId}/comments`, formData)}
+    const res = await createComment(this.state.formData, eventId)
+    console.log(this.state.formData.text)}
     catch (err) {
-      console.log(err)
+      console.log(err.response.data)
     }
   }
   
@@ -101,16 +102,18 @@ class GigShow extends React.Component {
           <h2>Comments</h2>
         </div>
         <section className="commentEventForm">
-        <form>
+        <form onSubmit={this.handleSubmit}>
         
         <textarea
                   className="textarea commentEventForm"
-                  name="comment"
-                  value={this.state.formData.comment}
+                  name="text"
+                  type="text"
                   onChange={this.handleChange}
+                  value={this.state.formData.text}
+                  
                 />
         <div>
-      <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+      <input type="submit" value="Submit" />
       </div>
       </form>
       </section>
