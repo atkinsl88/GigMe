@@ -2,6 +2,8 @@ import React from 'react'
 // import image from '../../assets/001.png'
 import axios from 'axios'
 
+const baseUrl = 'http://localhost:3000/api'
+
 class GigShow extends React.Component {
   state = {
     event: [],
@@ -9,7 +11,7 @@ class GigShow extends React.Component {
     comments: [],
     Liked: 0,
     formData:{
-      comment:'',
+      comments:'',
     }
   }
 
@@ -19,9 +21,8 @@ class GigShow extends React.Component {
       const res = await axios.get(`http://localhost:3000/api/events/${eventId}`)
       this.setState({ event: res.data })
       console.log(res.data)
-      console.log(this.state.event.likes.length)
+      this.setState({ comments: res.data.comments })
       this.setState({ likes: res.likes.length })
-      console.log(this.state.event.likes)
       this.handleClick()
     } catch (err) {
       console.log(err)
@@ -50,15 +51,26 @@ class GigShow extends React.Component {
   }
 
   handleChange = event => {
-    // const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     // console.log(formData)
     this.setState({ formData })
-  }
+    }
+  
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state.formData.comment)}
+    const formData = { ...this.state.formData, [event.target.name]: event.target.value }
+    const eventId = this.props.match.params.id
+    console.log(this.state.formData.comments)
+    console.log(`${baseUrl}/events/${eventId}`)
+    try {
+    // const eventId = this.props.match.params.id
+    return axios.post(`${baseUrl}/events/${eventId}/comments`, formData)}
+    catch (err) {
+      console.log(err)
+    }
+  }
+  
 
   render() {
     
@@ -88,10 +100,11 @@ class GigShow extends React.Component {
         <div className="home-title">
           <h2>Comments</h2>
         </div>
+        <section className="commentEventForm">
         <form>
-
+        
         <textarea
-                  className="textarea"
+                  className="textarea commentEventForm"
                   name="comment"
                   value={this.state.formData.comment}
                   onChange={this.handleChange}
@@ -99,7 +112,20 @@ class GigShow extends React.Component {
         <div>
       <input type="submit" value="Submit" onClick={this.handleSubmit}/>
       </div>
-        </form>
+      </form>
+      </section>
+        
+    
+        <section className="gigCommentSection">
+
+        <div>{this.state.comments.map(eachcomment => {
+          return (
+            <div key={eachcomment.createdAt} className="eventComments">
+            <h2 className="indivComment">{eachcomment.user.username} - {eachcomment.text}</h2>
+            </div>
+          )
+        })}</div>
+        </section>
 
       </section>
     )
