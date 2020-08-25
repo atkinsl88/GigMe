@@ -5,6 +5,7 @@ import { BrowserRouter, Switch , Route  } from 'react-router-dom'
 import Navbar from './components/common/NavBar'
 import Home from './components/common/Home'
 import Community from './components/common/Community'
+import Profile from './components/common/Profile'
 import GigIndex from './components/gigs/GigIndex'
 import GigShow from './components/gigs/GigShow'
 import GigCalendar from './components/gigs/GigCalendar'
@@ -41,6 +42,7 @@ render(){
         <Route exact path="/gigs/:id" component={GigShow}/>
         <Route exact path="/gigs" component={GigIndex}/>
         <Route exact path="/community" component={Community}/>
+        <Route exact path="/profile" component={Profile}/>
         <Route path="/register" component={Register} />
         <Route path="/gigcalendar" component={GigCalendar} />
         <Route path="/login" component={Login} />
