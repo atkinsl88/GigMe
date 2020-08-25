@@ -42,7 +42,7 @@ render(){
         <Route exact path="/gigs/:id" component={GigShow}/>
         <Route exact path="/gigs" component={GigIndex}/>
         <Route exact path="/community" component={Community}/>
-        <Route exact path="/profiles" component={Profiles}/>
+        <Route exact path="/profiles/" component={Profiles}/>
         <Route path="/register" component={Register} />
         <Route path="/gigcalendar" component={GigCalendar} />
         <Route path="/login" component={Login} />
