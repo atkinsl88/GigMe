@@ -2,13 +2,9 @@ import React from 'react'
 // import image from '../../assets/001.png'
 import axios from 'axios'
 import { createComment } from '../../lib/api.js'
-<<<<<<< HEAD
-const baseUrl = 'http://localhost:3000/api'
-=======
 
 const baseUrl = 'http://localhost:3000/api'
 
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
 class GigShow extends React.Component {
 
   state = {
@@ -61,10 +57,7 @@ class GigShow extends React.Component {
     console.log(this.state.formData.text)
     this.setState({ formData })
     }
-<<<<<<< HEAD
-=======
   
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
 
   handleSubmit = async event => {
     event.preventDefault()
@@ -79,10 +72,7 @@ class GigShow extends React.Component {
       console.log(err.response.data)
     }
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
 
   render() {
     // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
@@ -108,34 +98,24 @@ class GigShow extends React.Component {
         </div>
         <section className="commentEventForm">
         <form onSubmit={this.handleSubmit}>
-<<<<<<< HEAD
-=======
         
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
         <textarea
                   className="textarea commentEventForm"
                   name="text"
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.formData.text}
-<<<<<<< HEAD
-=======
                   
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
                 />
         <div>
       <input type="submit" value="Submit" />
       </div>
       </form>
       </section>
-<<<<<<< HEAD
-        <section className="gigCommentSection">
-=======
         
     
         <section className="gigCommentSection">
 
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
         <div>{this.state.comments.map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
@@ -144,10 +124,6 @@ class GigShow extends React.Component {
           )
         })}</div>
         </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> c64cf4054c8b69eb81491f7523292cbf10baf306
       </section>
     )
   }
