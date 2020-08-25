@@ -17,6 +17,7 @@ async function eventsShow (req, res) {
 
 async function eventsCreate (req, res) {
   try {
+    req.body.user = req.currentUser
     const createdEvents = await Event.create(req.body)
     res.status(201).json(createdEvents)
   } catch (err) {
