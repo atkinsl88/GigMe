@@ -27,3 +27,7 @@ export const createComment = (formData, id) => {
   return axios.post(`${baseUrl}/events/${id}/comments`, formData, withHeaders())
 }
 
+export const createLike = (formData, id) => {
+  return axios.post(`${baseUrl}/events/${id}/like`, formData, withHeaders())
+}
+
