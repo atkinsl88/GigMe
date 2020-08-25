@@ -13,7 +13,7 @@ const Navbar = () => (
       <Link to="/">Blog</Link>
     </div>
     <div className="nav-rgt">
-      <Link to="/">Profile</Link>
+      <Link to="/profile">Profile</Link>
       <Link to="/login">Login</Link>
       <Link to="/register">Sign Up</Link>
     </div>

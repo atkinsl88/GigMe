@@ -1,27 +1,31 @@
 import React from 'react'
 // import image from '../../assets/001.png'
 import axios from 'axios'
+import { createComment } from '../../lib/api.js'
+
+const baseUrl = 'http://localhost:3000/api'
 
 class GigShow extends React.Component {
+
   state = {
     event: [],
     likes: [],
     comments: [],
     Liked: 0,
     formData:{
-      comment:'',
+      text:'',
     }
   }
 
   async componentDidMount() {
+
     try {
       const eventId = this.props.match.params.id
       const res = await axios.get(`http://localhost:3000/api/events/${eventId}`)
       this.setState({ event: res.data })
       console.log(res.data)
-      console.log(this.state.event.likes.length)
+      this.setState({ comments: res.data.comments })
       this.setState({ likes: res.likes.length })
-      console.log(this.state.event.likes)
       this.handleClick()
     } catch (err) {
       console.log(err)
@@ -30,12 +34,11 @@ class GigShow extends React.Component {
 
   async componentDidUpdate() {
     try {
-      
     } catch (err) {
       console.log(err)
     }
   }
-  
+
   handleClick = (e) => {
     // const likesArray = []
     let Liked = null
@@ -50,23 +53,31 @@ class GigShow extends React.Component {
   }
 
   handleChange = event => {
-    // const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    // console.log(formData)
+    console.log(this.state.formData.text)
     this.setState({ formData })
-  }
+    }
+  
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault()
-    console.log(this.state.formData.comment)}
+    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
+    const eventId = this.props.match.params.id
+    console.log(`${baseUrl}/events/${eventId}`)
+    try {
+    // const eventId = this.props.match.params.id
+    const res = await createComment(this.state.formData, eventId)
+    console.log(this.state.formData.text)}
+    catch (err) {
+      console.log(err.response.data)
+    }
+  }
+  
 
   render() {
-    
     // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
-
     return (
       <section>
-
         <div className="hero-gigs-indv">
           <div className="hero-gigs-indv-txt">
             <h2>Event Info</h2>
@@ -75,32 +86,44 @@ class GigShow extends React.Component {
             <h4>{this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
-
             <button onClick={this.handleClick} value="like">Like</button>
             <p>{this.state.likes.length}</p>
-
           </div>
           <div className="hero-gigs-indv-img">
             <img src={this.state.event.posterImage} alt="logo" />
           </div>
         </div>
-
         <div className="home-title">
           <h2>Comments</h2>
         </div>
-        <form>
-
+        <section className="commentEventForm">
+        <form onSubmit={this.handleSubmit}>
+        
         <textarea
-                  className="textarea"
-                  name="comment"
-                  value={this.state.formData.comment}
+                  className="textarea commentEventForm"
+                  name="text"
+                  type="text"
                   onChange={this.handleChange}
+                  value={this.state.formData.text}
+                  
                 />
         <div>
-      <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+      <input type="submit" value="Submit" />
       </div>
-        </form>
+      </form>
+      </section>
+        
+    
+        <section className="gigCommentSection">
 
+        <div>{this.state.comments.map(eachcomment => {
+          return (
+            <div key={eachcomment.createdAt} className="eventComments">
+            <h2 className="indivComment">{eachcomment.user.username} - {eachcomment.text}</h2>
+            </div>
+          )
+        })}</div>
+        </section>
       </section>
     )
   }
