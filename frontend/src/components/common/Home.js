@@ -1,9 +1,11 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import icon from '../../assets/pin.png'
 import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
 import GigCalendar from '../gigs/GigCalendar'
+
 class Home extends React.Component{
   state = {
     gigs: [],
@@ -41,6 +43,8 @@ class Home extends React.Component{
 
   render() {
 
+    console.log(this.state.gigs)
+
     // if (!this.state.randomChoices) return
 
     return(
@@ -64,6 +68,7 @@ class Home extends React.Component{
               <h3>{name.artistName}</h3>
               <h4>{name.aboutEvent}</h4>
               <h5>{name.date}</h5>
+              <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
             </div>
           )
         })}
