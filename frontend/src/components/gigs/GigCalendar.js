@@ -34,7 +34,7 @@ class GigCalendar extends React.Component {
     console.log(this.state.events[0].aboutEvent)
     console.log(this.state.events[1].aboutEvent)
 
-  
+  //! Yes... I did try map 
     const events = [
       // { title: this.state.events, date: new Date('2020-08-02') },
       { title: this.state.events[0].artistName, date: new Date(this.state.events[0].date)},
@@ -46,6 +46,7 @@ class GigCalendar extends React.Component {
       { title: this.state.events[6].artistName, date: new Date(this.state.events[6].date)},
       { title: this.state.events[7].artistName, date: new Date(this.state.events[7].date)},
       { title: this.state.events[8].artistName, date: new Date(this.state.events[8].date)},
+      { title: this.state.events[9].artistName, date: new Date(this.state.events[9].date)},
       { title: this.state.events[10].artistName, date: new Date(this.state.events[10].date)},
       { title: this.state.events[11].artistName, date: new Date(this.state.events[11].date)},
       { title: this.state.events[12].artistName, date: new Date(this.state.events[12].date)},
@@ -70,7 +71,7 @@ class GigCalendar extends React.Component {
       { title: this.state.events[31].artistName, date: new Date(this.state.events[31].date)},
       { title: this.state.events[32].artistName, date: new Date(this.state.events[32].date)},
     ];
-    
+
     if (!this.state.events) return null
     return (
       <div className="App">
@@ -78,6 +79,8 @@ class GigCalendar extends React.Component {
           defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
           events={events}
+          // height={'520px'}
+          aspectRatio={'2.5'}
         />
       </div>
     )

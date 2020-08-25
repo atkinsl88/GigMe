@@ -316,6 +316,59 @@ nav a {
   margin-bottom: 40px;
 }
 
+// calendar 
+
+.calendarArea {
+ padding: 40px;
+ background-color: #FBFAF4;
+}
+
+.fc-event-title{
+  font-family: 'Playfair Display', serif;
+  color: #081C6A;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fc-col-header-cell-cushion{
+  font-family: 'Playfair Display', serif;
+  color: #081C6A;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fc-daygrid-day-number{
+  font-family: 'Playfair Display', serif;
+  color: #081C6A;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.fc-daygrid-day-frame {
+  background-color: white;
+}
+
+.fc-scrollgrid-sync-inner{
+  background-color: white;
+}
+
+// .calendar {
+//   // display:flex;
+//   // justify-content: center;
+//   font-family: 'Playfair Display', serif;
+//   color: #081C6A;
+//   text-decoration: none;
+//   font-weight: 400;
+//   font-size: 16px;
+
+// }
+
+
+
+
 /* Form */
 
 .form-area {

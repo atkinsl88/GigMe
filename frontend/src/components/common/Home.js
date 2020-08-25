@@ -110,8 +110,8 @@ class Home extends React.Component{
         </Map>
       </div>
 
-      <div className="calArea">
-        <GigCalendar className="cal">
+      <div className="calendarArea">
+        <GigCalendar className="calendar">
         </GigCalendar>
       </div>
 
