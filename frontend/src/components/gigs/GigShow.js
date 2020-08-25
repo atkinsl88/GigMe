@@ -3,20 +3,22 @@ import React from 'react'
 import axios from 'axios'
 import { createComment } from '../../lib/api.js'
 
-const baseUrl = 'http://localhost:3000/api'
+import { createLike } from '../../lib/api.js'
 
+const baseUrl = 'http://localhost:3000/api'
 class GigShow extends React.Component {
 
   state = {
     event: [],
-    likes: [],
+    text: '',
+    likes: '',
     comments: [],
     Liked: 0,
+    // clicked: false,
     formData:{
       text:'',
     }
   }
-
   async componentDidMount() {
 
     try {
@@ -25,13 +27,11 @@ class GigShow extends React.Component {
       this.setState({ event: res.data })
       console.log(res.data)
       this.setState({ comments: res.data.comments })
-      this.setState({ likes: res.likes.length })
-      this.handleClick()
+      this.setState({ likes: res.data.likes })
     } catch (err) {
       console.log(err)
     }
   }
-
   async componentDidUpdate() {
     try {
     } catch (err) {
@@ -39,41 +39,44 @@ class GigShow extends React.Component {
     }
   }
 
-  handleClick = (e) => {
-    // const likesArray = []
-    let Liked = null
-    if (e.target.value === 'like') {
-      this.state.likes.push('like')
-      // likesArray.push('likes')
-      // this.setState({ likes: [...likesArray] })
-      console.log(this.state.likes)
-      Liked = this.state.likes.length + 1
-      this.setState({ Liked : Liked})
-    } 
+  handleClick = async event => {
+    // if (this.state.clicked=false){
+    // event.preventDefault()
+    const eventId = this.props.match.params.id
+    // console.log(`${baseUrl}/events/${eventId}`)
+    try {const res = await createLike(this.state.text, eventId)
+    // this.setState({ clicked: true })
+    // console.log(this.state.clicked)
+    const res2 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
+    this.setState({ likes: res2.data.likes })}
+    catch (err) {
+      console.log(err.response.data)
+    }
   }
+//}
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     console.log(this.state.formData.text)
     this.setState({ formData })
+    
     }
-  
-
   handleSubmit = async event => {
     event.preventDefault()
     // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
     console.log(`${baseUrl}/events/${eventId}`)
     try {
-    // const eventId = this.props.match.params.id
     const res = await createComment(this.state.formData, eventId)
-    console.log(this.state.formData.text)}
+    console.log(this.state.formData.text)
+    const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
+    this.setState({ comments: res.data.comments })
+  
+  }
     catch (err) {
       console.log(err.response.data)
     }
   }
-  
-
   render() {
     // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
     return (
@@ -86,8 +89,10 @@ class GigShow extends React.Component {
             <h4>{this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
-            <button onClick={this.handleClick} value="like">Like</button>
-            <p>{this.state.likes.length}</p>
+            <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
+            <div>
+            <p>{this.state.likes.length} people have liked this event!</p>
+            </div>
           </div>
           <div className="hero-gigs-indv-img">
             <img src={this.state.event.posterImage} alt="logo" />
@@ -98,24 +103,19 @@ class GigShow extends React.Component {
         </div>
         <section className="commentEventForm">
         <form onSubmit={this.handleSubmit}>
-        
         <textarea
                   className="textarea commentEventForm"
                   name="text"
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.formData.text}
-                  
                 />
         <div>
       <input type="submit" value="Submit" />
       </div>
       </form>
       </section>
-        
-    
         <section className="gigCommentSection">
-
         <div>{this.state.comments.map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
@@ -128,5 +128,4 @@ class GigShow extends React.Component {
     )
   }
 }
-
 export default GigShow
