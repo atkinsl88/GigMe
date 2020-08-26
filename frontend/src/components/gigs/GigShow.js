@@ -1,8 +1,6 @@
 import React from 'react'
-// import image from '../../assets/001.png'
 import axios from 'axios'
 import { createComment } from '../../lib/api.js'
-
 import { createLike } from '../../lib/api.js'
 
 const baseUrl = 'http://localhost:3000/api'
