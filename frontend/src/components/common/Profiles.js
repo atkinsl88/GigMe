@@ -13,8 +13,8 @@ class Profiles extends React.Component{
 
   async componentDidMount() {
     try {
-      const userId = this.props.match.params.id
-      const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`)
+      // const userId = this.props.match.params.id
+      const res = await axios.get(`http://localhost:3000/api/profiles/5f463168adaa8e00c90846c8`)
       this.setState({ profiles: res.data})
       console.log(res.data)
       setToken(res.data.token)
