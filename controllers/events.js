@@ -30,7 +30,7 @@ async function eventsEdit (req, res) {
     const editedEvents = await Event.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true, runValidators: true }
+      { new: true, runValidators: false }
     )
     res.status(202).json(editedEvents)
   } catch (err) {
