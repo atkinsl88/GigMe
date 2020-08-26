@@ -8,6 +8,7 @@ import Community from './components/common/Community'
 import Profiles from './components/common/Profiles'
 import GigIndex from './components/gigs/GigIndex'
 import GigShow from './components/gigs/GigShow'
+import GigNew from './components/gigs/GigNew'
 import GigCalendar from './components/gigs/GigCalendar'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
@@ -40,6 +41,7 @@ render(){
         <Route exact path="/" component={Home}/>
         <Route exact path="/gigs/map" component={Maps}/>
         <Route exact path="/gigs/:id" component={GigShow}/>
+        <Route exact path="/create-an-event" component={GigNew}/>
         <Route exact path="/gigs" component={GigIndex}/>
         <Route exact path="/community" component={Community}/>
         <Route exact path="/profiles/" component={Profiles}/>
