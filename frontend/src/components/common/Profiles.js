@@ -68,7 +68,7 @@ class Profiles extends React.Component{
               <p>{event.artistName}</p>
               <p>{event.venue}</p>
               <p>{event.date}</p>
-              <Link to={`/gigs/${event._id}`}>Find out more</Link>
+              <Link to={(`/gigs/${event._id}`, withHeaders())}>Find out more</Link>
             </div>
           })}
             

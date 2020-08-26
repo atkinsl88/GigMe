@@ -2,7 +2,7 @@ import axios from 'axios'
 import { getToken } from './auth'
 const baseUrl = 'http://localhost:3000/api'
 
-const withHeaders = () => { 
+export const withHeaders = () => { 
   return {
     headers: { Authorization: `Bearer ${getToken()}` }  
   }
