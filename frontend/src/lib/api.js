@@ -8,10 +8,9 @@ export const withHeaders = () => {
   }
 }
 
-// // cheese requests 
-// export const getAllEvents = () => {
-//   return axios.get(`${baseUrl}/events`)
-// }
+export const createGig = formData => {
+  return axios.post(`${baseUrl}/events`, formData, withHeaders())
+}
 
 export const registerUser = formData => {
   return axios.post(`${baseUrl}/register`, formData)
@@ -29,3 +28,7 @@ export const createLike = (likes, id) => {
   return axios.post(`${baseUrl}/events/${id}/like`, likes, withHeaders())
 }
 
+// community 
+export const createMessage = formData => {
+  return axios.post(`${baseUrl}/community`, formData, withHeaders())
+}

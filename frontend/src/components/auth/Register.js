@@ -32,7 +32,6 @@ class Register extends React.Component {
     { value: 'ambient', label: 'ambient' }
   ]
 
-  //! this function is blatantly untouched JackCode. Would appreciate some help with writing both submit and onchange.
 
   handleChange = event => {
     // const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
@@ -164,7 +163,7 @@ class Register extends React.Component {
                 <div className="control">
                   <textarea
                     className="textarea input"
-                    name="description"
+                    name="aboutMe"
                     value={this.state.formData.aboutMe}
                     onChange={this.handleChange}
                   />

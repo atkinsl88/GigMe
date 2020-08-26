@@ -44,7 +44,9 @@ class Login extends React.Component {
 
         <div className="form-area">
           <div className="form">
+
             <form onSubmit={this.handleSubmit} className="box">
+
                 <div className="field">
                   <label className="label">Username</label>
                   <div className="control">
@@ -58,6 +60,7 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
+
                 <div className="field">
                   <label className="label">Email</label>
                   <div className="control">
@@ -70,6 +73,7 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
+
                 <div className="field">
                   <label className="label">Password</label>
                   <div className="control">
@@ -83,9 +87,11 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
+
                 <div className="field">
                   <button type="submit" className="button is-fullwidth is-warning">Login</button>
                 </div>
+                
               </form>
           </div>
           <div className="form-image">
