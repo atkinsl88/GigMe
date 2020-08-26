@@ -541,10 +541,14 @@ nav a {
   margin: 60px;
   // border: 1px solid black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   background-color:white;
   justify-content: center;
+}
+
+.profile-info {
+  margin: 5px;
 }
 
 .wrapper-crikey img {

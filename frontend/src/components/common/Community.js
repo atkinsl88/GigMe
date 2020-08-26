@@ -1,22 +1,33 @@
 import React from 'react'
+// import Axios from 'axios'
+
+import { createMessage } from '../../lib/api'
 
 class Community extends React.Component {
   state = {
+    messages: [],
     formData: {
-      messages: ''
+      text: ''
     }
     
   }
 
   handleChange = event => {
-    const formData = { ...this.state.mesaages, [event.target.name]: event.target.value }
-    console.log(this.state.formData.messages)
+    const formData = { ...this.state.formData.text, [event.target.name]: event.target.value }
+    console.log(this.state.formData.text)
     this.setState({ formData })
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault()
     console.log('submit now')
+    try {
+      const res = await createMessage(this.state.formData)
+      this.setState({ messages: res})
+      // console.log(res.data)
+    } catch (err) {
+      console.log(err.response.data)
+    }
   }
 
   render() {
@@ -30,7 +41,15 @@ class Community extends React.Component {
         </div>
 
         <div className="message-box">
+          <div>{this.state.messages.map(message => {
+            return (
+              <div key={message.id}>
+                <p>{message.text}</p>
+              </div>
+            )
+          })}
 
+          </div>
         </div>
 
         <div className="chat-area">
@@ -40,9 +59,9 @@ class Community extends React.Component {
                 <div className="fields">
                   <input
                   type="text"
-                  name="messages"
+                  name="text"
                   onChange={this.handleChange}
-                  value={this.state.formData.messages}
+                  value={this.state.formData.text}
                 />
                 </div>
                 <div className="button">
