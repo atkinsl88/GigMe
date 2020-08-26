@@ -29,18 +29,28 @@ class Community extends React.Component {
           </div>
         </div>
 
+        <div className="message-box">
+
+        </div>
+
         <div className="chat-area">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              name="messages"
-              onChange={this.handleChange}
-              value={this.state.formData.messages}
-            />
-            <div className="field">
+          <div className="message-input">
+            <div className="form-input">
+              <form onSubmit={this.handleSubmit}>
+                <div className="fields">
+                  <input
+                  type="text"
+                  name="messages"
+                  onChange={this.handleChange}
+                  value={this.state.formData.messages}
+                />
+                </div>
+                <div className="button">
                   <button type="submit" className="button is-link input">Send</button>
                 </div>
-          </form>
+              </form>
+            </div>
+          </div>
         </div>
 
       </section>
@@ -49,3 +59,5 @@ class Community extends React.Component {
 }
 
 export default Community
+
+// className="button is-link input"
