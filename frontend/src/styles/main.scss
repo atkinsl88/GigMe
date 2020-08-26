@@ -511,11 +511,29 @@ nav a {
 }
 /* community */
 
+.message-box {
+  display: flex;
+  height: 500px;
+  border: 1px solid black;
+}
+
 .chat-area {
   display: flex;
-  height: 50vh;
-  background-color: black;
+  flex-direction: row;
+  // justify-content: space-between;
+  // align-items: center;
 }
+
+.box1 {
+  display: flex;
+}
+
+.box2 {
+  display: flex;
+}
+
+
+
 
 //? Profile Page
 
@@ -523,10 +541,14 @@ nav a {
   margin: 60px;
   // border: 1px solid black;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   background-color:white;
   justify-content: center;
+}
+
+.profile-info {
+  margin: 5px;
 }
 
 .wrapper-crikey img {

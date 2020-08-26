@@ -1,22 +1,33 @@
 import React from 'react'
+// import Axios from 'axios'
+
+import { createMessage } from '../../lib/api'
 
 class Community extends React.Component {
   state = {
+    messages: [],
     formData: {
-      messages: ''
+      text: ''
     }
     
   }
 
   handleChange = event => {
-    const formData = { ...this.state.mesaages, [event.target.name]: event.target.value }
-    console.log(this.state.formData.messages)
+    const formData = { ...this.state.formData.text, [event.target.name]: event.target.value }
+    console.log(this.state.formData.text)
     this.setState({ formData })
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault()
     console.log('submit now')
+    try {
+      const res = await createMessage(this.state.formData)
+      this.setState({ messages: res})
+      // console.log(res.data)
+    } catch (err) {
+      console.log(err.response.data)
+    }
   }
 
   render() {
@@ -29,18 +40,36 @@ class Community extends React.Component {
           </div>
         </div>
 
+        <div className="message-box">
+          <div>{this.state.messages.map(message => {
+            return (
+              <div key={message.id}>
+                <p>{message.text}</p>
+              </div>
+            )
+          })}
+
+          </div>
+        </div>
+
         <div className="chat-area">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              type="text"
-              name="messages"
-              onChange={this.handleChange}
-              value={this.state.formData.messages}
-            />
-            <div className="field">
+          <div className="message-input">
+            <div className="form-input">
+              <form onSubmit={this.handleSubmit}>
+                <div className="fields">
+                  <input
+                  type="text"
+                  name="text"
+                  onChange={this.handleChange}
+                  value={this.state.formData.text}
+                />
+                </div>
+                <div className="button">
                   <button type="submit" className="button is-link input">Send</button>
                 </div>
-          </form>
+              </form>
+            </div>
+          </div>
         </div>
 
       </section>
@@ -49,3 +78,5 @@ class Community extends React.Component {
 }
 
 export default Community
+
+// className="button is-link input"

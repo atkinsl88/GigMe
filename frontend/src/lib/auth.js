@@ -10,7 +10,7 @@ export const logout = () => {
   window.localStorage.removeItem('token')
 }
 
-const getPayload = () => {
+export const getPayload = () => {
   const token = getToken()
   if (!token) return false
   const parts = token.split('.')
@@ -21,7 +21,7 @@ const getPayload = () => {
 export const isAuthenticated = () => {
   const payload = getPayload()
   if (!payload) return false
-  const now = Math.round(Date.now() / 1000000)
+  const now = Math.round(Date.now() / 10000000000000)
   return now < payload.exp
 }
 
