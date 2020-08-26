@@ -37,15 +37,14 @@ class Profiles extends React.Component{
             <h4>Welcome to your Profile Page!</h4>
           </div>
         </div>
-       <div className='wrapper-crikey'>
 
-       <div>
-          <img src={this.state.profiles.profilePicture} alt='prof-pic'/>
-       </div>
+        <div className='wrapper-crikey'>
 
         <div>
+            <img src={this.state.profiles.profilePicture} alt='prof-pic'/>
+        </div>
 
-
+        <div>
         <div className="form-area2">
           <div className="form register-form">
             <form onSubmit={this.handleSubmit} className="box">
@@ -125,16 +124,14 @@ class Profiles extends React.Component{
               </div>
 
             </form>
-       </div>
-       </div>
-       </div>
-         
-       </div>
-     
+          </div>
+        </div>
+        </div>
+        </div>
+
       </section>
     )
   }
 }
-
 
 export default Profiles

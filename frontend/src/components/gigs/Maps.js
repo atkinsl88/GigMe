@@ -36,8 +36,8 @@ return (
   <MapGL
   {...this.state.viewport}
         mapboxApiAccessToken="pk.eyJ1IjoiYWlzaGF0aG5hc2lyIiwiYSI6ImNrZHllYW51ODRodGIydHJvbm1yc2lkZHgifQ.8C_6datWjuBQUQbfsBAsOg"
-        height={'520px'}
-        width={'940px'}
+        height={'600px'}
+        width={'1500px'}
         onViewportChange={viewport => this.setState({viewport})}
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >

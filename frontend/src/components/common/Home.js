@@ -1,12 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import icon from '../../assets/pin.png'
-import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
 import GigCalendar from '../gigs/GigCalendar'
 
 class Home extends React.Component{
+
   state = {
     gigs: [],
     randomChoices: []
@@ -23,6 +22,7 @@ class Home extends React.Component{
       console.log(err)
     }
   }
+
   getRandom = () => {
     let currentChoices = []
     for (let i = 0; i < 3; i++) {
@@ -104,10 +104,6 @@ class Home extends React.Component{
         <div value="country">Country</div>
         <div value="grime">Grime</div>
         <div value="jazz-soul">Jazz / Soul</div>
-      </div>
-      <div className="map-icons">
-        <img src={icon} alt="logo" />
-        <img src={icon2} alt="logo" />
       </div>
       
       <div className="mapArea">
