@@ -26,7 +26,8 @@ async function login (req, res, next) {
     )
     res.status(202).json({ //! Pre-token logging in.
       message: `Welcome to GigMe ${user.username}`,
-      token
+      token, 
+      id: user.id
     })
   } catch (err) {
     next(err)
@@ -48,8 +49,6 @@ async function showProfile (req, res, next) {
     console.log(err)
   }
 }
-  
-
 
 
 module.exports = {

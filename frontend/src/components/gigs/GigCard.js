@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const GigCard = ({ name, posterImage, artistName, venue, date, genre, eventPrice, _id }) => (
 
-  <div className="column is-one-quarter-desktop is-one-third-tablet is-fullwidth">
+  <div className="column is-one-third-desktop is-one-third-tablet is-fullwidth">
     <Link to={`/gigs/${_id}`}>
 
-      <div className="card">
+      <div className="gig-card">
 
         <div className="card-image">
           <figure className="image image is-1by1">

@@ -81,6 +81,7 @@ this.setState({clicked: false})
     return (
       <section>
         <div className="hero-gigs-indv">
+
           <div className="hero-gigs-indv-txt">
             <h2>Event Info</h2>
             <span className="gigShowArtistName">{this.state.event.artistName}</span>
@@ -93,13 +94,17 @@ this.setState({clicked: false})
             <p>{this.state.likes.length} people have liked this event!</p>
             </div>
           </div>
+
           <div className="hero-gigs-indv-img">
             <img src={this.state.event.posterImage} alt="logo" />
           </div>
+
         </div>
+
         <div className="home-title">
           <h2>Comments</h2>
         </div>
+
         <section className="commentEventForm">
         <form onSubmit={this.handleSubmit}>
         <textarea
@@ -114,6 +119,7 @@ this.setState({clicked: false})
       </div>
       </form>
       </section>
+
         <section className="gigCommentSection">
         <div>{this.state.comments.map(eachcomment => {
           return (
@@ -123,6 +129,7 @@ this.setState({clicked: false})
           )
         })}</div>
         </section>
+        
       </section>
     )
   }

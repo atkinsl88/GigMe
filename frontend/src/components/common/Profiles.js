@@ -13,8 +13,8 @@ class Profiles extends React.Component{
 
   async componentDidMount() {
     try {
-
-      const res = await axios.get('http://localhost:3000/api/profiles/5f45630d72f0e07f6cd490c7')
+      const userId = this.props.match.params.id
+      const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`)
       this.setState({ profiles: res.data})
       console.log(res.data)
       setToken(res.data.token)
@@ -37,15 +37,14 @@ class Profiles extends React.Component{
             <h4>Welcome to your Profile Page!</h4>
           </div>
         </div>
-       <div className='wrapper-crikey'>
 
-       <div>
-          <img src={this.state.profiles.profilePicture} alt='prof-pic'/>
-       </div>
+        <div className='wrapper-crikey'>
 
         <div>
+            <img src={this.state.profiles.profilePicture} alt='prof-pic'/>
+        </div>
 
-
+        <div>
         <div className="form-area2">
           <div className="form register-form">
             <form onSubmit={this.handleSubmit} className="box">
@@ -94,7 +93,7 @@ class Profiles extends React.Component{
               
 
               <div className="field">
-                <label className="label">pick your favourite genre</label>
+                <label className="label">Your favourite genre</label>
                 <div className="control">
                   <div className="control">
                   <input 
@@ -109,7 +108,7 @@ class Profiles extends React.Component{
               </div>
 
               <div className="field">
-                <label className="label">bio</label>
+                <label className="label">Bio</label>
                 <div className="control">
                   <textarea
                     className="textarea input"
@@ -125,16 +124,14 @@ class Profiles extends React.Component{
               </div>
 
             </form>
-       </div>
-       </div>
-       </div>
-         
-       </div>
-     
+          </div>
+        </div>
+        </div>
+        </div>
+
       </section>
     )
   }
 }
-
 
 export default Profiles
