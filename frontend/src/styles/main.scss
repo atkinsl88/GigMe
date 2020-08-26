@@ -216,10 +216,35 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .three-col-content {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  flex: 1 1 400px;
+}
+
+.three-col-content img {
+  height: 400px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 900px) {
+  .three-col-content {
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  font-family: 'PT Sans', sans-serif;
+  color: #081C6A;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Links */
@@ -517,4 +542,35 @@ nav a {
 
 .wrapper-crikey .box{
   box-shadow: none
+}
+
+/* Gigs */
+
+.gig-card {
+  height: auto;
+  margin: 30px;
+  width: 350px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.gig-title {
+  height: auto;
+  margin: 10px;
+}
+
+.gig-content {
+  height: auto;
+  margin: 10px;
+}
+
+.gig-card h4 {
+  font-family: 'Playfair Display', serif;
+  color: #081C6A;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
 }
