@@ -17,7 +17,8 @@ async function login (req, res, next) {
   try {
     const user = await User.findOne({ email: req.body.email }) 
     if (!user || !user.validatePassword(req.body.password)) {
-      throw new Error() } 
+      throw new Error() 
+    } 
     const token = jwt.sign( 
       { sub: user._id }, 
       secret, 
