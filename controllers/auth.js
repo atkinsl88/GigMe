@@ -47,8 +47,6 @@ async function showProfile (req, res, next) {
     console.log(err)
   }
 }
-  
-
 
 
 module.exports = {

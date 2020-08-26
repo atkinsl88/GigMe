@@ -1,12 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import icon from '../../assets/pin.png'
-import icon2 from '../../assets/calendar.png'
 import Map from '../gigs/Maps'
 import GigCalendar from '../gigs/GigCalendar'
 
 class Home extends React.Component{
+
   state = {
     gigs: [],
     randomChoices: []
@@ -14,7 +13,7 @@ class Home extends React.Component{
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
-      // console.log(res.data)
+      console.log(res.data)
       this.setState({ gigs: res.data })
       // console.log(this.getRandom)
       this.getRandom()
@@ -23,6 +22,7 @@ class Home extends React.Component{
       console.log(err)
     }
   }
+
   getRandom = () => {
     let currentChoices = []
     for (let i = 0; i < 3; i++) {
@@ -64,11 +64,15 @@ class Home extends React.Component{
         {this.state.randomChoices.map(name => {
           return (
             <div className="three-col-content" key={name.id}>
-              <img src={name.posterImage} alt="logo" />
-              <h3>{name.artistName}</h3>
-              <h4>{name.aboutEvent}</h4>
-              <h5>{name.date}</h5>
-              <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
+              <div>
+                <img src={name.posterImage} alt="logo" />
+              </div>
+              <div>
+                <h3>{name.artistName}</h3>
+                <h4>{name.aboutEvent}</h4>
+                <h5>{name.date}</h5>
+                <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
+              </div>
             </div>
           )
         })}
@@ -104,10 +108,6 @@ class Home extends React.Component{
         <div value="country">Country</div>
         <div value="grime">Grime</div>
         <div value="jazz-soul">Jazz / Soul</div>
-      </div>
-      <div className="map-icons">
-        <img src={icon} alt="logo" />
-        <img src={icon2} alt="logo" />
       </div>
       
       <div className="mapArea">
