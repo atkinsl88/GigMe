@@ -14,13 +14,14 @@ class Navbar extends React.Component {
   }
 
   render(){
-    const isLoggedIn = isAuthenticated()
+  const isLoggedIn = isAuthenticated()
   return (
   <nav className="navbar">
     <div className="nav-logo">
       <Link to="/">Gigme</Link>
     </div>
       <Link to="/gigs">Gigs</Link>
+      <Link to="/create-an-event">Create an event</Link>
       {isLoggedIn ?
       <>
       <Link to="/community">Community</Link>
@@ -33,12 +34,11 @@ class Navbar extends React.Component {
       <Link to="/login">Login</Link>
       <Link to="/register">Sign Up</Link>
       </>
-     }
-   
+    }
     
   </nav>
   )
     }
-    }
+  }
 
 export default withRouter(Navbar)

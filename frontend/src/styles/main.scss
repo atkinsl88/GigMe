@@ -596,3 +596,37 @@ nav a {
   font-weight: 400;
   font-size: 16px;
 }
+
+.searchButtons{
+  margin: 20px;
+  padding: 10px;
+  background-color: lightseagreen;
+  border-radius: 25px;
+  text-decoration: none;
+  border-width: 0px;
+  min-width: 70px;
+}
+
+.searchGenres {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mapSearch {
+  padding:30px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  max-width:1500px;
+}
+
+.mapSearchHeader{
+  display:flex;
+  justify-content: center;
+  margin:15px;
+  
+}
+.mapSearchHeader h1 {
+  color:black
+}
