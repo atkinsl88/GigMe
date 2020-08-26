@@ -31,8 +31,8 @@ class GigCalendar extends React.Component {
 
 
   render(){
-    console.log(this.state.events[0].aboutEvent)
-    console.log(this.state.events[1].aboutEvent)
+    // console.log(this.state.events[0].aboutEvent)
+    // console.log(this.state.events[1].aboutEvent)
 
   //! Yes... I did try map 
     const events = [

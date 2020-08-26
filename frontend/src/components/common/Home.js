@@ -18,7 +18,7 @@ class Home extends React.Component{
       this.setState({ gigs: res.data })
       // console.log(this.getRandom)
       this.getRandom()
-      console.log(this.state.randomChoices)
+      // console.log(this.state.randomChoices)
     } catch (err) {
       console.log(err)
     }
@@ -51,7 +51,7 @@ class Home extends React.Component{
     ))
     // console.log(results)
     this.setState({ search: results})
-    console.log(this.state.search)
+    // console.log(this.state.search)
 
   }
 
@@ -109,18 +109,18 @@ class Home extends React.Component{
       <div className="home-title">
         <h2>Search Events</h2>
       </div>
-      <div id="genres" className="genres">
-        <button onClick={this.handleClick} value="pop">Pop</button>
-        <button onClick={this.handleClick} value="rock">Rock</button>
-        <button onClick={this.handleClick} value="electronic">Electronic</button>
-        <button onClick={this.handleClick} value="brunch">Brunch</button>
-        <button onClick={this.handleClick} value="metal">Metal</button>
-        <button onClick={this.handleClick} value="hip-hop">Hip Hop</button>
-        <button onClick={this.handleClick} value="world">World</button>
-        <button onClick={this.handleClick} value="ambient">Ambient</button>
-        <button onClick={this.handleClick} value="country">Country</button>
-        <button onClick={this.handleClick} value="grime">Grime</button>
-        <button onClick={this.handleClick} value="jazz/soul">Jazz / Soul</button>
+      <div id="genres" className="searchGenres">
+        <button onClick={this.handleClick} value="pop" className="searchButtons">Pop</button>
+        <button onClick={this.handleClick} value="rock" className="searchButtons">Rock</button>
+        <button onClick={this.handleClick} value="electronic" className="searchButtons">Electronic</button>
+        <button onClick={this.handleClick} value="brunch" className="searchButtons">Brunch</button>
+        <button onClick={this.handleClick} value="metal" className="searchButtons">Metal</button>
+        <button onClick={this.handleClick} value="hip-hop" className="searchButtons">Hip Hop</button>
+        <button onClick={this.handleClick} value="world" className="searchButtons">World</button>
+        <button onClick={this.handleClick} value="ambient" className="searchButtons">Ambient</button>
+        <button onClick={this.handleClick} value="country" className="searchButtons">Country</button>
+        <button onClick={this.handleClick} value="grime" className="searchButtons">Grime</button>
+        <button onClick={this.handleClick} value="jazz/soul" className="searchButtons">Jazz / Soul</button>
       </div>
       <div className="three-col">
         {this.state.search.map(name => {
