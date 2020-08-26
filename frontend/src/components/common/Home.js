@@ -8,7 +8,8 @@ class Home extends React.Component{
 
   state = {
     gigs: [],
-    randomChoices: []
+    randomChoices: [],
+    search: []
   }
   async componentDidMount() {
     try {
@@ -27,7 +28,7 @@ class Home extends React.Component{
     let currentChoices = []
     for (let i = 0; i < 3; i++) {
       const random = this.state.gigs[Math.floor(Math.random() * this.state.gigs.length)]
-      console.log(random)
+      // console.log(random)
       currentChoices.push(random)
       // this.setState({ randomChoices: random })
       // if (random === this.state.gigs) {
@@ -37,13 +38,26 @@ class Home extends React.Component{
       //   console.log(this.state.randomChoices)
       // }
     } 
-    console.log(currentChoices)
+    // console.log(currentChoices)
     this.setState({ randomChoices: [...currentChoices] })
+  }
+
+  handleClick = async event => {
+    event.preventDefault()
+    const genre=event.target.value
+    // console.log(genre)
+    const results = this.state.gigs.filter(gig => (
+      gig.genre === event.target.value
+    ))
+    // console.log(results)
+    this.setState({ search: results})
+    console.log(this.state.search)
+
   }
 
   render() {
 
-    console.log(this.state.gigs)
+    // console.log(this.state.gigs)
 
     // if (!this.state.randomChoices) return
 
@@ -96,18 +110,30 @@ class Home extends React.Component{
         <h2>Search Events</h2>
       </div>
       <div id="genres" className="genres">
-        <div value="pop">Pop</div>
-        <div value="rock">Rock</div>
-        <div value="electronic">Electronic</div>
-        <div value="brunch">Brunch</div>
-        <div value="metal">Metal</div>
-        <div value="hiphop">Hip Hop</div>
-        <div value="jazz">Jazz</div>
-        <div value="world">World</div>
-        <div value="ambient">Ambient</div>
-        <div value="country">Country</div>
-        <div value="grime">Grime</div>
-        <div value="jazz-soul">Jazz / Soul</div>
+        <button onClick={this.handleClick} value="pop">Pop</button>
+        <button onClick={this.handleClick} value="rock">Rock</button>
+        <button onClick={this.handleClick} value="electronic">Electronic</button>
+        <button onClick={this.handleClick} value="brunch">Brunch</button>
+        <button onClick={this.handleClick} value="metal">Metal</button>
+        <button onClick={this.handleClick} value="hip-hop">Hip Hop</button>
+        <button onClick={this.handleClick} value="world">World</button>
+        <button onClick={this.handleClick} value="ambient">Ambient</button>
+        <button onClick={this.handleClick} value="country">Country</button>
+        <button onClick={this.handleClick} value="grime">Grime</button>
+        <button onClick={this.handleClick} value="jazz/soul">Jazz / Soul</button>
+      </div>
+      <div className="three-col">
+        {this.state.search.map(name => {
+          return (
+            <div className="three-col-content" key={name.id}>
+              <img src={name.posterImage} alt="logo" />
+              <h3>{name.artistName}</h3>
+              <h4>{name.aboutEvent}</h4>
+              <h5>{name.date}</h5>
+              <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
+            </div>
+          )
+        })}
       </div>
       
       <div className="mapArea">

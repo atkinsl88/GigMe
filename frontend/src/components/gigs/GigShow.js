@@ -14,7 +14,7 @@ class GigShow extends React.Component {
     likes: '',
     comments: [],
     Liked: 0,
-    // clicked: false,
+    clicked: false,
     formData:{
       text:'',
     }
@@ -38,17 +38,17 @@ class GigShow extends React.Component {
       console.log(err)
     }
   }
+  async componentDidUnmount() {
+this.setState({clicked: false})
+  }
 
   handleClick = async event => {
-    // if (this.state.clicked=false){
-    // event.preventDefault()
+    event.preventDefault()
     const eventId = this.props.match.params.id
-    // console.log(`${baseUrl}/events/${eventId}`)
     try {const res = await createLike(this.state.text, eventId)
-    // this.setState({ clicked: true })
-    // console.log(this.state.clicked)
     const res2 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
-    this.setState({ likes: res2.data.likes })}
+    this.setState({ likes: res2.data.likes })
+    }
     catch (err) {
       console.log(err.response.data)
     }
@@ -78,7 +78,6 @@ class GigShow extends React.Component {
     }
   }
   render() {
-    // {if(this.props.singleGigProps[0]){console.log(this.props.singleGigProps[0].artistName)}} // Data from API
     return (
       <section>
         <div className="hero-gigs-indv">
@@ -125,7 +124,7 @@ class GigShow extends React.Component {
         <div>{this.state.comments.map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment">{eachcomment.user.username} - {eachcomment.text}</h2>
+            <h2 className="indivComment">{eachcomment.user.username} - {eachcomment.text} - {eachcomment.createdAt}</h2>
             </div>
           )
         })}</div>
