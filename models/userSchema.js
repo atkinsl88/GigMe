@@ -19,16 +19,16 @@ const userSchema = new mongoose.Schema({
 //!  useful for events a user is attending, etc, just not sure how to set this up 
 //! for our purposes yet??
 
-// userSchema
-//   .virtual('createdQueens', { // ! <-- name of the virtual field
-//     ref: 'Queen', // ! <-- name of the other Model as a reference
-//     localField: '_id', // ! <-- the field from this model to match, so our users._id
-//     foreignField: 'user' // ! <-- and the field to match is against on the Queens model
-//   })
+userSchema
+  .virtual('createdEvents', { // ! <-- name of the virtual field
+    ref: 'Event', // ! <-- name of the other Model as a reference
+    localField: '_id', // ! <-- the field from this model to match, so our users._id
+    foreignField: 'user' // ! <-- and the field to match is against on the Queens model
+  })
 
 userSchema 
   .set('toJSON', {
-    //virtuals: true, // ! <-- added this line to include virtuals in json responses
+    virtuals: true, // ! <-- added this line to include virtuals in json responses
     transform(doc, json) {
       delete json.password
       return json

@@ -3,6 +3,7 @@ const events = require('../controllers/events')
 const auth = require('../controllers/auth')
 const secureRoute = require('../lib/secureRoute')
 const community = require('../controllers/community')
+const user = require('../controllers/users')
 
 
 router.route('/events')
@@ -32,10 +33,15 @@ router.route('/register')
 router.route('/login')
   .post(auth.login)
 
-router.route('/profiles')
-  .get(auth.profileIndex)
+// router.route('/profiles')
+//   .get(auth.profileIndex)
+
+//!this is a new route to get all users --- Aishath
+router.route('/users/')
+  .get(user.usersall)
 
 router.route('/profiles/:id')
-  .get(auth.showProfile)
+  // .get(secureRoute, auth.showProfile)
+  .get(secureRoute, user.profile)
 
 module.exports = router

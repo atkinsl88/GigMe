@@ -2,6 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = require('./config/router')
 const logger = require('./lib/logger')
+const errorHandler = require('./lib/errorHandler')
+
 //! Won't need below till we make an error handler
 // const errorHandler = require('./lib/errorHandler')
 const app = express()
@@ -23,6 +25,6 @@ app.use(logger)
 
 app.use('/api', router)
 
-// app.use(errorHandler)
+app.use(errorHandler)
 
 app.listen(port, () => console.log(`Listening on Port: ${port}`))
