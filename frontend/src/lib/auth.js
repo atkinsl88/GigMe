@@ -1,4 +1,5 @@
 export const setToken = receivedToken => {
+  console.log('received', receivedToken);
   window.localStorage.setItem('token', receivedToken)
 }
 
@@ -10,12 +11,16 @@ export const logout = () => {
   window.localStorage.removeItem('token')
 }
 
-export const getPayload = () => {
+const getPayload = () => {
   const token = getToken()
   if (!token) return false
   const parts = token.split('.')
   if (parts.length < 3) return false
   return JSON.parse(window.atob(parts[1]))
+}
+
+export const getUserId = () => {
+  return getPayload().sub
 }
 
 export const isAuthenticated = () => {
