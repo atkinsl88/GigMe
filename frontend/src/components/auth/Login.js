@@ -88,10 +88,9 @@ class Login extends React.Component {
                 {this.state.error && <small className="help is-danger">Sorry, your credentials were incorrect</small>}
 
                 <div className="field">
-                  <button 
+                  <button className="button"
                     disabled={!this.state.formData.email || !this.state.formData.password}
-                    type="submit" 
-                    className="button is-fullwidth is-warning">
+                    type="submit">
                     Login
                   </button>
                 </div>

@@ -177,7 +177,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <button type="submit" className="button is-fullwidth is-warning">Sign Up</button>
+                <button type="submit" className="button">Sign Up</button>
               </div>
 
             </form>
