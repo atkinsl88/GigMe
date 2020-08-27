@@ -100,10 +100,6 @@ class GigShow extends React.Component {
   render() {
 
 
-    console.log(this.state.comments)
-    console.log(this.state.comments.user)
-
-
     return (
       <section>
         <div className="hero-gigs-indv">
