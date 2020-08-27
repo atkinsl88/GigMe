@@ -7,7 +7,7 @@ module.exports = [
     passwordConfirmation: 'pass',
     mySite: 'http://cnn.com/',
     profilePicture: 'https://i.imgur.com/d9wqAR5.jpg',
-    aboutMe: 'insert about me'
+    aboutMe: 'Nulla nec luctus magna. In fringilla tortor et risus varius scelerisque. '
   },
   {
     username: 'Ash',
@@ -17,7 +17,7 @@ module.exports = [
     passwordConfirmation: 'pass',
     mySite: 'http://cnn.com/',
     profilePicture: 'https://i.imgur.com/sfreHS3.jpg' ,
-    aboutMe: 'insert about me'
+    aboutMe: 'Nulla nec luctus magna. In fringilla tortor et risus varius scelerisque. '
   },
   {
     username: 'Noa',
@@ -27,7 +27,7 @@ module.exports = [
     passwordConfirmation: 'pass',
     mySite: 'http://facebook.com',
     profilePicture: 'https://i.imgur.com/KNwXB65.jpg',
-    aboutMe: 'insert about me'
+    aboutMe: 'Nulla nec luctus magna. In fringilla tortor et risus varius scelerisque. Nunc dignissim quis quam sit amet maximus. Sed venenatis et magna ut imperdiet. '
   },
   {
     username: 'Aisha',
@@ -36,7 +36,7 @@ module.exports = [
     password: 'pass',
     passwordConfirmation: 'pass',
     mySite: 'http://facebook.com',
-    profilePicture: 'https://static.catsoncatnip.co/images/FnCzDbkulGvf_7637_700.jpg',
-    aboutMe: 'insert about me'
+    profilePicture: 'https://i.imgur.com/4pxee3Z.jpg',
+    aboutMe: 'Nulla nec luctus magna. Sed venenatis et magna ut imperdiet. '
   }
 ]

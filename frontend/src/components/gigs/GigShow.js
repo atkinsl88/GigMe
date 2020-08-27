@@ -37,7 +37,6 @@ class GigShow extends React.Component {
     try {
       const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})
-      // console.log(resuser.data)
     } catch (err) {
       console.log(err)
     }
@@ -67,7 +66,6 @@ class GigShow extends React.Component {
     const eventId = this.props.match.params.id
     try {
     const res = await createComment(this.state.formData, eventId)
-    // console.log(this.state.formData.text)
     const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
     this.setState({ event: res3.data })
     this.setState({ comments: res3.data.comments })
@@ -78,9 +76,8 @@ class GigShow extends React.Component {
   }
 
   handleFindProfile = event => {
-    //! get target value, search userLinks for relevant user,use it to populate link to their userprofile
-    const posterProps = [] //populate this with the items received from searching for the right user in below function
-    const poster = event.target.value //clicking on button populates with the userid to find.
+    const posterProps = [] 
+    const poster = event.target.value 
     const selectedUser = posterProps.filter(poster)
     return selectedUser
   }
@@ -97,28 +94,28 @@ class GigShow extends React.Component {
   }
 
   render() {
-
-
+    var style = "color: red; background: #eee; font-size: 200 "
+console.log("%c made with love by the liam, noa, aishath and ash", style)
     return (
       <section>
         <div className="hero-gigs-indv">
 
           <div className="hero-gigs-indv-txt">
             <h2>Event Info</h2>
+            <hr />
             <span className="gigShowArtistName">{this.state.event.artistName}</span>
-            <h4>{this.state.event.venue}</h4>
-            <h4>{this.state.event.date}</h4>
-            <h4>Doors open at: {this.state.event.doorsAt}</h4>
-            <h4>About event: {this.state.event.aboutEvent} </h4>
+            <h4><b>Venue:</b> {this.state.event.venue}</h4>
+            <h4><b>Date:</b> {this.state.event.date}</h4>
+            <h4><b>Doors open at: </b>{this.state.event.doorsAt}</h4>
+            <h4><b>About event: </b>{this.state.event.aboutEvent} </h4>
 
             {isAuthenticated(this.state.event.userId) &&
             <>
-            <Link to={`/gigs/${this.state.event._id}/edit`} className="button is-warning">Edit</Link>
-            <hr />
-            <button onClick={this.handleDelete} className="button is-danger">Delete Event</button>
-            <hr />
-            <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
-           
+            <Link to={`/gigs/${this.state.event._id}/edit`} className="button button2">Edit</Link>
+            <button onClick={this.handleDelete} className="button2">Delete Event</button>
+            <div>
+              <button onClick={this.handleClick} value="" className="gigLike button2">🤍</button>
+            </div>
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
             }
@@ -126,16 +123,17 @@ class GigShow extends React.Component {
           </div>
 
           <div className="hero-gigs-indv-img">
-            <img src={this.state.event.posterImage} alt="logo" />
+            <img src={this.state.event.posterImage} alt="logo" className="show-page-img"/>
           </div>
 
         </div>
 
-        <div className="home-title">
+        
+        <section className="commentEventForm">
+        <div className="hero-gigs-indv-txt">
           <h2>Comments</h2>
         </div>
 
-        <section className="commentEventForm">
         <form onSubmit={this.handleSubmit}>
         <textarea
                   className="textarea commentEventForm"
@@ -145,7 +143,7 @@ class GigShow extends React.Component {
                   value={this.state.formData.text}
                 />
         <div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" className="button2"/>
       </div>
 
       </form>

@@ -15,15 +15,17 @@ const GigCard = ({ name, posterImage, artistName, venue, date, genre, eventPrice
         </div>
 
         <div className="card-header">
-          <h4 className="card-header-title">{artistName}</h4>
+          <div className="card-header-title">
+            <h4 className="">{artistName}</h4>
+          </div>
+          <div className="card-content">
+            <h5 className="">{venue}</h5>
+            <h5 className="">{date}</h5>
+            <h5 className="">{genre}</h5>
+            <h5 className="">£{eventPrice}</h5>
+          </div>
         </div>
 
-        <div className="card-content">
-          <h5 className="">{venue}</h5>
-          <h5 className="">{date}</h5>
-          <h5 className="">{genre}</h5>
-          <h5 className="">£{eventPrice}</h5>
-        </div>
 
       </div>
 
