@@ -14,6 +14,7 @@ $newGray: #f7f9fa;
 * {
   margin: 0px;
   font-family: 'Manrope', sans-serif;
+  // background-color: $newGray;
 }
 
 /* Fonts */
@@ -223,7 +224,7 @@ a.navbar-item:hover {
 /* Links */
 
 .links-home {
-  background-color: $primaryNavy;
+  background-color: $newGray;
   padding-bottom: 40px;
 }
 
@@ -305,7 +306,7 @@ a.navbar-item:hover {
 }
 
 .mapArea {
-  background-color: $primaryNavy;
+  background-color: $newGray;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -325,28 +326,26 @@ a.navbar-item:hover {
 
 .calendarArea {
   padding: 40px;
-  background-color: $primaryGray;
+  background-color: $newGray;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 .fc-event-title{
-  font-family: 'Playfair Display', serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
 }
 
 .fc-col-header-cell-cushion{
-  font-family: 'Playfair Display', serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
 }
 
 .fc-daygrid-day-number{
-  font-family: 'Playfair Display', serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
@@ -354,6 +353,7 @@ a.navbar-item:hover {
 
 .fc-daygrid-day-frame {
   background-color: white;
+ 
 }
 
 .fc-scrollgrid-sync-inner{
@@ -419,18 +419,24 @@ a.navbar-item:hover {
 /* Footer */
 
 .footer-main {
-  background-color: #FF9E9E;
+  background-color: $primaryNavy;
   height: 80px;
   display: flex;
   justify-content: center;
   align-content: flex-end;
+  text-align: center;
+    .footer-text {
+      color: $newGray
+    }
 }
 
 // The below is for the map component - added by Aishath
 .mapLabels {
-  background-color: lightpink;
-  font-weight: bold;
-  font-size: 16px;
+  background-color: $primaryRed;
+  font-size: 12px;
+  font-family: 'Manrope', sans-serif;
+  padding: 2px;
+  color: $newGray;
 }
 
 //the below is for gig event page comments
@@ -503,8 +509,6 @@ a.navbar-item:hover {
 }
 
 
-
-
 //? Profile Page
 
 .wrapper-crikey {
@@ -567,11 +571,13 @@ a.navbar-item:hover {
   font-size: 16px;
 }
 
-.searchButtons{
+.search-buttons{
+  font-family: 'Manrope', sans-serif;
   margin: 20px;
-  padding: 10px;
-  background-color: lightseagreen;
-  border-radius: 25px;
+  padding: 5px;
+  background-color: $secondaryGray;
+  color: $primaryRed;
+  border-radius: 5px;
   text-decoration: none;
   border-width: 0px;
   min-width: 70px;
@@ -589,14 +595,16 @@ a.navbar-item:hover {
   flex-wrap:wrap;
   justify-content: center;
   max-width:1500px;
+  background-color: $newGray;
 }
 
 .mapSearchHeader{
   display:flex;
   justify-content: center;
   margin:15px;
-  
+  background-color: $newGray;
 }
+
 .mapSearchHeader h1 {
   color:black;
 }
@@ -604,6 +612,7 @@ a.navbar-item:hover {
 .map-thumbs{
 max-width: 200px;
 padding: 10px;
+background-color: $newGray;
 }
 
 .map-thumbs img{
