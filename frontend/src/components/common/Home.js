@@ -32,17 +32,6 @@ class Home extends React.Component{
       currentChoices.push(random)}
     }
     this.setState({ randomChoices: [...currentChoices] })
-    console.log(currentChoices)
-  }
-
-  handleClick = async event => {
-    event.preventDefault()
-    const genre=event.target.value
-    const results = this.state.gigs.filter(gig => (
-      gig.genre === event.target.value
-    ))
-    // console.log(results)
-    this.setState({ search: results})
   }
 
   render() {
@@ -50,8 +39,10 @@ class Home extends React.Component{
     // console.log(this.state.gigs)
 
     // if (!this.state.randomChoices) return
+    
 
     return(
+      
 
   <section>
     <div className="hero-home">
@@ -67,7 +58,7 @@ class Home extends React.Component{
       <div className="three-col">
         {this.state.randomChoices.map(name => {
           return (
-            <div className="three-col-content" key={name.id}>
+            <div className="three-col-content" key={name._id}>
               <div>
                 <img src={name.posterImage} alt="logo" />
               </div>

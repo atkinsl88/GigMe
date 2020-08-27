@@ -36,17 +36,14 @@ class GigEdit extends React.Component {
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     this.setState({ formData })
-    console.log(formData)
   }
 
   handleSubmit = async event => {
     event.preventDefault()
     const gigID = this.props.match.params.id
-    console.log(gigID)
     try {
       const res = await editGig(this.state.formData, gigID)
       this.props.history.push(`/gigs/${res.data._id}`)
-      console.log(res.data)
     } catch (err) {
       console.log(err.response.data)
     }
