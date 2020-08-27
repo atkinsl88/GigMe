@@ -508,23 +508,43 @@ a.navbar-item:hover {
 //? Profile Page
 
 .wrapper-crikey {
-  margin: 60px;
-  height: 100vh;
+  margin: 0px;
+  max-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   background-color:white;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
+.recent-activity {
+  align-self: flex-start;
+  margin-top: 100px;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  text-align: center;
+  
+}
+
+.createdEventprofile{
+  flex-grow: 3;
+  background-color: #a2abb3;
+  font-size: 22px;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 .profile-info {
-  margin: 5px;
+  margin: 30px;
+  flex-grow: 1;
 }
 
-.wrapper-crikey img {
+.profile-photo {
   height: 200px;
   width: 200px;
   border-radius: 100px;
+  margin: 60px;
   // box-shadow: 1px 2px #888888;
 }
 
@@ -534,6 +554,24 @@ a.navbar-item:hover {
 
 .wrapper-crikey .box{
   box-shadow: none
+}
+
+.profile-info h2{
+  text-transform: none;
+  font-family: 'Manrope', sans-serif;
+}
+
+.profile-info span{
+  text-transform: none;
+  color: #3273DC;
+}
+
+.recent-activity-image{
+  border-radius: 0;
+  height: 200px;
+  width: 200px;
+  margin: 60px;
+  flex-wrap: wrap;
 }
 
 /* Gigs */

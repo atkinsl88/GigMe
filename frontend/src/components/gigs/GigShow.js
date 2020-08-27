@@ -74,10 +74,10 @@ class GigShow extends React.Component {
 
   handleFindProfile = event => {
     //! get target value, search userLinks for relevant user,
-    const posterProps = [] //populate this with the items received from searching for the right user in below function
-    const poster = event.target.value //clicking on button populates with the userid to find.
-    //posterprops array should then be props to a new profile page for the user needed.
-    console.log(poster)
+    // const posterProps = [] //populate this with the items received from searching for the right user in below function
+    // const poster = event.target.value //clicking on button populates with the userid to find.
+    // //posterprops array should then be props to a new profile page for the user needed.
+    // console.log(poster)
   }
 
 
