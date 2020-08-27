@@ -67,7 +67,7 @@ return (
               <span role="img" aria-label="marker" height="50" onClick = {(e) => {
                 // console.log(e.target.venue)
               }}>📍</span>
-              <button key={venue._id} className="mapLabels" value={venue.venue} onClick={this.handleClick} >{venue.venue}</button>
+              <button key={venue._id} className="mapLabels button" value={venue.venue} onClick={this.handleClick} >{venue.venue}</button>
             </Marker>
           </div>
         ))}
