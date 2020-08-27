@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { createLike, createComment, deleteGig } from '../../lib/api.js'
-import { isOwner } from '../../lib/auth'
+import { isAuthenticated } from '../../lib/auth'
 
 import { withHeaders } from '../../lib/api'
 
@@ -125,17 +125,24 @@ class GigShow extends React.Component {
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
 
+            {isAuthenticated(this.state.event.userId) &&
+            <>
+            <Link to={`/gigs/${this.state.event._id}/edit`} className="button is-warning">Edit</Link>
+            <hr />
+            <button onClick={this.handleDelete} className="button is-danger">Delete Event</button>
+            <hr />
+            <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
+           
+            <p>{this.state.likes.length} people have liked this event!</p>
+            </> 
+            }
+
             {/* {isOwner(this.state.event._id) &&
             <> */}
-            <Link to={`/gigs/${this.state.event._id}/edit`} className="button is-warning">Edit</Link>
-            <button onClick={this.handleDelete} className="button is-danger">Delete Event</button>
+            
             {/* </>
             } */}
-
-            <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
-    
-            <p>{this.state.likes.length} people have liked this event!</p>
-
+            
           </div>
 
           <div className="hero-gigs-indv-img">
