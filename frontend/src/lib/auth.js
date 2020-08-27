@@ -24,3 +24,8 @@ export const isAuthenticated = () => {
   const now = Math.round(Date.now() / 10000000000000)
   return now < payload.exp
 }
+
+export const isOwner = userId => {
+  if (!isAuthenticated) return false
+  return userId === getPayload().sub
+}

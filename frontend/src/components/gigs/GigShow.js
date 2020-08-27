@@ -1,11 +1,13 @@
 import React from 'react'
 import axios from 'axios'
-import { createComment } from '../../lib/api.js'
-import { createLike } from '../../lib/api.js'
+import { Link } from 'react-router-dom'
+import { createLike, createComment, deleteGig } from '../../lib/api.js'
+import { isOwner } from '../../lib/auth'
 
 import { withHeaders } from '../../lib/api'
 
 const baseUrl = 'http://localhost:3000/api'
+
 class GigShow extends React.Component {
 
   state = {
@@ -20,6 +22,7 @@ class GigShow extends React.Component {
       text:'',
     }
   }
+
   async componentDidMount() {
 
     try {
@@ -42,15 +45,17 @@ class GigShow extends React.Component {
       console.log(err)
     }
   }
+
   async componentDidUpdate() {
     try {
     } catch (err) {
       console.log(err)
     }
   }
-  async componentDidUnmount() {
-this.setState({clicked: false})
-  }
+
+//   async componentDidUnmount() {
+// this.setState({clicked: false})
+//   }
 
   handleClick = async event => {
     event.preventDefault()
@@ -71,6 +76,7 @@ this.setState({clicked: false})
     this.setState({ formData })
     
     }
+
   handleSubmit = async event => {
     event.preventDefault()
     // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
@@ -81,7 +87,6 @@ this.setState({clicked: false})
     console.log(this.state.formData.text)
     const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
     this.setState({ comments: res.data.comments })
-  
   }
     catch (err) {
       console.log(err.response.data) 
@@ -97,6 +102,16 @@ this.setState({clicked: false})
   }
 
 
+  handleDelete = async () => {
+    const gigID = this.props.match.params.id
+    try {
+      await deleteGig(gigID)
+      this.props.history.push('/gigs')
+    } catch (err) {
+      console.log(err.response.data)
+    }
+  }
+
   render() {
     return (
       <section>
@@ -109,10 +124,18 @@ this.setState({clicked: false})
             <h4>{this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
+
+            {/* {isOwner(this.state.event._id) &&
+            <> */}
+            <Link to={`/gigs/${this.state.event._id}/edit`} className="button is-warning">Edit</Link>
+            <button onClick={this.handleDelete} className="button is-danger">Delete Event</button>
+            {/* </>
+            } */}
+
             <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
-            <div>
+    
             <p>{this.state.likes.length} people have liked this event!</p>
-            </div>
+
           </div>
 
           <div className="hero-gigs-indv-img">
@@ -137,6 +160,7 @@ this.setState({clicked: false})
         <div>
       <input type="submit" value="Submit" />
       </div>
+
       </form>
       </section>
 
