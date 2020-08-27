@@ -3,33 +3,29 @@ import axios from 'axios'
 // import Select from 'react-select'
 import { Link } from 'react-router-dom'
 
-import { setToken, getPayload } from '../../lib/auth'
+import { getUserId } from '../../lib/auth'
 import { withHeaders } from '../../lib/api'
 
 class Profiles extends React.Component{
 
   state = {
-    profiles: [{}],
+    profiles: [],
     createdEvents: []
   }
 
   async componentDidMount() {
-    const userId = getPayload().sub
+    const userId = getUserId
       console.log(userId)
     try {
       
       const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`, withHeaders())
       this.setState({ profiles: res.data, createdEvents: res.data.createdEvents})
-      console.log(getPayload().sub)
       console.log(res.data)
-      setToken(res.data.token)
     } catch (err) {
       // this.props.history.push('/notfound')
       console.log(err)
     }
   }
-
-
 
   render(){
 
@@ -48,16 +44,16 @@ class Profiles extends React.Component{
             <img src={this.state.profiles.profilePicture} alt="profpic"></img>
           </div>
           <div className="profile-info">
-            <h2> USER: {this.state.profiles.username}</h2>
+            <h2>{this.state.profiles.username}</h2>
           </div>
           <div className="profile-info">
-            <h2>EMAIL:{this.state.profiles.email}</h2>
+            <h2>{this.state.profiles.email}</h2>
           </div>
           <div className="profile-info">
-            <h2>WEBSITE:{this.state.profiles.mySite}</h2>
+            <h2>{this.state.profiles.mySite}</h2>
           </div>
           <div className="profile-info">
-            <h2>FAVE GENRE:{this.state.profiles.genres}</h2>
+            <h2>{this.state.profiles.genres}</h2>
           </div>
           <div className="profile-info">
             <h2>{this.state.profiles.aboutMe}</h2>
@@ -65,14 +61,14 @@ class Profiles extends React.Component{
           <div className="createdEventprofile">
           <p>Created Events!</p>
           <div>{this.state.createdEvents.map(event => {
-            return <div key={event.id}>
+            return <div key={event._id}>
               <p>{event.artistName}</p>
-              <img src={event.posterImage}></img>
+              <img src={event.posterImage} alt="img"></img>
               <p>{event.venue}</p>
               <p>{event.date}</p>
-              <Link to={(`/gigs/${event._id}`, withHeaders())}>Find out more</Link>
+              <Link to={`/gigs/${event._id}`}>Find out more</Link>
             </div>
-          })}
+            })}
             </div>
           </div>
         </div>

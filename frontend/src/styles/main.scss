@@ -46,7 +46,6 @@ h4 {
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 20px;
 }
 
 h5 {
@@ -69,51 +68,20 @@ h6 {
 
 /* Navigation */
 
-nav {
-  background-color: #FBFAF4;
-  display: flex;
-  align-items: center;
-  height: 70px;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-}
-
-nav a {
-  padding: 10px;
+.navbar {
   font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.navbar-item {
   color: #081C6A;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
-.nav-logo {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 30px;
-}
-
-.nav-logo a {
-  font-family: 'Permanent Marker', cursive;
-  color: #FF9E9E;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.nav-lft {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 40px;
-  width: 50vw;
-}
-
-.nav-rgt {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 40px;
-  width: 50vw;
+a.navbar-item:hover {
+  color: #081C6A;
 }
 
 /* Heros */
@@ -406,7 +374,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   background-color: #FBFAF4;
-  // height: 80vh;
+  height: 95vh;
 }
 
 .form {
@@ -415,6 +383,10 @@ nav a {
   justify-content: flex-start;
   width: 500px;
   margin-left: 50px;
+}
+
+.register {
+  height: 100vh;
 }
 
 .register-form {
@@ -431,7 +403,7 @@ nav a {
 }
 
 .login {
-  height: 85vh;
+  height: 100vh;
   background-color: #FBFAF4;
 }
 
@@ -539,7 +511,7 @@ nav a {
 
 .wrapper-crikey {
   margin: 60px;
-  // border: 1px solid black;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
