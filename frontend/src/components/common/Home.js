@@ -29,30 +29,22 @@ class Home extends React.Component{
     for (let i = 0; i < 3; i++) {
       const random = this.state.gigs[Math.floor(Math.random() * this.state.gigs.length)]
       // console.log(random)
-      currentChoices.push(random)
-      // this.setState({ randomChoices: random })
-      // if (random === this.state.gigs) {
-      //   return this.getRandom()
-      // } else {
-      //   currentChoices.push(random)
-      //   console.log(this.state.randomChoices)
-      // }
-    } 
-    // console.log(currentChoices)
+      if(currentChoices.length < 3){
+      while(!currentChoices.includes(random)){
+      currentChoices.push(random)}
+    }}
     this.setState({ randomChoices: [...currentChoices] })
+    console.log(currentChoices.length)
   }
 
   handleClick = async event => {
     event.preventDefault()
     const genre=event.target.value
-    // console.log(genre)
     const results = this.state.gigs.filter(gig => (
       gig.genre === event.target.value
     ))
     // console.log(results)
     this.setState({ search: results})
-    // console.log(this.state.search)
-
   }
 
   render() {
