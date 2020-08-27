@@ -35,11 +35,11 @@ async function eventsEdit (req, res, next) {
   try {
     const editedEvents = await Event.findById(
       req.params.id,
-      { new: true, runValidators: false }
+      { new: true, runValidators: true }
     )
-    if (!editedEvents) throw new Error(notFound)
-    if (!editedEvents.user.equals(req.currentUser._id)) throw new Error(unauthorized)
-    Object.assign(editedEvents, req)
+    // if (!editedEvents) throw new Error(notFound)
+    // if (!editedEvents.user.equals(req.currentUser._id)) throw new Error(unauthorized)
+    Object.assign(editedEvents, req.body)
     await editedEvents.save()
     res.status(202).json(editedEvents)
   } catch (err) {
