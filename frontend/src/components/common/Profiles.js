@@ -9,7 +9,8 @@ import { withHeaders } from '../../lib/api'
 class Profiles extends React.Component{
 
   state = {
-    profiles: [{}]
+    profiles: [],
+    createdEvents: []
   }
 
   async componentDidMount() {
@@ -18,7 +19,7 @@ class Profiles extends React.Component{
     try {
       
       const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`, withHeaders())
-      this.setState({ profiles: res.data})
+      this.setState({ profiles: res.data, createdEvents: res.data.createdEvents})
       console.log(res.data)
     } catch (err) {
       // this.props.history.push('/notfound')
@@ -60,14 +61,14 @@ class Profiles extends React.Component{
           <div className="createdEventprofile">
           <p>Created Events!</p>
           <div>{this.state.createdEvents.map(event => {
-            return <div key={event.id}>
+            return <div key={event._id}>
               <p>{event.artistName}</p>
               <img src={event.posterImage} alt="img"></img>
               <p>{event.venue}</p>
               <p>{event.date}</p>
-              <Link to={`/gigs/${event.id}`}>Find out more</Link>
+              <Link to={`/gigs/${event._id}`}>Find out more</Link>
             </div>
-          })}
+            })}
             </div>
           </div>
         </div>
