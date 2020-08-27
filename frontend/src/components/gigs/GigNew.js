@@ -38,16 +38,19 @@ class GigNew extends React.Component {
 
   render() {
     return (
-      <section className="section">
-        <div className="container">
-          <div className="columns">
+      <section>
+
+        <div className="hero-gigs-indv text-center">
+          <div className="hero-gigs-indv-txt">
+            <h2>Create a new event</h2>
+            <h4>Fill in the information below to create a new event</h4>
+          </div>
+        </div>
             <GigForm 
               handleSubmit={this.handleSubmit}
               handleChange={this.handleChange}
               formData={this.state.formData}
               buttonText="Make my Gig"/> 
-          </div>
-        </div>
       </section>
     )
   }
