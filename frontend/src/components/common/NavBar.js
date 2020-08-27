@@ -17,6 +17,12 @@ class Navbar extends React.Component {
     this.props.history.push('/')
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.setState({ isOpen: false })
+    }
+  }
+
   render(){
   const isLoggedIn = isAuthenticated()
   return (
