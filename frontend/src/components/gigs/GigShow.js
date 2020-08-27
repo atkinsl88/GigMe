@@ -113,6 +113,8 @@ class GigShow extends React.Component {
   }
 
   render() {
+    var style = "color: red; background: #eee; font-size: 200 "
+console.log("%c made with love by the liam, noa, aishath and ash", style)
     return (
       <section>
         <div className="hero-gigs-indv">
