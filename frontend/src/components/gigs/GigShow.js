@@ -40,7 +40,7 @@ class GigShow extends React.Component {
     try {
       const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})
-      console.log(resuser.data)
+      // console.log(resuser.data)
     } catch (err) {
       console.log(err)
     }
@@ -72,21 +72,22 @@ class GigShow extends React.Component {
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    console.log(this.state.formData.text)
+    // console.log(this.state.formData.text)
     this.setState({ formData })
     
     }
 
   handleSubmit = async event => {
-    event.preventDefault()
+    // event.preventDefault()
     // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
     console.log(`${baseUrl}/events/${eventId}`)
     try {
     const res = await createComment(this.state.formData, eventId)
-    console.log(this.state.formData.text)
+    // console.log(this.state.formData.text)
     const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
-    this.setState({ comments: res.data.comments })
+    this.setState({ event: res3.data })
+    this.setState({ comments: res3.data.comments })
   }
     catch (err) {
       console.log(err.response.data) 
@@ -113,6 +114,12 @@ class GigShow extends React.Component {
   }
 
   render() {
+
+
+    console.log(this.state.comments)
+    console.log(this.state.comments.user)
+
+
     return (
       <section>
         <div className="hero-gigs-indv">
