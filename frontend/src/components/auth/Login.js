@@ -1,5 +1,4 @@
 import React from 'react'
-import image from '../../assets/002.png'
 import { loginUser } from '../../lib/api'
 import { setToken } from "../../lib/auth"
 
@@ -32,18 +31,18 @@ class Login extends React.Component {
   render() {
     // const { formData } = this.state
     return (
-      <section className="login">
 
-        <div className="hero-gigs-indv">
+      <section>
+
+<div className="hero-gigs-indv text-center">
           <div className="hero-gigs-indv-txt">
             <h2>Login</h2>
-            <h4>Login to your account.</h4>
+            <h4>Login to your account</h4>
           </div>
         </div>
 
-        <div className="form-area">
-          <div className="form">
-
+        <div className="register-form-area">
+          <div className="register-form">
             <form onSubmit={this.handleSubmit} className="box">
 
                 <div className="field">
@@ -52,7 +51,7 @@ class Login extends React.Component {
                     <input
                       type="text"
                       className="input"
-                      placeholder="username"
+                      placeholder="Username"
                       name="username"
                       onChange={this.handleChange}
                       value={this.state.formData.username}
@@ -65,7 +64,7 @@ class Login extends React.Component {
                   <div className="control">
                     <input
                       className={`input ${this.state.error ? 'is-danger': '' }`}
-                      placeholder="email"
+                      placeholder="Email"
                       name="email"
                       onChange={this.handleChange}
                       value={this.state.formData.email}
@@ -79,7 +78,7 @@ class Login extends React.Component {
                     <input
                       type="password"
                       className={`input ${this.state.error ? 'is-danger' : ''}`}
-                      placeholder="password"
+                      placeholder="Password"
                       name="password"
                       onChange={this.handleChange}
                       value={this.state.formData.password}
@@ -98,9 +97,6 @@ class Login extends React.Component {
                 </div>
                 
               </form>
-          </div>
-          <div className="form-image">
-            <img src={image} alt="logo" /> 
           </div>
         </div>
 

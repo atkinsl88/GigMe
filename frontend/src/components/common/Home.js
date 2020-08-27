@@ -87,9 +87,6 @@ class Home extends React.Component{
       </div>
     </div>
     <div className="map-home">
-      <div className="home-title">
-        <h2>Search Events</h2>
-      </div>
       
       <div className="mapArea">
         <Map className="map">
