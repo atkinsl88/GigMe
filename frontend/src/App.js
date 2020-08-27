@@ -14,6 +14,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Footer from './components/common/Footer'
 import Maps from './components/gigs/Maps'
+import UserShow from './components/gigs/UserShow'
 
 class App extends React.Component{
 
@@ -37,6 +38,7 @@ render(){
         <Route path="/register" component={Register} />
         <Route path="/gigcalendar" component={GigCalendar} />
         <Route path="/login" component={Login} />
+        <Route exact path="/users/:id" component={UserShow}/>
       </Switch>
       <Footer />
     </BrowserRouter>

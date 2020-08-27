@@ -40,6 +40,9 @@ router.route('/login')
 router.route('/users/')
   .get(user.usersall)
 
+router.route('/users/:id')
+  .get(user.userSpecific)
+
 router.route('/profiles/:id')
   // .get(secureRoute, auth.showProfile)
   .get(secureRoute, user.profile)

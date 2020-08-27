@@ -51,6 +51,10 @@ export const createLike = (likes, id) => {
   return axios.post(`${baseUrl}/events/${id}/like`, likes, withHeaders())
 }
 
+export const getSingleUser = id => {
+  return axios.get(`${baseUrl}/users/${id}`)
+}
+
 // community 
 export const createMessage = formData => {
   return axios.post(`${baseUrl}/community`, formData, withHeaders())

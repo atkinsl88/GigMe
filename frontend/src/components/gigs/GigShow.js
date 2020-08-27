@@ -58,7 +58,6 @@ class GigShow extends React.Component {
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    // console.log(this.state.formData.text)
     this.setState({ formData })
   }
 
@@ -79,11 +78,11 @@ class GigShow extends React.Component {
   }
 
   handleFindProfile = event => {
-    //! get target value, search userLinks for relevant user,
+    //! get target value, search userLinks for relevant user,use it to populate link to their userprofile
     const posterProps = [] //populate this with the items received from searching for the right user in below function
     const poster = event.target.value //clicking on button populates with the userid to find.
-    //posterprops array should then be props to a new profile page for the user needed.
-    console.log(poster)
+    const selectedUser = posterProps.filter(poster)
+    return selectedUser
   }
 
 
@@ -156,7 +155,7 @@ class GigShow extends React.Component {
         <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment"><button value={eachcomment.user._id} onClick={this.handleFindProfile}>{eachcomment.user.username}</button> - {eachcomment.text}</h2>
+            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} button value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
             </div>
           )
         })}</div>
