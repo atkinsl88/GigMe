@@ -2,17 +2,24 @@
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
 @import '~bulma/bulma.sass';
+$primaryRed: #f73434;
+$primaryGray: #a2abb3;
+$secondaryGray: #d6dde4;
+$primaryNavy: #093052;
+$newGray: #f7f9fa;
+
 
 /* Misc */
 
 * {
   margin: 0px;
+  font-family: 'Manrope', sans-serif;
 }
 
 /* Fonts */
 
 h1 {
-  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
@@ -21,8 +28,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'PT Sans', sans-serif;
-  color: #FF9E9E;
+  color: $primaryNavy;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -30,8 +36,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'PT Sans', sans-serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -41,16 +46,14 @@ h3 {
 
 
 h4 {
-  font-family: 'Playfair Display', serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
 }
 
 h5 {
-  font-family: 'PT Sans', sans-serif;
-  color: #081C6A;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
@@ -58,8 +61,7 @@ h5 {
 }
 
 h6 {
-  font-family: 'PT Sans', sans-serif;
-  color: #BAC0D6;
+  color: $primaryNavy;
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
@@ -69,7 +71,7 @@ h6 {
 /* Navigation */
 
 .navbar {
-  font-family: 'PT Sans', sans-serif;
+  background-color: $primaryNavy;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
@@ -77,11 +79,15 @@ h6 {
 }
 
 .navbar-item {
-  color: #081C6A;
+  color: #e1e3eb;
 }
 
 a.navbar-item:hover {
-  color: #081C6A;
+  color: $primaryGray;
+}
+
+.navbar-menu {
+  padding: 0px;
 }
 
 /* Heros */
@@ -98,6 +104,7 @@ a.navbar-item:hover {
 .hero-home-txt {
   margin-left: 40px;
   width: 300px;
+  font-weight: bolder;
 }
 
 .hero-gigs {
@@ -118,7 +125,7 @@ a.navbar-item:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #FBFAF4;
+  background-color: $newGray;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -135,7 +142,7 @@ a.navbar-item:hover {
 .hero-community {
   height: 390px;
   width: 100vw;
-  background-color: grey;
+  background-color: $newGray;
   display: flex;
   align-items: center;
   background-image: url(https://i.imgur.com/drQe5dH.png);
@@ -169,7 +176,7 @@ a.navbar-item:hover {
 /* Featured Events */
 
 .featured-home {
-  background-color: #FFFFFF;
+  background-color: $newGray;
   padding-bottom: 40px;
 }
 
@@ -206,8 +213,8 @@ a.navbar-item:hover {
 }
 
 .button {
-  font-family: 'PT Sans', sans-serif;
-  color: #081C6A;
+  color: $primaryNavy;
+  background-color: $secondaryGray;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -218,7 +225,7 @@ a.navbar-item:hover {
 /* Links */
 
 .links-home {
-  background-color: #FBFAF4;
+  background-color: $primaryNavy;
   padding-bottom: 40px;
 }
 
@@ -232,7 +239,7 @@ a.navbar-item:hover {
 .links-boxes-lft {
   height: 220px;
   width: 44vw;
-  background-color: #6455C1;
+  background-color: $primaryRed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +266,7 @@ a.navbar-item:hover {
 }
 
 .links-boxes-rgt h2 {
-  color: #081C6A;
+  color: $primaryNavy;
 }
 
 @media only screen and (max-width: 900px) {
@@ -300,6 +307,7 @@ a.navbar-item:hover {
 }
 
 .mapArea {
+  background-color: $primaryNavy;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -319,7 +327,7 @@ a.navbar-item:hover {
 
 .calendarArea {
   padding: 40px;
-  background-color: #FBFAF4;
+  background-color: $primaryGray;
 }
 
 .fc-event-title{
