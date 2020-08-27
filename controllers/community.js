@@ -11,8 +11,6 @@ async function communityMessage (req, res) {
 }
 
 
-
-
 module.exports = {
   create: communityMessage
 }
