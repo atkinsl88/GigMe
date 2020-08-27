@@ -32,3 +32,4 @@ export const createLike = (likes, id) => {
 export const createMessage = formData => {
   return axios.post(`${baseUrl}/community`, formData, withHeaders())
 }
+

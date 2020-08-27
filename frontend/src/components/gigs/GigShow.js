@@ -3,10 +3,13 @@ import axios from 'axios'
 import { createComment } from '../../lib/api.js'
 import { createLike } from '../../lib/api.js'
 
+import { withHeaders } from '../../lib/api'
+
 const baseUrl = 'http://localhost:3000/api'
 class GigShow extends React.Component {
 
   state = {
+    usersLink:[],
     event: [],
     text: '',
     likes: '',
@@ -26,6 +29,15 @@ class GigShow extends React.Component {
       console.log(res.data)
       this.setState({ comments: res.data.comments })
       this.setState({ likes: res.data.likes })
+    } catch (err) {
+      console.log(err)
+    }
+
+    //! fetched all userdata to use in linking comments to separate profiles (as well as passing props)
+    try {
+      const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
+      this.setState({ usersLink: resuser.data})
+      console.log(resuser.data)
     } catch (err) {
       console.log(err)
     }
@@ -72,9 +84,19 @@ this.setState({clicked: false})
   
   }
     catch (err) {
-      console.log(err.response.data)
+      console.log(err.response.data) 
     }
   }
+
+  handleFindProfile = event => {
+    //! get target value, search userLinks for relevant user,
+    const posterProps = [] //populate this with the items received from searching for the right user in below function
+    const poster = event.target.value //clicking on button populates with the userid to find.
+    //posterprops array should then be props to a new profile page for the user needed.
+    console.log(poster)
+  }
+
+
   render() {
     return (
       <section>
@@ -119,15 +141,14 @@ this.setState({clicked: false})
       </section>
 
         <section className="gigCommentSection">
-        <div>{this.state.comments.map(eachcomment => {
+        <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment">{eachcomment.user.username} - {eachcomment.text} - {eachcomment.createdAt}</h2>
+            <h2 className="indivComment"><button value={eachcomment.user._id} onClick={this.handleFindProfile}>{eachcomment.user.username}</button> - {eachcomment.text}</h2>
             </div>
           )
         })}</div>
         </section>
-        
       </section>
     )
   }
