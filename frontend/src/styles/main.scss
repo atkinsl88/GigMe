@@ -46,7 +46,6 @@ h4 {
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 20px;
 }
 
 h5 {
@@ -375,7 +374,7 @@ a.navbar-item:hover {
   display: flex;
   flex-wrap: wrap;
   background-color: #FBFAF4;
-  // height: 80vh;
+  height: 95vh;
 }
 
 .form {
@@ -384,6 +383,10 @@ a.navbar-item:hover {
   justify-content: flex-start;
   width: 500px;
   margin-left: 50px;
+}
+
+.register {
+  height: 100vh;
 }
 
 .register-form {
@@ -400,7 +403,7 @@ a.navbar-item:hover {
 }
 
 .login {
-  height: 85vh;
+  height: 100vh;
   background-color: #FBFAF4;
 }
 
@@ -508,7 +511,7 @@ a.navbar-item:hover {
 
 .wrapper-crikey {
   margin: 60px;
-  // border: 1px solid black;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

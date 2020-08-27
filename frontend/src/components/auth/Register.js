@@ -55,7 +55,9 @@ class Register extends React.Component {
   
   render() {
     return (
-      <section>
+
+      <section className="register">
+
         <div className="hero-gigs-indv text-center">
           <div className="hero-gigs-indv-txt">
             <h2>Sign Up</h2>

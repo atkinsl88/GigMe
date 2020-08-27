@@ -39,7 +39,7 @@ class Navbar extends React.Component {
               {isLoggedIn ?
                 <>
                   <Link to="/create-an-event" className="navbar-item">Add a new event</Link>
-                  <Link to="/profile" className="navbar-item">Profile</Link>
+                  <Link to="/profiles" className="navbar-item">Profile</Link>
                   <Link className="navbar-item" onClick={this.handleLogout}>LOG OUT</Link>
                 </>
                 :
