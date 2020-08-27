@@ -8,7 +8,12 @@ export const withHeaders = () => {
   }
 }
 
+
 // * Gig Requests
+
+export const getAllGigs = () => {
+  return axios.get(`${baseUrl}/events`)
+}
 
 export const createGig = formData => {
   return axios.post(`${baseUrl}/events`, formData, withHeaders())
