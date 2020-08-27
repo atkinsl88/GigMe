@@ -32,17 +32,6 @@ class Home extends React.Component{
       currentChoices.push(random)}
     }
     this.setState({ randomChoices: [...currentChoices] })
-    console.log(currentChoices)
-  }
-
-  handleClick = async event => {
-    event.preventDefault()
-    const genre=event.target.value
-    const results = this.state.gigs.filter(gig => (
-      gig.genre === event.target.value
-    ))
-    // console.log(results)
-    this.setState({ search: results})
   }
 
   render() {
@@ -50,8 +39,10 @@ class Home extends React.Component{
     // console.log(this.state.gigs)
 
     // if (!this.state.randomChoices) return
+    
 
     return(
+      
 
   <section>
     <div className="hero-home">
@@ -67,7 +58,7 @@ class Home extends React.Component{
       <div className="three-col">
         {this.state.randomChoices.map(name => {
           return (
-            <div className="three-col-content" key={name.id}>
+            <div className="three-col-content" key={name._id}>
               <div>
                 <img src={name.posterImage} alt="logo" />
               </div>
@@ -98,32 +89,6 @@ class Home extends React.Component{
     <div className="map-home">
       <div className="home-title">
         <h2>Search Events</h2>
-      </div>
-      <div id="genres" className="searchGenres">
-        <button onClick={this.handleClick} value="pop" className="searchButtons">Pop</button>
-        <button onClick={this.handleClick} value="rock" className="searchButtons">Rock</button>
-        <button onClick={this.handleClick} value="electronic" className="searchButtons">Electronic</button>
-        <button onClick={this.handleClick} value="brunch" className="searchButtons">Brunch</button>
-        <button onClick={this.handleClick} value="metal" className="searchButtons">Metal</button>
-        <button onClick={this.handleClick} value="hip-hop" className="searchButtons">Hip Hop</button>
-        <button onClick={this.handleClick} value="world" className="searchButtons">World</button>
-        <button onClick={this.handleClick} value="ambient" className="searchButtons">Ambient</button>
-        <button onClick={this.handleClick} value="country" className="searchButtons">Country</button>
-        <button onClick={this.handleClick} value="grime" className="searchButtons">Grime</button>
-        <button onClick={this.handleClick} value="jazz/soul" className="searchButtons">Jazz / Soul</button>
-      </div>
-      <div className="three-col">
-        {this.state.search.map(name => {
-          return (
-            <div className="three-col-content" key={name.id}>
-              <img src={name.posterImage} alt="logo" />
-              <h3>{name.artistName}</h3>
-              <h4>{name.aboutEvent}</h4>
-              <h5>{name.date}</h5>
-              <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
-            </div>
-          )
-        })}
       </div>
       
       <div className="mapArea">

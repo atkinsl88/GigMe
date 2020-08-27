@@ -15,14 +15,11 @@ class Profiles extends React.Component{
 
   async componentDidMount() {
     const userId = getUserId
-      console.log(userId)
     try {
-      
       const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`, withHeaders())
       this.setState({ profiles: res.data, createdEvents: res.data.createdEvents})
-      console.log(res.data)
     } catch (err) {
-      // this.props.history.push('/notfound')
+      this.props.history.push('/notfound')
       console.log(err)
     }
   }
@@ -79,86 +76,3 @@ class Profiles extends React.Component{
 }
 
 export default Profiles
-
-{/* <div>
-<img src={this.state.profiles.profilePicture} alt='prof-pic'/>
-</div> */}
-// <div className="form-area2">
-//           <div className="form register-form">
-//             <form onSubmit={this.handleSubmit} className="box">
-//               <div className="field">
-//                 <label className="label">Your username</label>
-//                 <div className="control">
-//                   <input
-//                     className="input"
-//                     type="text"
-//                     name="username"
-//                     placeholder="username"
-//                     // onChange={this.handleChange}
-//                     value={this.state.profiles.username}
-//                   />
-//                 </div>
-//               </div>
-
-//               <div className="field">
-//                 <label className="label">Your email</label>
-//                 <div className="control">
-//                   <input
-//                   className="input"
-//                     type="text"
-//                     name="email"
-//                     placeholder="email"
-//                     value={this.state.profiles.email}
-//                     // onChange={this.handleChange}
-//                   />
-//                 </div>
-//               </div>
-
-//               <div className="field">
-//                 <label className="label">Your website</label>
-//                 <div className="control">
-//                   <input
-//                     className="input"
-//                     type="text"
-//                     name="genres"
-//                     placeholder="www.aboutme.com"
-//                     value={this.state.profiles.mySite}
-//                     // onChange={this.handleChange}
-//                   />
-//                 </div>
-//               </div>
-
-              
-
-//               <div className="field">
-//                 <label className="label">Your favourite genre</label>
-//                 <div className="control">
-//                   <div className="control">
-//                   <input 
-//                   className="input"
-//                   type="text"
-//                   name="genres"
-//                   placeholder="genre"
-//                   value={this.state.profiles.genres}
-//                   />
-//                   </div>
-//                 </div>
-//               </div>
-
-//               <div className="field">
-//                 <label className="label">Bio</label>
-//                 <div className="control">
-//                   <textarea
-//                     className="textarea input"
-//                     name="description"
-//                     value={this.state.profiles.aboutMe}
-//                     // onChange={this.handleChange}
-//                   />
-//                 </div>
-//               </div>
-
-//               <div className="field">
-//                 <button type="submit" className="button is-fullwidth is-warning">confirm changes</button>
-//               </div>
-
-//             </form>

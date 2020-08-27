@@ -16,18 +16,11 @@ class GigCalendar extends React.Component {
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
-      // console.log(res.data)
       this.setState({ events: res.data })
-      console.log(res.data);
-      console.log(this.state.events);
     } catch (err) {
       console.log(err)
     }
   }
-
-  // async componentDidUpdate() {
-
-  // }
 
 
   render(){
@@ -76,10 +69,8 @@ class GigCalendar extends React.Component {
     return (
       <div className="App">
         <FullCalendar
-          defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
           events={events}
-          // height={'520px'}
           aspectRatio={'2.5'}
         />
       </div>

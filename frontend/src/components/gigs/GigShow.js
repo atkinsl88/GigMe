@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom'
 import { createLike, createComment, deleteGig } from '../../lib/api.js'
 import { isAuthenticated } from '../../lib/auth'
 
-import { withHeaders } from '../../lib/api'
-
-const baseUrl = 'http://localhost:3000/api'
+import { withHeaders, getSingleGig } from '../../lib/api'
 
 class GigShow extends React.Component {
 
@@ -27,9 +25,8 @@ class GigShow extends React.Component {
 
     try {
       const eventId = this.props.match.params.id
-      const res = await axios.get(`http://localhost:3000/api/events/${eventId}`)
+      const res = await getSingleGig(eventId)
       this.setState({ event: res.data })
-      console.log(res.data)
       this.setState({ comments: res.data.comments })
       this.setState({ likes: res.data.likes })
     } catch (err) {
@@ -40,55 +37,37 @@ class GigShow extends React.Component {
     try {
       const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})
-      console.log(resuser.data)
     } catch (err) {
       console.log(err)
     }
   }
-
-  async componentDidUpdate() {
-    try {
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
-//   async componentDidUnmount() {
-// this.setState({clicked: false})
-//   }
 
   handleClick = async event => {
     event.preventDefault()
     const eventId = this.props.match.params.id
-    try {const res = await createLike(this.state.text, eventId)
-    const res2 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
-    this.setState({ likes: res2.data.likes })
+    try {
+      await createLike(this.state.text, eventId)
+      const res2 = await getSingleGig(eventId)
+      this.setState({ likes: res2.data.likes })
     }
     catch (err) {
       console.log(err.response.data)
     }
   }
-//}
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    console.log(this.state.formData.text)
     this.setState({ formData })
-    
-    }
+  }
 
   handleSubmit = async event => {
     event.preventDefault()
-    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
-    console.log(`${baseUrl}/events/${eventId}`)
     try {
-    const res = await createComment(this.state.formData, eventId)
-    console.log(this.state.formData.text)
-    const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
-    this.setState({ comments: res.data.comments })
-  }
-    catch (err) {
+      const res = await createComment(this.state.formData, eventId)
+      await getSingleGig(eventId)
+      this.setState({ comments: res.data.comments })
+    } catch (err) {
       console.log(err.response.data) 
     }
   }
@@ -138,12 +117,6 @@ console.log("%c made with love by the liam, noa, aishath and ash", style)
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
             }
-
-            {/* {isOwner(this.state.event._id) &&
-            <> */}
-            
-            {/* </>
-            } */}
             
           </div>
 
