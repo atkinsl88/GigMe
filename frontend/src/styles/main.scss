@@ -192,6 +192,7 @@ a.navbar-item:hover {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: $newGray;
 }
 
 .three-col-content {
@@ -598,6 +599,10 @@ a.navbar-item:hover {
   flex-direction: column;
 }
 
+.card-content {
+  padding: 17px;
+}
+
 .gig-title {
   height: auto;
   margin: 10px;
@@ -631,6 +636,7 @@ a.navbar-item:hover {
   display:flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: $newGray;
 }
 
 .mapSearch {
