@@ -74,16 +74,16 @@ class Home extends React.Component{
       </div>
     </div>
     <div className="links-home">
-      <div className="home-title">
+      {/* <div className="home-title">
         <h2>Links</h2>
-      </div>
+      </div> */}
       <div className="links-boxes">
           <a href="/gigs" className="links-boxes-lft">
             <h2>All Gigs</h2>
           </a>
-          <a href="/community" className="links-boxes-rgt">
+          {/* <a href="/community" className="links-boxes-rgt">
             <h2>Community</h2>
-          </a>
+          </a> */}
       </div>
     </div>
     <div className="map-home">

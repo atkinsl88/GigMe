@@ -100,17 +100,19 @@ class GigShow extends React.Component {
             <h2>Event Info</h2>
             <hr />
             <span className="gigShowArtistName">{this.state.event.artistName}</span>
-            <h4>Venue: {this.state.event.venue}</h4>
-            <h4>Date: {this.state.event.date}</h4>
-            <h4>Doors open at: {this.state.event.doorsAt}</h4>
-            <h4>About event: {this.state.event.aboutEvent} </h4>
+            <h4><b>Venue:</b> {this.state.event.venue}</h4>
+            <h4><b>Date:</b> {this.state.event.date}</h4>
+            <h4><b>Doors open at: </b>{this.state.event.doorsAt}</h4>
+            <h4><b>About event: </b>{this.state.event.aboutEvent} </h4>
 
             {isAuthenticated(this.state.event.userId) &&
             <>
             <Link to={`/gigs/${this.state.event._id}/edit`} className="button button2">Edit</Link>
             <button onClick={this.handleDelete} className="button2">Delete Event</button>
-            <hr />
-            <button onClick={this.handleClick} value="" className="gigLike">like</button>
+            <div>
+              <button onClick={this.handleClick} value="" className="gigLike button2">🤍</button>
+            </div>
+            
            
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
@@ -119,16 +121,17 @@ class GigShow extends React.Component {
           </div>
 
           <div className="hero-gigs-indv-img">
-            <img src={this.state.event.posterImage} alt="logo" />
+            <img src={this.state.event.posterImage} alt="logo" className="show-page-img"/>
           </div>
 
         </div>
 
-        <div className="home-title">
+        
+        <section className="commentEventForm">
+        <div className="hero-gigs-indv-txt">
           <h2>Comments</h2>
         </div>
 
-        <section className="commentEventForm">
         <form onSubmit={this.handleSubmit}>
         <textarea
                   className="textarea commentEventForm"
@@ -138,7 +141,7 @@ class GigShow extends React.Component {
                   value={this.state.formData.text}
                 />
         <div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" className="button2"/>
       </div>
 
       </form>
@@ -148,7 +151,10 @@ class GigShow extends React.Component {
         <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment"><button value={eachcomment.user._id} onClick={this.handleFindProfile}>{eachcomment.user.username}</button> - {eachcomment.text}</h2>
+              <div className="indivComment">
+                <button value={eachcomment.user._id} onClick={this.handleFindProfile} className="button2">
+                  {eachcomment.user.username}
+                </button>  {eachcomment.text}</div>
             </div>
           )
         })}</div>

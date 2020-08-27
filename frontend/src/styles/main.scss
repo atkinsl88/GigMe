@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-// @import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
-// @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
-// @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
-=======
 @import '~bulma/bulma.sass';
 @import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
->>>>>>> 95282c8d36bf5b00b6f66a6f6830ae8e88ba24c7
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap);
 @import '~bulma/bulma.sass';
 $primaryRed: #f73434;
 $primaryGray: #a2abb3;
@@ -27,7 +22,8 @@ $newGray: #f7f9fa;
 /* Fonts */
 
 h1 {
-  font-weight: bold;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
   color: #FFFFFF;
   text-decoration: none;
   text-transform: uppercase;
@@ -143,10 +139,6 @@ a.navbar-item:hover {
   width: 600px;
 }
 
-.hero-gigs-indv-img {
-  margin-right: 50px;
-}
-
 .hero-community {
   height: 390px;
   width: 100vw;
@@ -163,14 +155,10 @@ a.navbar-item:hover {
 
 .hero-gigs-indv-img img{
   margin: 0 50px;
-  max-width: 550px;
-  border-style: solid;
-  border-color: black;
-  border-width: 5px;
-  padding:0px;
-  display: block;
-  border-radius: 25px;
-  // margin:0px;
+  max-width: 400px;
+  display: inline;
+  border-radius: 5px;
+  margin-right: 50px;
 }
 
 .gigShowArtistName {
@@ -267,8 +255,8 @@ a.navbar-item:hover {
 }
 
 .links-boxes-lft {
-  height: 220px;
-  width: 44vw;
+  height: 170px;
+  max-width: 600px;
   background-color: $primaryRed;
   display: flex;
   justify-content: center;
@@ -276,28 +264,26 @@ a.navbar-item:hover {
   flex: 1 1 400px;
   margin-left: 40px;
   margin-right: 10px;
+  h2 {
+    color: #FFE065;
+  }
 }
 
+// .links-boxes-rgt{
+//   height: 220px;
+//   width: 44vw;
+//   background-color: #FFDECA;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex: 1 1 400px;
+//   margin-right: 40px;
+//   margin-left: 10px;
+// }
 
-.links-boxes-lft h2 {
-  color: #FFE065;
-}
-
-.links-boxes-rgt{
-  height: 220px;
-  width: 44vw;
-  background-color: #FFDECA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 400px;
-  margin-right: 40px;
-  margin-left: 10px;
-}
-
-.links-boxes-rgt h2 {
-  color: $primaryNavy;
-}
+// .links-boxes-rgt h2 {
+//   color: $primaryNavy;
+// }
 
 @media only screen and (max-width: 900px) {
   .links-boxes-lft {
@@ -470,13 +456,17 @@ a.navbar-item:hover {
 
 .footer-main {
   background-color: $primaryNavy;
-  height: 80px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-content: flex-end;
   text-align: center;
     .footer-text {
-      color: $newGray
+      color: $newGray;
+      margin-top: 10px;
+    }
+    h1 {
+      margin-top: 30px;
     }
 }
 
@@ -492,17 +482,18 @@ a.navbar-item:hover {
 //the below is for gig event page comments
 
 .eventComments{
-  background-color: lightblue;
+  background-color: $primaryRed;
   margin: 30px;
-  border-radius: 25px;
-  padding:20px;
+  border-radius: 5px;
+  padding: 5px;
   max-width: 800px;
-  min-width:500px
+  min-width: 300px;
+
 }
 
 .indivComment {
   font-size: 15px;
-  color: darkslategrey;
+  color: $primaryNavy;
   font-weight: normal;
 }
 
@@ -510,15 +501,17 @@ a.navbar-item:hover {
   display:flex;
   // align-items: center;
   justify-content: left;
+  background-color: $newGray;
+  padding-left: 50px;
 }
 
 .commentEventForm {
   align-self: center;
-  margin: 10px;
-  border-radius: 25px;
-  padding:20px;
+  border-radius: 5px;
+  padding: 20px;
   max-width: 1200px;
-  min-width:800px
+  background-color: $newGray;
+  padding-left: 50px;
 }
 
 .commentEventForm textarea {
@@ -528,12 +521,15 @@ a.navbar-item:hover {
 }
 
 .gigLike {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  margin: 10px;
   color: $newGray;
   background-color: $primaryRed;
-  padding: 3px;
+  padding-left: 8px;
+  margin-left: 55px;
   border-radius: 5px;
-  min-width: 50px;
-  font-size: 15px;
+  // min-width: 55px;
   border: none;
 }
 /* community */
@@ -653,24 +649,21 @@ a.navbar-item:hover {
   justify-content: center;
   margin:15px;
   background-color: $newGray;
-}
-
-.mapSearchHeader h1 {
-  color:black;
+    h1 {
+      color:black;
+    }
 }
 
 .map-thumbs{
 max-width: 200px;
 padding: 10px;
 background-color: $newGray;
-}
-
-.map-thumbs img{
-  max-height: 100px;
+  img {
+    max-height: 100px;
+  }
 }
 
 .createdEventprofile{
-
   display:flex;
   justify-content: center;
 }
