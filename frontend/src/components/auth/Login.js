@@ -9,12 +9,13 @@ class Login extends React.Component {
       username: '',
       email: '',
       password: ''
-    }
+    },
+    error: false
   }
 
   handleChange = event => {
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
-    this.setState({ formData })
+    this.setState({ formData, error: false })
   }
 
   handleSubmit = async event => {
@@ -26,7 +27,7 @@ class Login extends React.Component {
       setToken(res.data.token)
       this.props.history.push('/')
     } catch (err) {
-      console.log(err.response.data)
+      this.setState({ error: true })
     }
   }
 
@@ -65,7 +66,7 @@ class Login extends React.Component {
                   <label className="label">Email</label>
                   <div className="control">
                     <input
-                      className="input"
+                      className={`input ${this.state.error ? 'is-danger': '' }`}
                       placeholder="email"
                       name="email"
                       onChange={this.handleChange}
@@ -79,7 +80,7 @@ class Login extends React.Component {
                   <div className="control">
                     <input
                       type="password"
-                      className="input"
+                      className={`input ${this.state.error ? 'is-danger' : ''}`}
                       placeholder="password"
                       name="password"
                       onChange={this.handleChange}
@@ -87,9 +88,15 @@ class Login extends React.Component {
                     />
                   </div>
                 </div>
+                {this.state.error && <small className="help is-danger">Sorry, your credentials were incorrect</small>}
 
                 <div className="field">
-                  <button type="submit" className="button is-fullwidth is-warning">Login</button>
+                  <button 
+                    disabled={!this.state.formData.email || !this.state.formData.password}
+                    type="submit" 
+                    className="button is-fullwidth is-warning">
+                    Login
+                  </button>
                 </div>
                 
               </form>
