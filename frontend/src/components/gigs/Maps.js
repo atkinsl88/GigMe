@@ -26,7 +26,6 @@ class Maps extends React.Component {
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
-      console.log(res.data)
       this.setState({ venues: res.data })
     } catch (err) {
       console.log(err)
@@ -35,7 +34,7 @@ class Maps extends React.Component {
 
   handleClick = async event => {
     event.preventDefault()
-    const venue=event.target.venue
+    // const venue=event.target.venue
     // console.log(genre)
     const results = this.state.venues.filter(gig => (
       gig.venue === event.target.value
@@ -59,19 +58,18 @@ return (
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
         {this.state.venues.map(venue => (
-          <>
-          <Marker
-            key={venue._id}
-            value={venue.venue}
-            latitude={venue.latitude}
-            longitude={venue.longitude}
-            >
-            <span role="img" aria-label="marker" height="50" onClick = {(e) => {
-              // console.log(e.target.venue)
-            }}>🔴</span>
-            <button key={venue.artistName} className="mapLabels" value={venue.venue} onClick={this.handleClick} >{venue.venue}</button>
-          </Marker>
-          </>
+          <div key={venue._id}>
+            <Marker
+              value={venue.venue}
+              latitude={venue.latitude}
+              longitude={venue.longitude}
+              >
+              <span role="img" aria-label="marker" height="50" onClick = {(e) => {
+                // console.log(e.target.venue)
+              }}>📍</span>
+              <button key={venue._id} className="mapLabels" value={venue.venue} onClick={this.handleClick} >{venue.venue}</button>
+            </Marker>
+          </div>
         ))}
         
       </MapGL>
@@ -81,7 +79,8 @@ return (
       <div className="three-col">
         {this.state.searchResults.map(name => {
           return (
-            <div className="map-thumbs" key={name.id}>
+            <div className="map-thumbs" key={name._id}>
+              
               <img src={name.posterImage} alt="logo" />
               <h3>{name.artistName}</h3>
               <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>

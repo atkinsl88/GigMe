@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import { BrowserRouter, Switch , Route  } from 'react-router-dom'
 
 import Navbar from './components/common/NavBar'
@@ -17,22 +16,10 @@ import Footer from './components/common/Footer'
 import Maps from './components/gigs/Maps'
 
 class App extends React.Component{
-  state = {
-    gigs: []
-  }
-
-  async componentDidMount() {
-    try {
-      const res = await axios.get('http://localhost:3000/api/events')
-      console.log(res.data)
-      this.setState({ gigs: res.data })
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
 render(){
-
+  var style = 'color: red; background: #eee; font-size: 20px'
+  console.log("%c made with love by the liam, noa, aishath and ash", style)
   // console.log(this.state.gigs) //data from API
 
   return (

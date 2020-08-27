@@ -35,10 +35,8 @@ class Register extends React.Component {
 
 
   handleChange = event => {
-    // const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const errors = { ...this.state.errors, [event.target.name]: ''}
-    // console.log(formData)
     this.setState({ formData, errors })
   }
 
