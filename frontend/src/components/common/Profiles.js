@@ -67,10 +67,10 @@ class Profiles extends React.Component{
           <div>{this.state.createdEvents.map(event => {
             return <div key={event.id}>
               <p>{event.artistName}</p>
-              <img src={event.posterImage}></img>
+              <img src={event.posterImage} alt="img"></img>
               <p>{event.venue}</p>
               <p>{event.date}</p>
-              <Link to={(`/gigs/${event._id}`, withHeaders())}>Find out more</Link>
+              <Link to={`/gigs/${event.id}`}>Find out more</Link>
             </div>
           })}
             </div>
