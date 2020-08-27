@@ -56,7 +56,7 @@ class Register extends React.Component {
   render() {
     return (
 
-      <section className="register">
+      <section>
 
         <div className="hero-gigs-indv text-center">
           <div className="hero-gigs-indv-txt">
@@ -65,17 +65,17 @@ class Register extends React.Component {
           </div>
         </div>
 
-        <div className="form-area">
-          <div className="form register-form">
+        <div className="register-form-area">
+          <div className="register-form">
             <form onSubmit={this.handleSubmit} className="box">
               <div className="field">
-                <label className="label">username</label>
+                <label className="label">Username</label>
                 <div className="control">
                   <input
                     className={`input ${this.state.errors.username ? 'is-danger' : '' }`}
                     type="text"
                     name="username"
-                    placeholder="username"
+                    placeholder="Username"
                     onChange={this.handleChange}
                     value={this.state.formData.username}
                   />
@@ -84,13 +84,13 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">email</label>
+                <label className="label">Email</label>
                 <div className="control">
                   <input
                   className={`input ${this.state.errors.email ? 'is-danger' : ''}`}
                     type="text"
                     name="email"
-                    placeholder="email"
+                    placeholder="Email"
                     value={this.state.formData.email}
                     onChange={this.handleChange}
                   />
@@ -99,7 +99,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">password</label>
+                <label className="label">Password</label>
                 <div className="control">
                   <input
                     className={`input ${this.state.errors.password ? 'is-danger' : ''}`}
@@ -114,12 +114,12 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">password confirmation</label>
+                <label className="label">Password confirmation</label>
                 <div className="control">
                   <input
                     className={`input ${this.state.errors.passwordConfirmation ? 'is-danger' : ''}`}
                     type="password"
-                    placeholder="password confirmation"
+                    placeholder="Password Confirmation"
                     name="passwordConfirmation"
                     value={this.state.formData.passwordConfirmation}
                     onChange={this.handleChange}
@@ -129,7 +129,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">website</label>
+                <label className="label">Website</label>
                 <div className="control">
                   <input
                     className="input"
@@ -143,7 +143,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">link to profile picture</label>
+                <label className="label">Link to profile picture</label>
                 <div className="control">
                   <input
                     className="input"
@@ -157,7 +157,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">pick your favourite genre</label>
+                <label className="label">Pick your favourite genre</label>
                 <div className="control">
                   <div className="control">
                   <Select options={this.options}
@@ -167,7 +167,7 @@ class Register extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">bio</label>
+                <label className="label">Bio</label>
                 <div className="control">
                   <textarea
                     className="textarea input"
@@ -186,57 +186,6 @@ class Register extends React.Component {
           </div>
         </div>
       </section>
-      
-
-      // <div className="field">
-      //   <label className="label">Username</label>
-      //   <div className="control">
-
-      //   </div>
-      // </div>
-        
-        
-      //   <label className="label">Email</label>
-      
-      //   <label className="label">Website</label>
-      
-      //   <label className="label">link to profile picture</label>
-      // <input
-      //     type="text"
-      //     name="profilePicture"
-      //     value={this.state.formData.profilePicture}
-      //     onChange={this.handleChange}
-      //   />
-      //   <label className="label">Your favourite genre!</label>
-              
-
-      //   <label className="label">Description</label>
-      //         <div className="control">
-      //           <textarea
-      //             className="textarea"
-      //             name="description"
-      //             value={this.state.formData.aboutMe}
-      //             onChange={this.handleChange}
-      //           />
-      //   </div>
-      //   <label className="label">password</label>
-      //   <input
-      //     type="text"
-      //     name="password"
-      //     value={this.state.formData.password}
-      //     onChange={this.handleChange}
-      //   />
-      //   <label className="label">confirm password</label>
-      // <input
-      //     type="text"
-      //     name="passwordConfirmation"
-      //     value={this.state.formData.passwordConfirmation}
-      //     onChange={this.handleChange}
-      //   />
-      //   <p>
-      // <input type="submit" value="Submit" onClick={this.handleSubmit}/>
-      // </p>
-      // </form>
     )
   }
 }

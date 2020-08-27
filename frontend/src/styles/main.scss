@@ -146,8 +146,6 @@ a.navbar-item:hover {
   width: 300px;
 }
 
-  // margin:0px;
-
 .hero-gigs-indv-img img{
   margin: 0 50px;
   max-width: 550px;
@@ -354,20 +352,6 @@ a.navbar-item:hover {
   background-color: white;
 }
 
-// .calendar {
-//   // display:flex;
-//   // justify-content: center;
-//   font-family: 'Playfair Display', serif;
-//   color: #081C6A;
-//   text-decoration: none;
-//   font-weight: 400;
-//   font-size: 16px;
-
-// }
-
-
-
-
 /* Form */
 
 .form-area {
@@ -385,13 +369,19 @@ a.navbar-item:hover {
   margin-left: 50px;
 }
 
-.register {
+/* Register */
+
+.register-form-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: 100vh;
 }
 
 .register-form {
-  margin-left: 25%;
-  margin-bottom: 20px;
+  width: 500px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .form-image {
