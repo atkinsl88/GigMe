@@ -52,7 +52,7 @@ export const createLike = (likes, id) => {
 }
 
 // community 
-export const createMessage = formData => {
-  return axios.post(`${baseUrl}/community`, formData, withHeaders())
-}
+// export const createMessage = formData => {
+//   return axios.post(`${baseUrl}/community`, formData, withHeaders())
+// }
 

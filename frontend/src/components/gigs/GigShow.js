@@ -1,13 +1,12 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+
 import { createLike, createComment, deleteGig } from '../../lib/api.js'
 import { isAuthenticated } from '../../lib/auth'
-
 import { withHeaders, getSingleGig } from '../../lib/api'
 
 class GigShow extends React.Component {
-
   state = {
     usersLink:[],
     event: [],
@@ -80,7 +79,6 @@ class GigShow extends React.Component {
     // console.log(poster)
   }
 
-
   handleDelete = async () => {
     const gigID = this.props.match.params.id
     try {
@@ -92,8 +90,6 @@ class GigShow extends React.Component {
   }
 
   render() {
-    var style = "color: red; background: #eee; font-size: 200 "
-console.log("%c made with love by the liam, noa, aishath and ash", style)
     return (
       <section>
         <div className="hero-gigs-indv">
@@ -114,52 +110,46 @@ console.log("%c made with love by the liam, noa, aishath and ash", style)
             <div>
               <button onClick={this.handleClick} value="" className="gigLike button2">🤍</button>
             </div>
-            
-           
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
             }
-            
           </div>
-
           <div className="hero-gigs-indv-img">
             <img src={this.state.event.posterImage} alt="logo" className="show-page-img"/>
           </div>
-
         </div>
 
-        
         <section className="commentEventForm">
-        <div className="hero-gigs-indv-txt">
+          <div className="hero-gigs-indv-txt">
           <h2>Comments</h2>
-        </div>
-
-        <form onSubmit={this.handleSubmit}>
-        <textarea
+            </div>
+              <form onSubmit={this.handleSubmit}>
+                <textarea
                   className="textarea commentEventForm"
                   name="text"
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.formData.text}
                 />
-        <div>
-      <input type="submit" value="Submit" className="button2"/>
-      </div>
-
-      </form>
-      </section>
+                <div>
+              <input type="submit" value="Submit" className="button2"/>
+            </div>
+          </form>
+        </section>
 
         <section className="gigCommentSection">
-        <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
+          <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
               <div className="indivComment">
                 <button value={eachcomment.user._id} onClick={this.handleFindProfile} className="button2">
                   {eachcomment.user.username}
-                </button>  {eachcomment.text}</div>
+                </button>  
+                {eachcomment.text}
+              </div>
             </div>
-          )
-        })}</div>
+          )})}
+          </div>
         </section>
       </section>
     )

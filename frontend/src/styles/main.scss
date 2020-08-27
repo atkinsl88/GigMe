@@ -1,9 +1,5 @@
 @import '~bulma/bulma.sass';
-@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap);
-@import '~bulma/bulma.sass';
 $primaryRed: #f73434;
 $primaryGray: #a2abb3;
 $secondaryGray: #d6dde4;
@@ -102,12 +98,12 @@ a.navbar-item:hover {
   background-color: grey;
   display: flex;
   align-items: center;
-  background-image: url(https://i.imgur.com/kl1wt97.jpg);
+  background-image: url(https://i.imgur.com/mqx6eaR.jpg);
 }
 
 .hero-home-txt {
   margin-left: 40px;
-  width: 300px;
+  width: 250px;
   font-weight: bolder;
 }
 
@@ -116,12 +112,12 @@ a.navbar-item:hover {
   width: 100vw;
   background-color: grey;
   display: flex;
-  align-items: center;
-  background-image: url(https://i.imgur.com/fD2RdRx.png);
+  // align-items: center;
+  background-image: url(https://i.imgur.com/P5WmhOD.jpg);
 }
 
 .hero-gigs-txt {
-  margin-left: 40px;
+  margin: 130px;
   width: 300px;
 }
 
@@ -139,19 +135,19 @@ a.navbar-item:hover {
   width: 600px;
 }
 
-.hero-community {
-  height: 390px;
-  width: 100vw;
-  background-color: $newGray;
-  display: flex;
-  align-items: center;
-  background-image: url(https://i.imgur.com/drQe5dH.png);
-}
+// .hero-community {
+//   height: 390px;
+//   width: 100vw;
+//   background-color: $newGray;
+//   display: flex;
+//   align-items: center;
+//   background-image: url(https://i.imgur.com/drQe5dH.png);
+// }
 
-.hero-community-txt {
-  margin-left: 40px;
-  width: 300px;
-}
+// .hero-community-txt {
+//   margin-left: 40px;
+//   width: 300px;
+// }
 
 .hero-gigs-indv-img img{
   margin: 0 50px;
@@ -269,22 +265,6 @@ a.navbar-item:hover {
     color: #FFE065;
   }
 }
-
-// .links-boxes-rgt{
-//   height: 220px;
-//   width: 44vw;
-//   background-color: #FFDECA;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex: 1 1 400px;
-//   margin-right: 40px;
-//   margin-left: 10px;
-// }
-
-// .links-boxes-rgt h2 {
-//   color: $primaryNavy;
-// }
 
 @media only screen and (max-width: 900px) {
   .links-boxes-lft {
@@ -664,8 +644,8 @@ a.navbar-item:hover {
   font-family: 'Manrope', sans-serif;
   margin: 20px;
   padding: 5px;
-  background-color: $secondaryGray;
-  color: $primaryRed;
+  background-color: $primaryNavy;
+  color: $secondaryGray;
   border-radius: 5px;
   text-decoration: none;
   border-width: 0px;

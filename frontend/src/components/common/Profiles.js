@@ -38,7 +38,7 @@ class Profiles extends React.Component{
 
         <div className='wrapper-crikey'>
           <div className="profile-info">
-            <img class ="profile-photo" src={this.state.profiles.profilePicture} alt="profpic"></img>
+            <img className="profile-photo" src={this.state.profiles.profilePicture} alt="profpic"></img>
           <div className="profile-info">
             
             <h2>Your Name: <span>{this.state.profiles.username}</span></h2>
@@ -60,7 +60,7 @@ class Profiles extends React.Component{
           {/* <p>Your created events: </p> */}
           <div className="createdEventprofile">
             
-          <div class = "recent-activity">
+          <div className="recent-activity">
           {/* <p>Created Events:</p> */}
             {this.state.createdEvents.map(event => {
             return <div key={event._id}>

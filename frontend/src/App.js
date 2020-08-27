@@ -3,7 +3,7 @@ import { BrowserRouter, Switch , Route  } from 'react-router-dom'
 
 import Navbar from './components/common/NavBar'
 import Home from './components/common/Home'
-import Community from './components/common/Community'
+// import Community from './components/common/Community'
 import Profiles from './components/common/Profiles'
 import GigIndex from './components/gigs/GigIndex'
 import GigShow from './components/gigs/GigShow'
@@ -32,7 +32,7 @@ render(){
         <Route exact path="/gigs/:id" component={GigShow}/>
         <Route exact path="/create-an-event" component={GigNew}/>
         <Route exact path="/gigs" component={GigIndex}/>
-        <Route exact path="/community" component={Community}/>
+        {/* <Route exact path="/community" component={Community}/> */}
         <Route exact path="/profiles/" component={Profiles}/>
         <Route path="/register" component={Register} />
         <Route path="/gigcalendar" component={GigCalendar} />
