@@ -48,32 +48,33 @@ class Profiles extends React.Component{
             <img src={this.state.profiles.profilePicture} alt="profpic"></img>
           </div>
           <div className="profile-info">
-            <h2>{this.state.profiles.username}</h2>
+            <h2> USER: {this.state.profiles.username}</h2>
           </div>
           <div className="profile-info">
-            <h2>{this.state.profiles.email}</h2>
+            <h2>EMAIL:{this.state.profiles.email}</h2>
           </div>
           <div className="profile-info">
-            <h2>{this.state.profiles.mySite}</h2>
+            <h2>WEBSITE:{this.state.profiles.mySite}</h2>
           </div>
           <div className="profile-info">
-            <h2>{this.state.profiles.genres}</h2>
+            <h2>FAVE GENRE:{this.state.profiles.genres}</h2>
           </div>
           <div className="profile-info">
             <h2>{this.state.profiles.aboutMe}</h2>
           </div>
+          <div className="createdEventprofile">
           <p>Created Events!</p>
           <div>{this.state.createdEvents.map(event => {
             return <div key={event.id}>
               <p>{event.artistName}</p>
+              <img src={event.posterImage}></img>
               <p>{event.venue}</p>
               <p>{event.date}</p>
               <Link to={(`/gigs/${event._id}`, withHeaders())}>Find out more</Link>
             </div>
           })}
-            
+            </div>
           </div>
-          
         </div>
 
       </section>
