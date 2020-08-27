@@ -600,7 +600,16 @@ a.navbar-item:hover {
   
 }
 .mapSearchHeader h1 {
-  color:black
+  color:black;
+}
+
+.map-thumbs{
+max-width: 200px;
+padding: 10px;
+}
+
+.map-thumbs img{
+  max-height: 100px;
 }
 
 .createdEventprofile{

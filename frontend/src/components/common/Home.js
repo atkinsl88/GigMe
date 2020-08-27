@@ -14,7 +14,7 @@ class Home extends React.Component{
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
-      console.log(res.data)
+      // console.log(res.data)
       this.setState({ gigs: res.data })
       // console.log(this.getRandom)
       this.getRandom()
@@ -26,15 +26,13 @@ class Home extends React.Component{
 
   getRandom = () => {
     let currentChoices = []
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       const random = this.state.gigs[Math.floor(Math.random() * this.state.gigs.length)]
-      // console.log(random)
-      if(currentChoices.length < 3){
-      while(!currentChoices.includes(random)){
+      if(!currentChoices.includes(random) && (currentChoices.length < 3)){
       currentChoices.push(random)}
-    }}
+    }
     this.setState({ randomChoices: [...currentChoices] })
-    console.log(currentChoices.length)
+    console.log(currentChoices)
   }
 
   handleClick = async event => {

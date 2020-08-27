@@ -16,7 +16,7 @@ class Maps extends React.Component {
     viewport: {
       latitude: 51.5,
       longitude: -0.14,
-      zoom: 11,
+      zoom: 11.25,
       bearing: 0,
       pitch: 0
     }
@@ -28,7 +28,6 @@ class Maps extends React.Component {
       const res = await axios.get('http://localhost:3000/api/events')
       console.log(res.data)
       this.setState({ venues: res.data })
-      // console.log("these are the venues" , this.state.venues)
     } catch (err) {
       console.log(err)
     }
@@ -56,7 +55,7 @@ return (
         mapboxApiAccessToken="pk.eyJ1IjoiYWlzaGF0aG5hc2lyIiwiYSI6ImNrZHllYW51ODRodGIydHJvbm1yc2lkZHgifQ.8C_6datWjuBQUQbfsBAsOg"
         height={'600px'}
         width={'1500px'}
-        onViewportChange={viewport => this.setState({viewport})}
+        // onViewportChange={viewport => this.setState({viewport})}
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
         {this.state.venues.map(venue => (
@@ -82,11 +81,9 @@ return (
       <div className="three-col">
         {this.state.searchResults.map(name => {
           return (
-            <div className="three-col-content" key={name.id}>
+            <div className="map-thumbs" key={name.id}>
               <img src={name.posterImage} alt="logo" />
               <h3>{name.artistName}</h3>
-              <h4>{name.aboutEvent}</h4>
-              <h5>{name.date}</h5>
               <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
             </div>
           )
