@@ -98,19 +98,19 @@ class GigShow extends React.Component {
 
           <div className="hero-gigs-indv-txt">
             <h2>Event Info</h2>
+            <hr />
             <span className="gigShowArtistName">{this.state.event.artistName}</span>
-            <h4>{this.state.event.venue}</h4>
-            <h4>{this.state.event.date}</h4>
+            <h4>Venue: {this.state.event.venue}</h4>
+            <h4>Date: {this.state.event.date}</h4>
             <h4>Doors open at: {this.state.event.doorsAt}</h4>
             <h4>About event: {this.state.event.aboutEvent} </h4>
 
             {isAuthenticated(this.state.event.userId) &&
             <>
-            <Link to={`/gigs/${this.state.event._id}/edit`} className="button is-warning">Edit</Link>
+            <Link to={`/gigs/${this.state.event._id}/edit`} className="button button2">Edit</Link>
+            <button onClick={this.handleDelete} className="button2">Delete Event</button>
             <hr />
-            <button onClick={this.handleDelete} className="button is-danger">Delete Event</button>
-            <hr />
-            <button onClick={this.handleClick} value="" className="gigLike">LIKE</button>
+            <button onClick={this.handleClick} value="" className="gigLike">like</button>
            
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
