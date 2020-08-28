@@ -140,7 +140,7 @@ class GigShow extends React.Component {
           <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} button value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
+            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
             </div>
           )})}
           </div>
