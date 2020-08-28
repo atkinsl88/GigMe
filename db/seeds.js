@@ -24,7 +24,6 @@ mongoose.connect(
       })
       const events = await Event.create(eventsWithUsers) 
       console.log(`${events.length} Events created 🥁`)
-     
       await mongoose.connection.close() 
       console.log('Goodbye 👋')
     } catch (err) {

@@ -1,4 +1,5 @@
 const User = require('../models/userSchema')
+const { notFound } = require('../lib/errorMessages')
 
 async function userProfile(req, res, next) {
   try {
