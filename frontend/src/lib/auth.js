@@ -1,5 +1,4 @@
 export const setToken = receivedToken => {
-  console.log('received', receivedToken);
   window.localStorage.setItem('token', receivedToken)
 }
 

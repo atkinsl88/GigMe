@@ -35,12 +35,8 @@ class GigIndex extends React.Component {
   }
 
   render() {
-
-// console.log(this.props.gigprops) //data from the API here
-
     return (
       <section>
-
         <div className="hero-gigs">
           <div className="hero-gigs-txt">
             <h1>Gigs</h1>
@@ -48,29 +44,28 @@ class GigIndex extends React.Component {
         </div>
 
         <div id="genres" className="searchGenres">
-        <button onClick={this.handleAllClick} className="search-buttons">All</button>
-        <button onClick={this.handleClick} value="pop" className="search-buttons">Pop</button>
-        <button onClick={this.handleClick} value="rock" className="search-buttons">Rock</button>
-        <button onClick={this.handleClick} value="electronic" className="search-buttons">Electronic</button>
-        <button onClick={this.handleClick} value="brunch" className="search-buttons">Brunch</button>
-        <button onClick={this.handleClick} value="metal" className="search-buttons">Metal</button>
-        <button onClick={this.handleClick} value="hip-hop" className="search-buttons">Hip Hop</button>
-        <button onClick={this.handleClick} value="world" className="search-buttons">World</button>
-        <button onClick={this.handleClick} value="ambient" className="search-buttons">Ambient</button>
-        <button onClick={this.handleClick} value="country" className="search-buttons">Country</button>
-        <button onClick={this.handleClick} value="grime" className="search-buttons">Grime</button>
-        <button onClick={this.handleClick} value="jazz/soul" className="search-buttons">Jazz / Soul</button>
-      </div>
-      <div className="three-col">
-        {this.state.search.map(name => {
-          return (
-            <div className="three-col-content" key={name._id}>
-              <GigCard key={name._id} {...name}/>
-            </div>
-          )
-        })}
-      </div>
-
+          <button onClick={this.handleAllClick} className="search-buttons">All</button>
+          <button onClick={this.handleClick} value="pop" className="search-buttons">Pop</button>
+          <button onClick={this.handleClick} value="rock" className="search-buttons">Rock</button>
+          <button onClick={this.handleClick} value="electronic" className="search-buttons">Electronic</button>
+          <button onClick={this.handleClick} value="brunch" className="search-buttons">Brunch</button>
+          <button onClick={this.handleClick} value="metal" className="search-buttons">Metal</button>
+          <button onClick={this.handleClick} value="hip-hop" className="search-buttons">Hip Hop</button>
+          <button onClick={this.handleClick} value="world" className="search-buttons">World</button>
+          <button onClick={this.handleClick} value="ambient" className="search-buttons">Ambient</button>
+          <button onClick={this.handleClick} value="country" className="search-buttons">Country</button>
+          <button onClick={this.handleClick} value="grime" className="search-buttons">Grime</button>
+          <button onClick={this.handleClick} value="jazz/soul" className="search-buttons">Jazz / Soul</button>
+        </div>
+        <div className="three-col">
+          {this.state.search.map(name => {
+            return (
+              <div className="three-col-content" key={name._id}>
+                <GigCard key={name._id} {...name}/>
+              </div>
+            )
+          })}
+        </div>
       </section>
     )
   }

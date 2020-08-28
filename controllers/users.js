@@ -12,7 +12,6 @@ async function userProfile(req, res, next) {
 }
 
 
-//! new addition, index of users for getting other profiles
 async function usersIndex(req, res, next) {
   try {
     const usersall = await User.find().populate('user')

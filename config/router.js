@@ -2,7 +2,7 @@ const router = require('express').Router()
 const events = require('../controllers/events')
 const auth = require('../controllers/auth')
 const secureRoute = require('../lib/secureRoute')
-const community = require('../controllers/community')
+// const community = require('../controllers/community')
 const user = require('../controllers/users')
 
 
@@ -24,8 +24,8 @@ router.route('/events/:id/comments/:commentId')
 router.route('/events/:id/like')
   .post(secureRoute, events.eventsLike)
 
-router.route('/community')
-  .post(secureRoute, community.create)
+// router.route('/community')
+//   .post(secureRoute, community.create)
 
 router.route('/register')
   .post(auth.register)

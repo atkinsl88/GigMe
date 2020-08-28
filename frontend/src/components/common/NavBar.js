@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { isAuthenticated, logout } from '../../lib/auth'
+import { popupNotification } from '../../lib/notification'
 
 class Navbar extends React.Component {
 
@@ -14,6 +15,7 @@ class Navbar extends React.Component {
 
   handleLogout = () => {
     logout()
+    popupNotification('You have successfuly logged out')
     this.props.history.push('/')
   }
 

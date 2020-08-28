@@ -1,6 +1,7 @@
 import React from 'react'
 import { createGig } from '../../lib/api'
 import GigForm from './GigForm'
+import { popupNotification } from '../../lib/notification'
 
 class GigNew extends React.Component {
   state = {
@@ -30,6 +31,7 @@ class GigNew extends React.Component {
 
     try {
       const res = await createGig(this.state.formData)
+      popupNotification('You have successfuly added a new gig')
       this.props.history.push(`/gigs/${res.data._id}`)
     } catch (err) {
       console.log(err.response.data)
