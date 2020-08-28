@@ -611,6 +611,11 @@ a.navbar-item:hover {
   height: auto;
   margin: 30px;
   width: 350px;
+  transition: all 0.5s ease;
+}
+
+.gig-card:hover {
+  transform: scale(1.1);
 }
 
 .card-header {
@@ -644,12 +649,18 @@ a.navbar-item:hover {
   margin: 20px;
   padding: 5px;
   background-color: $primaryNavy;
-  color: $secondaryGray;
+  color: $newGray;
   border-radius: 5px;
   text-decoration: none;
   border-width: 0px;
   min-width: 70px;
-  box-shadow: 2px 2px $primaryGray;
+  color: $newGray;
+  box-shadow: 2px 2px $secondaryGray;
+  transition: all 0.5s ease;
+}
+
+.search-buttons:hover {
+  transform: scale(1.1);
 }
 
 .searchGenres {
