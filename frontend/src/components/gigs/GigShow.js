@@ -107,7 +107,7 @@ class GigShow extends React.Component {
             <Link to={`/gigs/${this.state.event._id}/edit`} className="button button2">Edit</Link>
             <button onClick={this.handleDelete} className="button2">Delete Event</button>
             <div>
-              <button onClick={this.handleClick} value="" className="gigLike button2">🤍</button>
+              <button onClick={this.handleClick} value="" className="gigLike">🤍</button>
             </div>
             <p>{this.state.likes.length} people have liked this event!</p>
             </> 
