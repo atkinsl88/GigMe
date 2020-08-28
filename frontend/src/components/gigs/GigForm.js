@@ -101,20 +101,31 @@ const GigForm = ({ handleSubmit, handleChange, formData, buttonText }) => {
           </div>
 
           <div className="field">
-            <label className="label">Has a bar?</label>
-            <div className="control">
-              <input
-                className="input"
-                placeholder="Has a bar?"
-                name="hasBar"
-                onChange={handleChange}
-                value={formData.hasBar}
-              />
-            </div>
-          </div>
-
+              <label className="label">Has a bar?</label>
+              <div className="control">
+                <label className="radio">
+                  <input
+                    type="radio"
+                    name="radio"
+                    onChange={handleChange}
+                    value={formData.hasBar}
+                  />
+                    true
+                </label>
+                <label className="radio">
+                  <input
+                    type="radio"
+                    name="radio"
+                    onChange={handleChange}
+                    value={formData.hasBar}
+                    // value="false"
+                  />
+                    false
+                </label>
+                </div>
+                </div>
           <div className="field">
-            <label className="label">Latitude</label>
+            <label className="label">Latitude(optional)</label>
             <div className="control">
               <input
                 className="input"
@@ -127,7 +138,7 @@ const GigForm = ({ handleSubmit, handleChange, formData, buttonText }) => {
           </div>
 
           <div className="field">
-            <label className="label">Longitude</label>
+            <label className="label">Longitude(optional)</label>
             <div className="control">
               <input
                 className="input"

@@ -88,6 +88,14 @@ class GigShow extends React.Component {
     }
   }
 
+  hasBarFinder = () => {
+    if (this.state.event.hasBar === true){
+      return "yes"
+    } else {
+      return "no"
+    }
+  }
+
   render() {
     return (
       <section>
@@ -98,9 +106,15 @@ class GigShow extends React.Component {
             <hr />
             <span className="gigShowArtistName">{this.state.event.artistName}</span>
             <h4><b>Venue:</b> {this.state.event.venue}</h4>
+            <h4><b>Venue address:</b> {this.state.event.venueAddress}</h4>
             <h4><b>Date:</b> {this.state.event.date}</h4>
-            <h4><b>Doors open at: </b>{this.state.event.doorsAt}</h4>
-            <h4><b>About event: </b>{this.state.event.aboutEvent} </h4>
+            <h4><b>Doors open at:</b> {this.state.event.doorsAt}</h4>
+            <h4><b>About event:</b> {this.state.event.aboutEvent} </h4>
+            <h4><b>Has Bar?:</b> {this.hasBarFinder()} </h4>
+            <h4><b>Genre:</b> {this.state.event.genre} </h4>
+            <h4><b>Price:</b> £{this.state.event.eventPrice}</h4>
+            
+           
 
             {isAuthenticated(this.state.event.userId) &&
             <>
@@ -150,3 +164,5 @@ class GigShow extends React.Component {
   }
 }
 export default GigShow
+
+
