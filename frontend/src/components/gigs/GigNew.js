@@ -13,7 +13,7 @@ class GigNew extends React.Component {
       date: '',
       doorsAt: '',
       posterImage: '',
-      hasBar: '',
+      hasBar: true,
       latitude: '',
       longitude: '',
       aboutEvent: '',
