@@ -54,15 +54,21 @@ class Home extends React.Component{
             {this.state.randomChoices.map(name => {
               return (
                 <div className="three-col-content" key={name._id}>
-                  <div>
-                    <img src={name.posterImage} alt="logo" />
+
+                  <div class="container-animation">
+                    <img src={name.posterImage} alt="logo" class="image-animation"/>
+                    <div class="overlay">
+                      <Link to={`/gigs/${name._id}`} className="text">Find out more</Link>
+                    </div>
                   </div>
+
                   <div>
                     <h3>{name.artistName}</h3>
                     <h4>{name.aboutEvent}</h4>
                     <h5>{name.date}</h5>
                     <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
                   </div>
+
                 </div>
               )
             })}
