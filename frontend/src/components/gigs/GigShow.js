@@ -32,7 +32,6 @@ class GigShow extends React.Component {
       console.log(err)
     }
 
-    //! fetched all userdata to use in linking comments to separate profiles (as well as passing props)
     try {
       const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})

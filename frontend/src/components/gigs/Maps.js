@@ -10,7 +10,6 @@ class Maps extends React.Component {
   state = {
     searchResults:[],
     venues: [],
-    //! setting viewport below is part of allowing the pan and zoom as well as default focus
     viewport: {
       latitude: 51.5,
       longitude: -0.14,

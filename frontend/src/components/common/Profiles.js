@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-// import Select from 'react-select'
 import { Link } from 'react-router-dom'
 
 import { getUserId } from '../../lib/auth'
