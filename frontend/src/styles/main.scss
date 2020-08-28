@@ -1,14 +1,17 @@
 @import '~bulma/bulma.sass';
 @import url(https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap);
+@import './footerNav.scss';
+@import './hero.scss';
+@import './mapCalendar.scss';
+@import './forms.scss';
+@import './gigsAll.scss';
 $primaryRed: #f73434;
 $primaryGray: #a2abb3;
 $secondaryGray: #d6dde4;
 $primaryNavy: #093052;
 $newGray: #f7f9fa;
 
-
 /* Misc */
-
 * {
   margin: 0px;
   font-family: 'Manrope', sans-serif;
@@ -16,7 +19,6 @@ $newGray: #f7f9fa;
 }
 
 /* Fonts */
-
 h1 {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
@@ -67,104 +69,7 @@ h6 {
   font-size: 12px;
 }
 
-
-/* Navigation */
-
-.navbar {
-  background-color: $primaryNavy;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.navbar-item {
-  color: #e1e3eb;
-}
-
-a.navbar-item:hover {
-  color: $primaryGray;
-}
-
-.navbar-menu {
-  padding: 0px;
-}
-
-/* Heros */
-
-.hero-home {
-  height: 390px;
-  width: 100vw;
-  background-color: grey;
-  display: flex;
-  align-items: center;
-  background-image: url(https://i.imgur.com/mqx6eaR.jpg);
-}
-
-.hero-home-txt {
-  margin-left: 40px;
-  width: 250px;
-  font-weight: bolder;
-}
-
-.hero-gigs {
-  height: 390px;
-  width: 100vw;
-  background-color: grey;
-  display: flex;
-  // align-items: center;
-  background-image: url(https://i.imgur.com/P5WmhOD.jpg);
-}
-
-.hero-gigs-txt {
-  margin: 130px;
-  width: 300px;
-}
-
-.hero-gigs-indv {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: $newGray;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.hero-gigs-indv-txt {
-  margin-left: 50px;
-  width: 600px;
-}
-
-// .hero-community {
-//   height: 390px;
-//   width: 100vw;
-//   background-color: $newGray;
-//   display: flex;
-//   align-items: center;
-//   background-image: url(https://i.imgur.com/drQe5dH.png);
-// }
-
-// .hero-community-txt {
-//   margin-left: 40px;
-//   width: 300px;
-// }
-
-.hero-gigs-indv-img img{
-  margin: 0 50px;
-  max-width: 400px;
-  display: inline;
-  border-radius: 5px;
-  margin-right: 50px;
-}
-
-.gigShowArtistName {
-  color: #081C6A;
-  font-size: 20px;
-  font-weight: bold;
-
-}
 /* Featured Events */
-
 .featured-home {
   background-color: $newGray;
   padding-bottom: 40px;
@@ -238,7 +143,6 @@ a.navbar-item:hover {
 }
 
 /* Links */
-
 .links-home {
   background-color: $newGray;
   padding-bottom: 40px;
@@ -276,181 +180,6 @@ a.navbar-item:hover {
   }
 }
 
-/* Map */
-
-.genres {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 40px;
-  margin-right: 20px;
-}
-
-.genres > div {
-  margin-right: 15px;
-  margin-bottom: 20px;
-  height: 55px;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 6px;
-  color: #081C6A;
-  font-weight: 700;
-  font-size: 12px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.mapArea {
-  background-color: $newGray;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding:40px;
-}
-
-
-.map {
-  background-color: grey;
-  margin-top: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-}
-
-// calendar 
-
-.calendarArea {
-  padding: 40px;
-  background-color: $newGray;
-  box-shadow: 0 10px 6px -6px #777;
-}
-
-.fc-event-title{
-  color: $primaryNavy;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.fc-col-header-cell-cushion{
-  color: $primaryNavy;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.fc-daygrid-day-number{
-  color: $primaryNavy;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.fc-daygrid-day-frame {
-  background-color: white;
-}
-
-.fc-scrollgrid-sync-inner{
-  background-color: white;
-}
-
-/* Form */
-
-.form-area {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #FBFAF4;
-  height: 95vh;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 500px;
-  margin-left: 50px;
-}
-
-/* Register */
-
-.register-form-area {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f7f9fa;
-}
-
-.register-form {
-  width: 500px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-/* New */
-
-.new-form-area {
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #f7f9fa;
-}
-
-.new-form {
-  width: 500px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-}
-
-
-.form-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 10px;
-  margin-top: 20px;
-}
-
-.login {
-  height: 100vh;
-  background-color: #FBFAF4;
-}
-
-.box {
-  border-radius: 0px
-}
-
-.text-center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-
-/* Footer */
-
-.footer-main {
-  background-color: $primaryNavy;
-  height: 140px;
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  text-align: center;
-    .footer-text {
-      color: $newGray;
-      margin-top: 10px;
-    }
-    h1 {
-      margin-top: 30px;
-    }
-}
-
 // The below is for the map component - added by Aishath
 .mapLabels {
   background-color: $primaryRed;
@@ -460,254 +189,14 @@ a.navbar-item:hover {
   color: $newGray;
 }
 
-//the below is for gig event page comments
-
-.eventComments{
-  background-color: $primaryRed;
-  margin: 30px;
-  border-radius: 5px;
-  padding: 5px;
-  max-width: 800px;
-  min-width: 300px;
-
-}
-
-.indivComment {
-  font-size: 15px;
-  color: $primaryNavy;
-  font-weight: normal;
-}
-
-.gigCommentSection {
-  display:flex;
-  // align-items: center;
-  justify-content: left;
-  background-color: $newGray;
-  padding-left: 50px;
-}
-
-.commentEventForm {
-  align-self: center;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 1200px;
-  background-color: $newGray;
-  padding-left: 50px;
-}
-
-.commentEventForm textarea {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.gigLike {
-  font-family: 'Manrope', sans-serif;
-  font-size: 14px;
-  margin: 10px;
-  color: $newGray;
-  background-color: $primaryRed;
-  padding-left: 8px;
-  margin-left: 55px;
-  border-radius: 5px;
-  // min-width: 55px;
-  border: none;
-}
-/* community */
-
-.message-box {
-  display: flex;
-  height: 500px;
-  border: 1px solid black;
-}
-
-.chat-area {
-  display: flex;
-  flex-direction: row;
-  // justify-content: space-between;
-  // align-items: center;
-}
-
-.box1 {
-  display: flex;
-}
-
-.box2 {
-  display: flex;
-}
-
-
-//? Profile Page
-
-.wrapper-crikey {
-  margin: 0px;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color:white;
-  justify-content: flex-start;
-}
-
-.recent-activity {
-  align-self: flex-start;
-  margin-top: 100px;
-  font-family: 'Manrope', sans-serif;
-  display: flex;
-  text-align: center;
-  
-}
-
-.createdEventprofile{
-  flex-grow: 3;
-  background-color: #a2abb3;
-  font-size: 22px;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  
-}
-.profile-info {
-  margin: 30px;
-  flex-grow: 1;
-}
-
-.profile-photo {
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  margin: 60px;
-  // box-shadow: 1px 2px #888888;
-}
-
-.form-area2{
-  background-color: white;
-}
-
-.wrapper-crikey .box{
-  box-shadow: none
-}
-
-.profile-info h2{
-  text-transform: none;
-  font-family: 'Manrope', sans-serif;
-}
-
-.profile-info span{
-  text-transform: none;
-  color: #3273DC;
-}
-
-.recent-activity-image{
-  border-radius: 0;
-  height: 200px;
-  width: 200px;
-  margin: 60px;
-  flex-wrap: wrap;
-}
-
-/* Gigs */
-
-.gig-card {
-  height: auto;
-  margin: 30px;
-  width: 350px;
-}
-
-.card-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-content {
-  padding: 17px;
-}
-
-.gig-title {
-  height: auto;
-  margin: 10px;
-}
-
-.gig-content {
-  height: auto;
-  margin: 10px;
-}
-
-.gig-card h4 {
-  color: #081C6A;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.search-buttons{
-  font-family: 'Manrope', sans-serif;
-  margin: 20px;
-  padding: 5px;
-  background-color: $primaryNavy;
-  color: $secondaryGray;
-  border-radius: 5px;
-  text-decoration: none;
-  border-width: 0px;
-  min-width: 70px;
-}
-
-.searchGenres {
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: $newGray;
-}
-
-.mapSearch {
-  padding:30px;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
-  max-width:1500px;
-  background-color: $newGray;
-}
-
-.mapSearchHeader{
-  display:flex;
-  justify-content: center;
-  margin:15px;
-  background-color: $newGray;
-    h1 {
-      color:black;
-    }
-}
-
-.map-thumbs{
-max-width: 200px;
-padding: 10px;
-background-color: $newGray;
-  img {
-    max-height: 100px;
-  }
-}
-
-.createdEventprofile{
-  display:flex;
-  justify-content: center;
-}
-
-.randomUser{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 // extra
 hr {
   background-color: $newGray;
 }
 
-
 // Animation
 .container-animation {
   position: relative;
-  width: 50%;
 }
 
 .image-animation {
@@ -721,21 +210,23 @@ hr {
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: $primaryNavy;
   overflow: hidden;
   width: 100%;
   height: 0;
   transition: .5s ease;
 }
 
-.container:hover .overlay {
+.container-animation:hover .overlay {
   bottom: 0;
   height: 100%;
+  opacity: 0.8;
+  font-size: 30px;
 }
 
-.text {
+.text-ani {
   white-space: nowrap; 
-  color: white;
+  color: $primaryRed;
   font-size: 20px;
   position: absolute;
   overflow: hidden;

@@ -32,11 +32,7 @@ class Home extends React.Component{
   }
 
   render() {
-
-    // console.log(this.state.gigs)
-
-    // if (!this.state.randomChoices) return
-    
+ 
 
     return(
       <section>
@@ -54,11 +50,11 @@ class Home extends React.Component{
             {this.state.randomChoices.map(name => {
               return (
                 <div className="three-col-content" key={name._id}>
-
-                  <div class="container-animation">
-                    <img src={name.posterImage} alt="logo" class="image-animation"/>
-                    <div class="overlay">
-                      <Link to={`/gigs/${name._id}`} className="text">Find out more</Link>
+                  <div className="container-animation">
+                    <img src={name.posterImage} alt="logo" className="image-animation"/>
+                    <div className="overlay">
+                      {/* <div className="text-ani">Find out more</div> */}
+                      <Link to={`/gigs/${name._id}`} className="text-ani">FIND OUT MORE</Link>
                     </div>
                   </div>
 
@@ -66,7 +62,7 @@ class Home extends React.Component{
                     <h3>{name.artistName}</h3>
                     <h4>{name.aboutEvent}</h4>
                     <h5>{name.date}</h5>
-                    <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>
+                    
                   </div>
 
                 </div>

@@ -22,7 +22,6 @@ class App extends React.Component{
 render(){
   var style = 'color: red; background: #eee; font-size: 20px'
   console.log("%c made with love by the liam, noa, aishath and ash", style)
-  // console.log(this.state.gigs) //data from API
 
   return (
     <BrowserRouter>

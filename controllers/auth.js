@@ -1,7 +1,6 @@
 const User = require('../models/userSchema')
 const jwt = require('jsonwebtoken') 
 const { secret } = require('../config/environment') 
-// const { unauthorized } = require('../lib/errorMessage') //! Don't need this till we start error logging 
 
 
 async function register(req, res, next) {
@@ -24,7 +23,7 @@ async function login (req, res, next) {
       secret, 
       { expiresIn: '7 days' } 
     )
-    res.status(202).json({ //! Pre-token logging in.
+    res.status(202).json({ 
       message: `Welcome to GigMe ${user.username}`,
       token, 
       id: user.id

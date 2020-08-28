@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import MapGL, { Marker } from 'react-map-gl'
-// import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../../../src/styles/main.scss'
 
@@ -11,8 +10,6 @@ class Maps extends React.Component {
   state = {
     searchResults:[],
     venues: [],
-    // selectedVenue: null,
-    //! setting viewport is part of allowing the pan and zoom as well as default focus
     viewport: {
       latitude: 51.5,
       longitude: -0.14,
@@ -22,7 +19,6 @@ class Maps extends React.Component {
     }
   }
 
-  //! May want to pass this data call in as props eventually, for now I made it separate to test the map.
   async componentDidMount() {
     try {
       const res = await axios.get('http://localhost:3000/api/events')
@@ -34,19 +30,14 @@ class Maps extends React.Component {
 
   handleClick = async event => {
     event.preventDefault()
-    // const venue=event.target.venue
-    // console.log(genre)
     const results = this.state.venues.filter(gig => (
       gig.venue === event.target.value
     ))
-    // console.log(results)
     this.setState({ searchResults: results})
-    // console.log(this.state.searchResults)
 
   }
 
 render() {
-  // console.log(this.state.venues)
 return (
   <div>
   <MapGL
@@ -54,7 +45,7 @@ return (
         mapboxApiAccessToken="pk.eyJ1IjoiYWlzaGF0aG5hc2lyIiwiYSI6ImNrZHllYW51ODRodGIydHJvbm1yc2lkZHgifQ.8C_6datWjuBQUQbfsBAsOg"
         height={'600px'}
         width={'1500px'}
-        // onViewportChange={viewport => this.setState({viewport})}
+        onViewportChange={viewport => this.setState({viewport})} 
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
         {this.state.venues.map(venue => (
@@ -65,17 +56,14 @@ return (
               longitude={venue.longitude}
               >
               <span role="img" aria-label="marker" height="50" onClick = {(e) => {
-                // console.log(e.target.venue)
               }}>📍</span>
               <button key={venue._id} className="mapLabels button" value={venue.venue} onClick={this.handleClick} >{venue.venue}</button>
             </Marker>
           </div>
         ))}
         
-      </MapGL>
-      {/* <div className="mapSearchHeader"><h1> Click a location for events!</h1></div> */}
-      
-      <div className="mapSearch">
+      </MapGL>      
+    <div className="mapSearch">
       <div className="three-col">
         {this.state.searchResults.map(name => {
           return (
@@ -88,8 +76,8 @@ return (
           )
         })}
       </div>
-      </div>
-      </div>
+    </div>
+  </div>
 )
 }
 }

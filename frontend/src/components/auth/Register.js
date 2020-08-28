@@ -1,7 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
 import { registerUser } from '../../lib/api'
-// import Axios from 'axios'
 
 class Register extends React.Component {
 

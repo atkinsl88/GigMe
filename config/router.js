@@ -33,7 +33,6 @@ router.route('/register')
 router.route('/login')
   .post(auth.login)
 
-//!this is a new route to get all users --- Aishath
 router.route('/users/')
   .get(user.usersall)
 

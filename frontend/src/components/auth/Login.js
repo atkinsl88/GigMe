@@ -31,7 +31,6 @@ class Login extends React.Component {
   }
 
   render() {
-    // const { formData } = this.state
     return (
 
       <section>

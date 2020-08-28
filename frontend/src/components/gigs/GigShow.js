@@ -32,7 +32,6 @@ class GigShow extends React.Component {
       console.log(err)
     }
 
-    //! fetched all userdata to use in linking comments to separate profiles (as well as passing props)
     try {
       const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})
@@ -60,8 +59,6 @@ class GigShow extends React.Component {
   }
 
   handleSubmit = async event => {
-    // event.preventDefault()
-    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
     try {
     const res = await createComment(this.state.formData, eventId)
@@ -157,7 +154,7 @@ class GigShow extends React.Component {
           <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} button value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
+            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
             </div>
           )})}
           </div>

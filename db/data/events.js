@@ -10,7 +10,7 @@ module.exports = [
     hasBar: true,
     latitude: 51.5488118 , 
     longitude: -0.141056,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'With seventeen years and fifteen albums Spinal Tap is still going strong, earning a distinguished place in rock history as one of England\'s loudest bands.',
     eventPrice: '55'
   },
   { 
@@ -24,7 +24,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'The French musician, DJ, record producer, singer and songwriter graces our shores for a one night only performance! Don\'t miss it!',
     eventPrice: '75'
   },
   { 
@@ -38,7 +38,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.511031,  
     longitude: -0.113712,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'From RuPaul\'s Drag Race season 10, Vanessa "Miss Vanjie" Mateo headlines a star-studded brunch event with all the mimosas and entertainment you could hope for. WILL sell out!',
     eventPrice: '25'
   },
   { 
@@ -52,7 +52,7 @@ module.exports = [
     hasBar: true, 
     latitude: 51.501267 , 
     longitude: -0.17754,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Babymetal play their first UK and European headline run! The all female metal outfit from Japan have enjoyed enormous success around the world.',
     eventPrice: '90'
   },
   { 
@@ -66,7 +66,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Japanese artists Geinoh Yamashirogumi blend traditional and modern musical styles to create an unforgettable musical experience. Best known abroad for creating the soundtrack to Katsuhiro Otomo\'s "Akira"',
     eventPrice: '75'
   },
   { 
@@ -80,7 +80,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'The HU is a band from Mongolia that blends western rock and traditional Mongolian music and singing. One night only!',
     eventPrice: 25
   },
   { 
@@ -94,7 +94,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'From inner Mongolia, Hanggai blend rock and traditional folk music to create a truly unique sound.',
     eventPrice: '35'
   },
   { 
@@ -108,7 +108,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'In their own words, Heilung is amplified history from early medieval northern Europe. An unmissable visual spectacle.',
     eventPrice: '35'
   },
   { 
@@ -122,7 +122,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Vintage Trouble are the rock and roll vintage you never knew you needed.',
     eventPrice: '45'
   },
   { 
@@ -136,7 +136,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: '"YOU CAN\'T BEAT THE MEAT & GREET" VIP PACKAGES AVAILABLE NOW!.',
     eventPrice: '60'
   },
   { 
@@ -150,7 +150,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.530767 , 
     longitude: -0.120263,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Foxygen is an American indie rock duo from Westlake Village, California, formed in 2005. The band consists of multi-instrumentalist Jonathan Rado and vocalist Sam France.',
     eventPrice: '25'
   },
   { 
@@ -164,7 +164,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Breakout stars of the London jazz scene Moses Boyd and Binker Golding are sure to delight at their next performance.',
     eventPrice: '22'
   },
   { 
@@ -178,7 +178,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5392 , 
     longitude: -0.1421,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Swedish melodic death metal act Avatar have a genre-defying sound and aesthetic. VIP packages available!',
     eventPrice: '65'
   },
   { 
@@ -192,7 +192,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Coming off their recent landmark performance at the Hollywood Bowl, Canadian band Chromeo begin their UK tour in London.',
     eventPrice: '60'
   },
   { 
@@ -206,7 +206,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.552031 ,  
     longitude: -0.141892 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Shabaka Hutchings is a British-Barbadian jazz saxophonist, clarinetist and band leader. He leads the bands Sons of Kemet and Shabaka and the Ancestors.',
     eventPrice: '45'
   },
   { 
@@ -220,7 +220,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.552031 ,  
     longitude: -0.141892 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Ryder is an artist adored by fans, peers and critics alike, mainly due to her immense raw and earnest songwriting talent and electric live performances.',
     eventPrice: '45'
   },
   { 
@@ -234,7 +234,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Laurie is a musician who has managed to craft a rousing, wickedly entertaining, deeply memorable live show.',
     eventPrice: '100'
   },
   { 
@@ -248,7 +248,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'World famous prodigy Lang Lang takes the stage in a single performance at the Royal Albert Hall.',
     eventPrice: '155'
   },
   { 
@@ -262,7 +262,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.501267 , 
     longitude: -0.17754 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Prolific composer of the Studio Ghibli scores, Hisaishi embarks on a European tour. VIP meet and greet packages available.',
     eventPrice: '175'
   },
   {
@@ -276,7 +276,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.519959 , 
     longitude: -0.094129,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'British electronic record producer, performer, and composer takes the stage at the Barbican for the very first time.',
     eventPrice: '35'
   },
   {
@@ -290,7 +290,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.487092 , 
     longitude: -0.197709 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Radiohead perform at the Prince in an unexpectedly intimate setting! This one will sell out fast.',
     eventPrice: '155'
   },
   {
@@ -304,7 +304,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.5347485 ,  
     longitude: -0.1381645,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Jack White of the White Stripes is an American singer, songwriter and producer. Currently on tour in the UK.',
     eventPrice: '75'
   },
   {
@@ -318,7 +318,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.530767 , 
     longitude: -0.120263,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Promoting their sixth studio album release, the Bombay Bicycle Club will be taking the stage at Scala!',
     eventPrice: '66'
   },
   {
@@ -332,7 +332,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.506494 ,  
     longitude: -0.231685 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Canadian country musician Colter Wall will be on our shores promoting his third studio release. Tickets on sale soon!',
     eventPrice: '65'
   },
   {
@@ -346,7 +346,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.46332 , 
     longitude: -0.111692 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Helmed rap artist MF Doom brings his theatrical act to Brixton Pop. Limited number of meet and greet tickets available!',
     eventPrice: '25'
   },
   {
@@ -360,7 +360,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'The unexpected return of the Prodigy promises a high energy act you will not want to miss',
     eventPrice: '90'
   },
   {
@@ -374,7 +374,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.516215 , 
     longitude: -0.135333 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Blue States are an English electronic music group headed by Andy Dragazis. The band has been active since 1997, and is currently based in London, England.',
     eventPrice: '45'
   },
   {
@@ -388,7 +388,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.531705 , 
     longitude: -0.11188 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Madonna jumps on the intimate venue bandwagon with what is sure to be a show full of surprises for the lucky few who manage to snag a ticket.',
     eventPrice: '250'
   },
   {
@@ -402,7 +402,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.51961 , 
     longitude: -0.102391 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'British electronic music duo composed of Tom Rowlands and Ed Simons take the stage at Fabric.',
     eventPrice: '200'
   },
   {
@@ -416,7 +416,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.51961 , 
     longitude: -0.102391 ,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Aphex Twin is best known for his idiosyncratic work in electronic styles such as techno and ambient music. Limited tickets available!',
     eventPrice: '35'
   },
   {
@@ -430,7 +430,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.543041 , 
     longitude: -0.151312,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'Mercury nominated artist Ghostpoet, otherwise known as Obaro Ejimiwe, performing on his UK tour.',
     eventPrice: '22'
   },
   {
@@ -444,7 +444,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.519959 , 
     longitude: -0.094129,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.',
+    aboutEvent: 'James Blake adds one show to his currently sold out tour!',
     eventPrice: '35'
   },
   {
@@ -458,7 +458,7 @@ module.exports = [
     hasBar: true ,
     latitude: 51.537413 , 
     longitude: -0.1457,
-    aboutEvent: 'Nunc vestibulum blandit ipsum vitae pretium. Vestibulum pulvinar sapien eget tincidunt volutpat. Nulla ante odio, ultrices id mi ut, lobortis tincidunt urna. Fusce congue porttitor turpis, vitae sodales diam eleifend non. Proin eu turpis vel urna vehicula placerat. Duis mattis ut eros eget viverra.' ,
+    aboutEvent: 'Max Richter is a German-born British composer. He works within postminimalism and in the meeting of contemporary classical and alternative popular musical styles.' ,
     eventPrice:	'65'
   }
 ]

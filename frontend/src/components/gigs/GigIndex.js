@@ -15,14 +15,12 @@ class GigIndex extends React.Component {
       this.setState({ events: res.data })
       this.handleAllClick()
     } catch (err) {
-      // this.props.history.push('/notfound')
       console.log(err)
     }
   }
 
   handleClick = async event => {
     event.preventDefault()
-    // const genre = event.target.value
     const results = this.state.events.filter(gig => (
       gig.genre === event.target.value
     ))
@@ -56,6 +54,7 @@ class GigIndex extends React.Component {
           <button onClick={this.handleClick} value="country" className="search-buttons">Country</button>
           <button onClick={this.handleClick} value="grime" className="search-buttons">Grime</button>
           <button onClick={this.handleClick} value="jazz/soul" className="search-buttons">Jazz / Soul</button>
+          <button onClick={this.handleClick} value="classical" className="search-buttons">Classical</button>
         </div>
         <div className="three-col">
           {this.state.search.map(name => {

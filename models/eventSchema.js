@@ -12,25 +12,21 @@ const likeSchema = new mongoose.Schema({
   text: { type: String }
 })
 
-// const artistSchema = new mongoose.Schema({
-//   artistName: { type: String, required: true , maxlength: 60 }
-// })
-
 const eventSchema = new mongoose.Schema({
   artistName: { type: String }, 
   venue: { type: String, required: true },
   venueAddress: { type: String, required: true },
-  genre: { type: String }, //could also be an array for cross-genre acts?
-  date: { type: String, required: true }, //this depends on react calendar needs?
-  doorsAt: { type: Number, required: true }, //this depends on how we plan to use the dates?
+  genre: { type: String }, 
+  date: { type: String, required: true }, 
+  doorsAt: { type: Number, required: true }, 
   hasBar: { type: Boolean },
-  latitude: { type: Number, required: true },// for map markers
-  longitude: { type: Number, required: true }, //for map markers
-  posterImage: { type: String, required: true }, //url for image
+  latitude: { type: Number, required: true },
+  longitude: { type: Number, required: true }, 
+  posterImage: { type: String, required: true }, 
   eventPrice: { type: String },
   aboutEvent: { type: String },
-  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },//user who added the event (needed for deletions and edits)
-  comments: [commentSchema], //comments embedded
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  comments: [commentSchema], 
   likes: [likeSchema]
 } , {
   timestamps: true
