@@ -23,7 +23,7 @@ class UserShow extends React.Component {
   render(){
     return(
       <section className="randomUser"> 
-      <img class ="profile-photo" src={this.state.user.profilePicture} alt="profpic"></img>
+      <img className="profile-photo" src={this.state.user.profilePicture} alt="profpic"></img>
     <div className="profile-info">
       <h2>User Name: <span>{this.state.user.username}</span></h2>
     </div>
