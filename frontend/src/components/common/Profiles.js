@@ -64,7 +64,7 @@ class Profiles extends React.Component{
           {/* <p>Created Events:</p> */}
             {this.state.createdEvents.map(event => {
             return <div key={event._id}>
-              <p>You created! </p>
+              <p>You created: </p>
               <p>{event.artistName}</p>
               <img class="recent-activity-image" src={event.posterImage} alt="img"></img>
               <p>{event.venue}</p>

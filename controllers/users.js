@@ -11,15 +11,6 @@ async function userProfile(req, res, next) {
   }
 }
 
-// async function userShow(req, res, next) {
-//   try {
-//     const userneeded = await User.findById(req.params.id).populate('user')
-//     if (!userneeded) throw new Error(notFound)
-//     res.status(200).json(userneeded)
-//   } catch (err) {
-//     next(err)
-//   }
-// }
 
 //! new addition, index of users for getting other profiles
 async function usersIndex(req, res, next) {
@@ -32,7 +23,18 @@ async function usersIndex(req, res, next) {
   }
 }
 
+async function usersFind(req, res, next) {
+  try {
+    const userSpecific = await User.findById(req.params.id).populate('user')
+    if (!userSpecific) throw new Error(notFound)
+    res.status(200).json(userSpecific)
+  } catch (err) {
+    next(err)
+  }
+}
+
 module.exports = {
   profile: userProfile ,
-  usersall: usersIndex
+  usersall: usersIndex,
+  userSpecific: usersFind
 }

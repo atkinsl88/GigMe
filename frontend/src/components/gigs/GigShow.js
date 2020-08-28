@@ -60,23 +60,25 @@ class GigShow extends React.Component {
   }
 
   handleSubmit = async event => {
-    event.preventDefault()
+    // event.preventDefault()
+    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
     try {
-      const res = await createComment(this.state.formData, eventId)
-      await getSingleGig(eventId)
-      this.setState({ comments: res.data.comments })
-    } catch (err) {
+    const res = await createComment(this.state.formData, eventId)
+    const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
+    this.setState({ event: res3.data })
+    this.setState({ comments: res3.data.comments })
+  }
+    catch (err) {
       console.log(err.response.data) 
     }
   }
 
   handleFindProfile = event => {
-    //! get target value, search userLinks for relevant user,
-    // const posterProps = [] //populate this with the items received from searching for the right user in below function
-    // const poster = event.target.value //clicking on button populates with the userid to find.
-    // //posterprops array should then be props to a new profile page for the user needed.
-    // console.log(poster)
+    const posterProps = [] 
+    const poster = event.target.value 
+    const selectedUser = posterProps.filter(poster)
+    return selectedUser
   }
 
   handleDelete = async () => {
@@ -141,12 +143,7 @@ class GigShow extends React.Component {
           <div>{this.state.comments.slice(0).reverse().map(eachcomment => {
           return (
             <div key={eachcomment.createdAt} className="eventComments">
-              <div className="indivComment">
-                <button value={eachcomment.user._id} onClick={this.handleFindProfile} className="button2">
-                  {eachcomment.user.username}
-                </button>  
-                {eachcomment.text}
-              </div>
+            <h2 className="indivComment"><Link to={`/users/${eachcomment.user._id}`} button value={eachcomment.user._id}>{eachcomment.user.username}</Link> - {eachcomment.text}</h2>
             </div>
           )})}
           </div>
