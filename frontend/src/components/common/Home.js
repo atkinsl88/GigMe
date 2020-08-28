@@ -32,11 +32,7 @@ class Home extends React.Component{
   }
 
   render() {
-
-    // console.log(this.state.gigs)
-
-    // if (!this.state.randomChoices) return
-    
+ 
 
     return(
       <section>

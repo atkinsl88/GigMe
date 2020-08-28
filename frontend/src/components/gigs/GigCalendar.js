@@ -3,8 +3,6 @@ import axios from 'axios';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
-// import '@fullcalendar/core/main.css';
-// import '@fullcalendar/daygrid/main.css';
 
 class GigCalendar extends React.Component {
 
@@ -24,12 +22,8 @@ class GigCalendar extends React.Component {
 
 
   render(){
-    // console.log(this.state.events[0].aboutEvent)
-    // console.log(this.state.events[1].aboutEvent)
-
   //! Yes... I did try map 
     const events = [
-      // { title: this.state.events, date: new Date('2020-08-02') },
       { title: this.state.events[0].artistName, date: new Date(this.state.events[0].date)},
       { title: this.state.events[1].artistName, date: new Date(this.state.events[1].date)},
       { title: this.state.events[2].artistName, date: new Date(this.state.events[2].date)},

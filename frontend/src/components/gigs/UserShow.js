@@ -27,9 +27,6 @@ class UserShow extends React.Component {
     <div className="profile-info">
       <h2>User Name: <span>{this.state.user.username}</span></h2>
     </div>
-    {/* <div className="profile-info">
-      <h2>Your e-mail: <span>{this.state.user.email}</span></h2>
-    </div> */}
     <div className="profile-info">
       <h2>Website: <span>{this.state.user.mySite}</span> </h2>
     </div>

@@ -60,8 +60,6 @@ class GigShow extends React.Component {
   }
 
   handleSubmit = async event => {
-    // event.preventDefault()
-    // const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     const eventId = this.props.match.params.id
     try {
     const res = await createComment(this.state.formData, eventId)

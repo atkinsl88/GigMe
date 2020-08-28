@@ -4,8 +4,6 @@ const router = require('./config/router')
 const logger = require('./lib/logger')
 const errorHandler = require('./lib/errorHandler')
 
-//! Won't need below till we make an error handler
-// const errorHandler = require('./lib/errorHandler')
 const app = express()
 const port = 4000
 const { dbURI } = require('./config/environment')
