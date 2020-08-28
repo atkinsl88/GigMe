@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch , Route  } from 'react-router-dom'
+import Notifications from 'react-notify-toast'
 
 import Navbar from './components/common/NavBar'
 import Home from './components/common/Home'
@@ -26,6 +27,7 @@ render(){
   return (
     <BrowserRouter>
       <Navbar />
+      <Notifications />
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/gigs/map" component={Maps}/>

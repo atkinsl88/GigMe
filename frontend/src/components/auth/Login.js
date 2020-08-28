@@ -1,6 +1,7 @@
 import React from 'react'
 import { loginUser } from '../../lib/api'
 import { setToken } from "../../lib/auth"
+import { popupNotification } from '../../lib/notification'
 
 class Login extends React.Component {
   state = {
@@ -22,6 +23,7 @@ class Login extends React.Component {
     try {
       const res = await loginUser(this.state.formData)
       setToken(res.data.token)
+      popupNotification(`welcome back ${this.state.formData.username}`)
       this.props.history.push('/')
     } catch (err) {
       this.setState({ error: true })
