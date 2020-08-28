@@ -33,10 +33,6 @@ router.route('/register')
 router.route('/login')
   .post(auth.login)
 
-// router.route('/profiles')
-//   .get(auth.profileIndex)
-
-//!this is a new route to get all users --- Aishath
 router.route('/users/')
   .get(user.usersall)
 
@@ -44,7 +40,6 @@ router.route('/users/:id')
   .get(user.userSpecific)
 
 router.route('/profiles/:id')
-  // .get(secureRoute, auth.showProfile)
   .get(secureRoute, user.profile)
 
 module.exports = router
