@@ -57,11 +57,9 @@ class Profiles extends React.Component{
             <h2>About You: <span>{this.state.profiles.aboutMe}</span></h2>
           </div>
           </div>
-          {/* <p>Your created events: </p> */}
           <div className="createdEventprofile">
             
           <div className="recent-activity">
-          {/* <p>Created Events:</p> */}
             {this.state.createdEvents.map(event => {
             return <div key={event._id}>
               <p>You created: </p>
