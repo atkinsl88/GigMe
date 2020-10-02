@@ -28,7 +28,7 @@ class GigIndex extends React.Component {
   }
 
   handleAllClick = async event => {
-    const res = await axios.get('http://localhost:3000/api/events')
+    const res = await axios.get('/api/events')
     this.setState({ search: res.data })
   }
 

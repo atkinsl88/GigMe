@@ -13,7 +13,7 @@ class Home extends React.Component{
   }
   async componentDidMount() {
     try {
-      const res = await axios.get('http://localhost:3000/api/events')
+      const res = await axios.get('/api/events')
       this.setState({ gigs: res.data })
       this.getRandom()
     } catch (err) {
@@ -32,7 +32,7 @@ class Home extends React.Component{
   }
 
   render() {
- 
+
 
     return(
       <section>
@@ -62,7 +62,7 @@ class Home extends React.Component{
                     <h3>{name.artistName}</h3>
                     <h4>{name.aboutEvent}</h4>
                     <h5>{name.date}</h5>
-                    
+
                   </div>
 
                 </div>
@@ -81,7 +81,7 @@ class Home extends React.Component{
           </div>
         </div>
         <div className="map-home">
-          
+
           <div className="mapArea">
             <Map className="map">
             </Map>

@@ -21,7 +21,7 @@ class Maps extends React.Component {
 
   async componentDidMount() {
     try {
-      const res = await axios.get('http://localhost:3000/api/events')
+      const res = await axios.get('/api/events')
       this.setState({ venues: res.data })
     } catch (err) {
       console.log(err)
@@ -45,7 +45,7 @@ return (
         mapboxApiAccessToken="pk.eyJ1IjoiYWlzaGF0aG5hc2lyIiwiYSI6ImNrZHllYW51ODRodGIydHJvbm1yc2lkZHgifQ.8C_6datWjuBQUQbfsBAsOg"
         height={'600px'}
         width={'1500px'}
-        onViewportChange={viewport => this.setState({viewport})} 
+        onViewportChange={viewport => this.setState({viewport})}
         mapStyle='mapbox://styles/mapbox/streets-v11'
       >
         {this.state.venues.map(venue => (
@@ -61,14 +61,14 @@ return (
             </Marker>
           </div>
         ))}
-        
-      </MapGL>      
+
+      </MapGL>
     <div className="mapSearch">
       <div className="three-col">
         {this.state.searchResults.map(name => {
           return (
             <div className="map-thumbs" key={name._id}>
-              
+
               <img src={name.posterImage} alt="logo" />
               <h3>{name.artistName}</h3>
               <Link to={`/gigs/${name._id}`} className="button">Find out more</Link>

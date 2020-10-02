@@ -13,7 +13,7 @@ class GigCalendar extends React.Component {
 
   async componentDidMount() {
     try {
-      const res = await axios.get('http://localhost:3000/api/events')
+      const res = await axios.get('/api/events')
       this.setState({ events: res.data })
     } catch (err) {
       console.log(err)
@@ -22,7 +22,7 @@ class GigCalendar extends React.Component {
 
 
   render(){
-  //! Yes... I did try map 
+  //! Yes... I did try map
     const events = [
       { title: this.state.events[0].artistName, date: new Date(this.state.events[0].date)},
       { title: this.state.events[1].artistName, date: new Date(this.state.events[1].date)},

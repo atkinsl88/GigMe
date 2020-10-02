@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { getToken } from './auth'
-const baseUrl = 'http://localhost:3000/api'
+const baseUrl = '/api'
 
-export const withHeaders = () => { 
+export const withHeaders = () => {
   return {
-    headers: { Authorization: `Bearer ${getToken()}` }  
+    headers: { Authorization: `Bearer ${getToken()}` }
   }
 }
 
@@ -55,7 +55,7 @@ export const getSingleUser = id => {
   return axios.get(`${baseUrl}/users/${id}`)
 }
 
-// community 
+// community
 // export const createMessage = formData => {
 //   return axios.post(`${baseUrl}/community`, formData, withHeaders())
 // }

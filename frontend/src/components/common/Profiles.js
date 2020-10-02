@@ -15,7 +15,7 @@ class Profiles extends React.Component{
   async componentDidMount() {
     const userId = getUserId
     try {
-      const res = await axios.get(`http://localhost:3000/api/profiles/${userId}`, withHeaders())
+      const res = await axios.get(`/api/profiles/${userId}`, withHeaders())
       this.setState({ profiles: res.data, createdEvents: res.data.createdEvents})
     } catch (err) {
       this.props.history.push('/notfound')
@@ -27,7 +27,7 @@ class Profiles extends React.Component{
 
     return(
       <section>
-        
+
         <div className="hero-gigs-indv text-center">
           <div className="hero-gigs-indv-txt">
             <h2>{this.state.profiles.username}</h2>
@@ -39,11 +39,11 @@ class Profiles extends React.Component{
           <div className="profile-info">
             <img className="profile-photo" src={this.state.profiles.profilePicture} alt="profpic"></img>
           <div className="profile-info">
-            
+
             <h2>Your Name: <span>{this.state.profiles.username}</span></h2>
           </div>
           <div className="profile-info">
-          
+
             <h2>Your e-mail: <span>{this.state.profiles.email}</span></h2>
           </div>
           <div className="profile-info">
@@ -57,7 +57,7 @@ class Profiles extends React.Component{
           </div>
           </div>
           <div className="createdEventprofile">
-            
+
           <div className="recent-activity">
             {this.state.createdEvents.map(event => {
             return <div key={event._id}>

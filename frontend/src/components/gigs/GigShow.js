@@ -33,7 +33,7 @@ class GigShow extends React.Component {
     }
 
     try {
-      const resuser = await axios.get(`http://localhost:3000/api/users`, withHeaders())
+      const resuser = await axios.get(`/api/users`, withHeaders())
       this.setState({ usersLink: resuser.data})
     } catch (err) {
       console.log(err)
@@ -62,18 +62,18 @@ class GigShow extends React.Component {
     const eventId = this.props.match.params.id
     try {
     const res = await createComment(this.state.formData, eventId)
-    const res3 = await axios.get(`http://localhost:3000/api/events/${eventId}`)
+    const res3 = await axios.get(`/api/events/${eventId}`)
     this.setState({ event: res3.data })
     this.setState({ comments: res3.data.comments })
   }
     catch (err) {
-      console.log(err.response.data) 
+      console.log(err.response.data)
     }
   }
 
   handleFindProfile = event => {
-    const posterProps = [] 
-    const poster = event.target.value 
+    const posterProps = []
+    const poster = event.target.value
     const selectedUser = posterProps.filter(poster)
     return selectedUser
   }
@@ -113,8 +113,8 @@ class GigShow extends React.Component {
             <h4><b>Has Bar?:</b> {this.hasBarFinder()} </h4>
             <h4><b>Genre:</b> {this.state.event.genre} </h4>
             <h4><b>Price:</b> £{this.state.event.eventPrice}</h4>
-            
-           
+
+
 
             {isAuthenticated(this.state.event.userId) &&
             <>
@@ -124,7 +124,7 @@ class GigShow extends React.Component {
               <button onClick={this.handleClick} value="" className="gigLike">🤍</button>
             </div>
             <p>{this.state.likes.length} people have liked this event!</p>
-            </> 
+            </>
             }
           </div>
           <div className="hero-gigs-indv-img">
